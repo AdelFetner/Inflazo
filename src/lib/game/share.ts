@@ -24,9 +24,28 @@ export function resultPath(number: number, grid: string): string {
   return `/r/${number}/${grid}`;
 }
 
-export function shareText(number: number, grid: string, siteUrl: string): string {
-  const url = `${siteUrl.replace(/\/+$/, '')}${resultPath(number, grid)}`;
-  return `¿Qué subió más? #${number} ${gridScore(grid)}/${ROUND_COUNT}\n${gridToEmoji(grid)}\n${url}`;
+export function ogImagePath(number: number, grid: string): string {
+  return `/api/og?n=${number}&g=${grid}`;
+}
+
+/** Share message split in two: networks like X and Telegram take the link as a separate field. */
+export interface ShareMessage {
+  text: string;
+  url: string;
+}
+
+/** Streaks shorter than this are not worth bragging about, so the line is left out. */
+const MIN_SHARED_STREAK = 2;
+
+export function shareMessage(number: number, grid: string, siteUrl: string, streak = 0): ShareMessage {
+  const lines = [`¿Qué subió más? #${number} ${gridScore(grid)}/${ROUND_COUNT}`, gridToEmoji(grid)];
+  if (streak >= MIN_SHARED_STREAK) lines.push(`🔥 Racha: ${streak}`);
+  return { text: lines.join('\n'), url: `${siteUrl.replace(/\/+$/, '')}${resultPath(number, grid)}` };
+}
+
+export function shareText(number: number, grid: string, siteUrl: string, streak = 0): string {
+  const { text, url } = shareMessage(number, grid, siteUrl, streak);
+  return `${text}\n${url}`;
 }
 
 export function parseResultParams(

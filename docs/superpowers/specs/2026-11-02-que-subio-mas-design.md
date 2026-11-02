@@ -77,13 +77,14 @@ Juego web diario, estilo Wordle, basado en precios oficiales del INDEC. Cada dí
   - Header: título, número de puzzle, botón de reglas y de estadísticas.
   - Ronda: dos tarjetas con nombre del producto y unidad ("Cebolla · por kg"), pregunta "¿Cuál aumentó más en los últimos 12 meses?" (meses mostrados: "sep 2025 → sep 2026").
   - Al elegir: revela en ambas tarjetas precio anterior → actual y la variación % con contador animado; marca acierto/error; botón "Siguiente".
-  - Final: puntaje N/5, grilla, botón Compartir (Web Share API; fallback copiar al portapapeles), cuenta regresiva al próximo puzzle, fuente "Datos: INDEC, precios promedio GBA".
+  - Final: puntaje N/5, grilla, botón Compartir (Web Share API en mobile; fallback copiar al portapapeles), botones por red (WhatsApp, X, LinkedIn, Copiar, Compartir imagen cuando el navegador comparte archivos; "Más": Telegram, Bluesky, Threads, Facebook, Reddit), cuenta regresiva al próximo puzzle, fuente "Datos: INDEC, precios promedio GBA". Endpoints y motivos: `docs/research/2026-11-02-share-ux.md`.
 - Estado local (`localStorage`): progreso del día (se puede recargar y retomar), historial por número de puzzle, racha actual, mejor racha, distribución de puntajes 0–5. Sin backend ni cuentas.
-- Texto compartido:
+- Texto compartido (la línea de racha aparece solo con racha ≥ 2):
 
   ```
   ¿Qué subió más? #42 4/5
   🟩🟩🟥🟩🟩
+  🔥 Racha: 7
   https://<sitio>/r/42/11011
   ```
 

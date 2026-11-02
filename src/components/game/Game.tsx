@@ -6,6 +6,7 @@ import { argentinaDate, puzzleNumberForDate } from '@/lib/game/calendar';
 import { formatPeriod, shiftPeriod } from '@/lib/game/period';
 import { answersFor, recordAnswer } from '@/lib/game/session';
 import { gridFromAnswers, ROUND_COUNT } from '@/lib/game/share';
+import { computeStats } from '@/lib/game/stats';
 import { getBrowserStorage, loadState, saveState, type SavedState } from '@/lib/game/storage';
 import type { Answer, Puzzle } from '@/lib/game/types';
 import { ResultPanel } from './ResultPanel';
@@ -147,6 +148,7 @@ export function Game({ puzzle, spare, siteUrl }: GameProps) {
           grid={grid}
           spare={spare}
           siteUrl={siteUrl}
+          streak={computeStats(state.history, puzzle.number).currentStreak}
           onCountdownEnd={requestRollover}
           headingRef={resultRef}
         />

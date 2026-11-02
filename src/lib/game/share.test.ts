@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { gridFromAnswers, gridToEmoji, isValidGrid, parseResultParams, shareText } from './share';
+import { gridFromAnswers, gridToEmoji, isValidGrid, ogImagePath, parseResultParams, shareMessage, shareText } from './share';
 import type { Round } from './types';
 
 const item = (code: string) => ({ code, name: code, unit: 'kg', from: 1, to: 2, yoy: 100 });
@@ -18,6 +18,24 @@ describe('share text', () => {
 
   it('renders emoji per round', () => {
     expect(gridToEmoji('10')).toBe('🟩🟥');
+  });
+
+  it('adds the streak line from two days in a row', () => {
+    expect(shareText(42, '11011', 'https://quesubiomas.ar', 7)).toBe(
+      '¿Qué subió más? #42 4/5\n🟩🟩🟥🟩🟩\n🔥 Racha: 7\nhttps://quesubiomas.ar/r/42/11011',
+    );
+    expect(shareText(42, '11011', 'https://quesubiomas.ar', 1)).not.toContain('Racha');
+  });
+
+  it('splits the message into text and link for networks that take the link apart', () => {
+    expect(shareMessage(42, '11011', 'https://quesubiomas.ar/', 3)).toEqual({
+      text: '¿Qué subió más? #42 4/5\n🟩🟩🟥🟩🟩\n🔥 Racha: 3',
+      url: 'https://quesubiomas.ar/r/42/11011',
+    });
+  });
+
+  it('points at the result image', () => {
+    expect(ogImagePath(42, '11011')).toBe('/api/og?n=42&g=11011');
   });
 });
 

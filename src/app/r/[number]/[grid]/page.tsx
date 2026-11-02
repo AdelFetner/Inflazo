@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { connection } from 'next/server';
 import { getTodayNumber } from '@/lib/data/puzzles';
-import { ROUND_COUNT, gridScore, gridToEmoji, parseResultParams } from '@/lib/game/share';
+import { ROUND_COUNT, gridScore, gridToEmoji, ogImagePath, parseResultParams } from '@/lib/game/share';
 import { getSiteUrl } from '@/lib/site';
 
 /**
@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: PageProps<'/r/[number]/[grid]
   const result = await resolve(params);
   if (!result) return {};
   const title = `¿Qué subió más? #${result.number} — ${gridScore(result.grid)}/${ROUND_COUNT}`;
-  const image = `${getSiteUrl()}/api/og?n=${result.number}&g=${result.grid}`;
+  const image = `${getSiteUrl()}${ogImagePath(result.number, result.grid)}`;
   return {
     title,
     openGraph: { title, images: [{ url: image, width: 1200, height: 630 }] },

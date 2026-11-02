@@ -1,15 +1,18 @@
 'use client';
 
-import { useEffect, useRef, useState, type Ref } from 'react';
-import { gridScore, gridToEmoji, ROUND_COUNT, shareText } from '@/lib/game/share';
+import { useRef, type Ref } from 'react';
+import { gridScore, gridToEmoji, ogImagePath, ROUND_COUNT, shareMessage } from '@/lib/game/share';
 import type { Puzzle } from '@/lib/game/types';
 import { Countdown } from './Countdown';
+import { ShareActions } from './ShareActions';
 
 interface ResultPanelProps {
   puzzle: Puzzle;
   grid: string;
   spare: boolean;
   siteUrl: string;
+  /** Consecutive days played, ending with this puzzle. */
+  streak: number;
   onCountdownEnd: () => void;
   headingRef?: Ref<HTMLHeadingElement>;
 }
@@ -32,34 +35,10 @@ function selectText(node: HTMLElement | null) {
   selection.addRange(range);
 }
 
-export function ResultPanel({ puzzle, grid, spare, siteUrl, onCountdownEnd, headingRef }: ResultPanelProps) {
-  const text = shareText(puzzle.number, grid, siteUrl);
+export function ResultPanel({ puzzle, grid, spare, siteUrl, streak, onCountdownEnd, headingRef }: ResultPanelProps) {
+  const message = shareMessage(puzzle.number, grid, siteUrl, streak);
   const score = gridScore(grid);
   const preRef = useRef<HTMLPreElement>(null);
-  const [copied, setCopied] = useState(false);
-
-  useEffect(() => {
-    if (!copied) return;
-    const id = window.setTimeout(() => setCopied(false), 2000);
-    return () => window.clearTimeout(id);
-  }, [copied]);
-
-  async function share() {
-    if (typeof navigator.share === 'function' && window.matchMedia('(pointer: coarse)').matches) {
-      try {
-        await navigator.share({ text });
-        return;
-      } catch (error) {
-        if (error instanceof DOMException && error.name === 'AbortError') return;
-      }
-    }
-    try {
-      await navigator.clipboard.writeText(text);
-      setCopied(true);
-    } catch {
-      selectText(preRef.current);
-    }
-  }
 
   return (
     <section aria-labelledby="result-heading" className="rise mt-8 sm:mt-12">
@@ -87,20 +66,14 @@ export function ResultPanel({ puzzle, grid, spare, siteUrl, onCountdownEnd, head
             data-testid="share-text"
             className="bg-paper-2 p-4 font-sans text-[15px] leading-relaxed break-all whitespace-pre-wrap select-all"
           >
-            {text}
+            {`${message.text}\n${message.url}`}
           </pre>
-          <div className="flex items-center gap-4">
-            <button
-              type="button"
-              onClick={share}
-              className="h-14 flex-1 bg-ink px-6 text-[17px] font-semibold text-paper transition-[background-color,transform] duration-150 hover:bg-accent active:scale-[0.98]"
-            >
-              Compartir
-            </button>
-            <p role="status" className="w-24 text-[15px] font-semibold text-up">
-              {copied ? '¡Copiado!' : ''}
-            </p>
-          </div>
+          <ShareActions
+            message={message}
+            imagePath={ogImagePath(puzzle.number, grid)}
+            imageName={`que-subio-mas-${puzzle.number}.png`}
+            onCopyFailed={() => selectText(preRef.current)}
+          />
 
           <div className="mt-4 bg-ink p-5 text-paper">
             <p className="text-[15px]">

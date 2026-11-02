@@ -1,6 +1,6 @@
 # ¿Qué subió más?
 
-Juego diario al estilo Wordle con los precios promedio del INDEC. Cada día hay un puzzle nuevo de 5 rondas: en cada ronda aparecen dos productos y hay que adivinar cuál aumentó más en el último año (variación interanual del precio promedio en el Gran Buenos Aires). Al terminar se puede compartir el resultado como una grilla de emojis con un link a `/r/<número>/<grilla>`, que muestra una imagen OG del resultado.
+Juego diario al estilo Wordle con los precios promedio del INDEC. Cada día hay un puzzle nuevo de 5 rondas: en cada ronda aparecen dos productos y hay que adivinar cuál aumentó más en el último año (variación interanual del precio promedio en el Gran Buenos Aires). Al terminar se puede compartir el resultado (grilla de emojis, racha y un link a `/r/<número>/<grilla>`, que muestra una imagen OG del resultado) con el menú nativo del dispositivo, el portapapeles, WhatsApp, X, LinkedIn, Telegram, Bluesky, Threads, Facebook o Reddit, o como imagen PNG. Ver `docs/research/2026-11-02-share-ux.md` para los endpoints y por qué WhatsApp usa `api.whatsapp.com` y no `wa.me`.
 
 ## Fuente de datos
 
