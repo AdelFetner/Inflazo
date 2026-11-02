@@ -1,3 +1,7 @@
+export const SITE_NAME = 'Inflazo';
+/** Second line under the name: what the game asks, then what it is. */
+export const SITE_TAGLINE = '¿Qué subió más? El juego diario de precios del INDEC';
+
 const DEFAULT_SITE_URL = 'http://localhost:3000';
 
 /** NEXT_PUBLIC_SITE_URL, else the Vercel production domain, else localhost; no trailing slash. */

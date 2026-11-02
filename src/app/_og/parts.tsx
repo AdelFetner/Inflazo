@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
 import { OG_COLORS, OG_DISPLAY_FONT, OG_TEXT_FONT } from '@/app/fonts/og';
-import { getSiteUrl } from '@/lib/site';
+import { getSiteUrl, SITE_NAME } from '@/lib/site';
 
 // Building blocks shared by the site card (opengraph-image.tsx) and the result card (api/og).
 // Satori only lays out flexbox: every element with more than one child sets display: flex.
@@ -73,7 +73,7 @@ function Brand() {
         <Arrow color={OG_COLORS.paper} size={32} up />
       </div>
       <div style={{ display: 'flex', fontFamily: OG_DISPLAY_FONT, fontSize: 34, fontWeight: 800, letterSpacing: '0.04em' }}>
-        ¿QUÉ SUBIÓ MÁS?
+        {SITE_NAME.toUpperCase()}
       </div>
     </div>
   );

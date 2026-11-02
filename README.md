@@ -1,6 +1,10 @@
-# ¿Qué subió más?
+# Inflazo
+
+**¿Qué subió más?** El juego diario de precios del INDEC: https://inflazo.adelfetner.com
 
 Juego diario al estilo Wordle con los precios promedio del INDEC. Cada día hay un puzzle nuevo de 5 rondas: en cada ronda aparecen dos productos y hay que adivinar cuál aumentó más en el último año (variación interanual del precio promedio en el Gran Buenos Aires). Al terminar se puede compartir el resultado (grilla de emojis, racha y un link a `/r/<número>/<grilla>`, que muestra una imagen OG del resultado) con el menú nativo del dispositivo, el portapapeles, WhatsApp, X, LinkedIn, Telegram, Bluesky, Threads, Facebook o Reddit, o como imagen PNG. Ver `docs/research/2026-11-02-share-ux.md` para los endpoints y por qué WhatsApp usa `api.whatsapp.com` y no `wa.me`.
+
+El nombre y la bajada viven en `src/lib/site.ts` (`SITE_NAME`, `SITE_TAGLINE`).
 
 ## Fuente de datos
 
@@ -59,9 +63,13 @@ Secrets del repositorio (Settings → Secrets and variables → Actions):
 
 ## Deploy en Vercel
 
+Producción: proyecto `inflazo` en Vercel, conectado a este repo (cada push a `main` despliega), con el dominio **`inflazo.adelfetner.com`** (el DNS de `adelfetner.com` está en Vercel, así que el registro se crea solo al agregar el dominio al proyecto).
+
+Para recrearlo:
+
 1. En Vercel, *Add New → Project* e importar este repositorio (framework: Next.js, sin cambios en build).
-2. En *Environment Variables*, definir `NEXT_PUBLIC_SITE_URL` con la URL pública (por ejemplo `https://que-subio-mas.vercel.app`). Si no se define, se usa el dominio de producción de Vercel (`NEXT_PUBLIC_VERCEL_PROJECT_PRODUCTION_URL`). El sitio no necesita `INDEC_API_TOKEN`: los datos ya están en el repo.
-3. Deploy.
+2. En *Environment Variables*, definir `NEXT_PUBLIC_SITE_URL=https://inflazo.adelfetner.com`. Si no se define, se usa el dominio de producción de Vercel (`NEXT_PUBLIC_VERCEL_PROJECT_PRODUCTION_URL`). El sitio no necesita `INDEC_API_TOKEN`: los datos ya están en el repo.
+3. *Settings → Domains*: agregar `inflazo.adelfetner.com`.
 4. Crear un Deploy Hook: *Project → Settings → Git → Deploy Hooks*, con branch `main`. Copiar la URL y guardarla en GitHub como el secret `VERCEL_DEPLOY_HOOK_URL`.
 
-¿Por qué el Deploy Hook? En el plan Hobby, con el repo privado, Vercel no despliega los commits hechos por `github-actions[bot]`, así que los datos nuevos nunca llegarían al sitio. El workflow llama al hook solo cuando pushea un commit de datos, y eso dispara el deploy de `main`.
+¿Por qué el Deploy Hook? Vercel puede no desplegar los commits hechos por `github-actions[bot]` (por ejemplo en el plan Hobby con repo privado), así que los datos nuevos no llegarían al sitio. El workflow llama al hook solo cuando pushea un commit de datos, y eso dispara el deploy de `main`.

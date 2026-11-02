@@ -7,8 +7,8 @@ const round = (answer: 'a' | 'b'): Round => ({ a: item('A'), b: item('B'), answe
 
 describe('share text', () => {
   it('matches the exact share format: result, blank line, challenge + pitch, link', () => {
-    expect(shareText(42, '11011', 'https://quesubiomas.ar')).toBe(
-      '¿Qué subió más? #42 · 4/5\n🟩🟩🟥🟩🟩\n\n¿Me ganás? Adiviná qué aumentó más en el súper, con precios del INDEC 👇\nhttps://quesubiomas.ar/r/42/11011',
+    expect(shareText(42, '11011', 'https://inflazo.adelfetner.com')).toBe(
+      'Inflazo #42 · 4/5\n🟩🟩🟥🟩🟩\n\n¿Me ganás? Adiviná qué aumentó más en el súper, con precios del INDEC 👇\nhttps://inflazo.adelfetner.com/r/42/11011',
     );
   });
 
@@ -27,16 +27,16 @@ describe('share text', () => {
   });
 
   it('adds the streak line from two days in a row', () => {
-    expect(shareText(42, '11011', 'https://quesubiomas.ar', 7)).toBe(
-      '¿Qué subió más? #42 · 4/5\n🟩🟩🟥🟩🟩\n🔥 Racha: 7\n\n¿Me ganás? Adiviná qué aumentó más en el súper, con precios del INDEC 👇\nhttps://quesubiomas.ar/r/42/11011',
+    expect(shareText(42, '11011', 'https://inflazo.adelfetner.com', 7)).toBe(
+      'Inflazo #42 · 4/5\n🟩🟩🟥🟩🟩\n🔥 Racha: 7\n\n¿Me ganás? Adiviná qué aumentó más en el súper, con precios del INDEC 👇\nhttps://inflazo.adelfetner.com/r/42/11011',
     );
-    expect(shareText(42, '11011', 'https://quesubiomas.ar', 1)).not.toContain('Racha');
+    expect(shareText(42, '11011', 'https://inflazo.adelfetner.com', 1)).not.toContain('Racha');
   });
 
   it('splits the message into text and link for networks that take the link apart', () => {
-    expect(shareMessage(42, '11011', 'https://quesubiomas.ar/', 3)).toEqual({
-      text: '¿Qué subió más? #42 · 4/5\n🟩🟩🟥🟩🟩\n🔥 Racha: 3\n\n¿Me ganás? Adiviná qué aumentó más en el súper, con precios del INDEC 👇',
-      url: 'https://quesubiomas.ar/r/42/11011',
+    expect(shareMessage(42, '11011', 'https://inflazo.adelfetner.com/', 3)).toEqual({
+      text: 'Inflazo #42 · 4/5\n🟩🟩🟥🟩🟩\n🔥 Racha: 3\n\n¿Me ganás? Adiviná qué aumentó más en el súper, con precios del INDEC 👇',
+      url: 'https://inflazo.adelfetner.com/r/42/11011',
     });
   });
 

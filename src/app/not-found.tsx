@@ -1,15 +1,16 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { SITE_NAME } from '@/lib/site';
 
 export const metadata: Metadata = {
-  title: 'Página no encontrada — ¿Qué subió más?',
+  title: `Página no encontrada — ${SITE_NAME}`,
 };
 
 export default function NotFound() {
   return (
     <main className="mx-auto w-full max-w-[1040px] flex-1 px-5 pt-5 pb-16 sm:px-10 sm:pt-8">
       <p className="condensed text-[30px] leading-none font-extrabold tracking-[-0.02em] sm:text-[40px]">
-        ¿Qué subió más?
+        {SITE_NAME}
       </p>
       <p
         aria-hidden="true"

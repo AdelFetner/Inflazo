@@ -9,6 +9,7 @@ import { gridFromAnswers, ROUND_COUNT } from '@/lib/game/share';
 import { computeStats } from '@/lib/game/stats';
 import { getBrowserStorage, loadState, saveState, type SavedState } from '@/lib/game/storage';
 import type { Answer, Puzzle } from '@/lib/game/types';
+import { SITE_NAME } from '@/lib/site';
 import { ResultPanel } from './ResultPanel';
 import { RoundCard } from './RoundCard';
 import { RulesDialog } from './RulesDialog';
@@ -235,7 +236,8 @@ function Header({ number, statsDisabled, onRules, onStats }: HeaderProps) {
     <header className="flex items-start justify-between gap-4">
       <div>
         <h1 className="condensed text-[30px] leading-none font-extrabold tracking-[-0.02em] sm:text-[40px]">
-          ¿Qué subió más?
+          {SITE_NAME}
+          <span className="sr-only">: ¿qué subió más?</span>
         </h1>
         <p className="figures mt-2 text-[14px] text-ink-2 sm:text-[15px]">#{number} · Precios promedio en GBA · INDEC</p>
       </div>

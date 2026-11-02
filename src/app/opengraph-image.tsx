@@ -1,10 +1,11 @@
 import { ImageResponse } from 'next/og';
+import { SITE_NAME, SITE_TAGLINE } from '@/lib/site';
 import { OgFrame, OG_SIZE, Receipt } from './_og/parts';
 import { OG_COLORS, OG_DISPLAY_FONT, OG_FONTS } from './fonts/og';
 
 export const size = OG_SIZE;
 export const contentType = 'image/png';
-export const alt = '¿Qué subió más? Un juego diario con los precios del INDEC';
+export const alt = `${SITE_NAME}: ${SITE_TAGLINE}`;
 
 export default function OpengraphImage() {
   return new ImageResponse(
@@ -31,7 +32,7 @@ export default function OpengraphImage() {
         <div style={{ display: 'flex', fontSize: 36, lineHeight: 1.25, marginTop: 24, width: 600 }}>
           Dos productos del súper. Adiviná cuál aumentó más en el último año.
         </div>
-        <div style={{ display: 'flex', fontSize: 24, color: OG_COLORS.ink2, marginTop: 14 }}>
+        <div style={{ display: 'flex', fontSize: 24, color: OG_COLORS.ink2, marginTop: 12 }}>
           Cinco rondas por día · Datos del INDEC
         </div>
       </OgFrame>

@@ -1,7 +1,7 @@
 import { isValidGrid, ROUND_COUNT } from './share';
 import type { Answer } from './types';
 
-export const STORAGE_KEY = 'que-subio-mas:v1';
+export const STORAGE_KEY = 'inflazo:v1';
 
 export interface SavedState {
   version: 1;

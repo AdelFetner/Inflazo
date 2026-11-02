@@ -1,6 +1,6 @@
-# ¿Qué subió más? — Design spec
+# Inflazo (¿Qué subió más?) — Design spec
 
-Fecha: 2026-11-02 · Estado: pendiente de revisión
+Fecha: 2026-11-02 · Estado: implementado · Producción: https://inflazo.adelfetner.com
 
 ## Objetivo
 
@@ -82,7 +82,7 @@ Juego web diario, estilo Wordle, basado en precios oficiales del INDEC. Cada dí
 - Texto compartido (la línea de racha aparece solo con racha ≥ 2; el desafío depende del puntaje: 5 → "¿Me igualás?", 3–4 → "¿Me ganás?", 0–2 → "¿Vos lo hacés mejor?"):
 
   ```
-  ¿Qué subió más? #42 · 4/5
+  Inflazo #42 · 4/5
   🟩🟩🟥🟩🟩
   🔥 Racha: 7
 
@@ -92,7 +92,7 @@ Juego web diario, estilo Wordle, basado en precios oficiales del INDEC. Cada dí
 
   En X el link va dentro del texto (si va en `url`, X lo pega a la última línea). En LinkedIn se agrega al final `#INDEC #Inflación #Economía #Precios`.
 
-- `/r/[number]/[grid]` — página de resultado compartido, adonde llega quien toca el link: puntaje, grilla, el desafío, cómo se juega en tres líneas y el CTA "Aceptá el desafío". Metadata OG/Twitter: título "Saqué 4/5 en ¿Qué subió más? #42", descripción con desafío + pitch, imagen `/api/og?n=42&g=11011`. `grid` es una cadena de 5 dígitos 0/1; valores inválidos ⇒ 404.
+- `/r/[number]/[grid]` — página de resultado compartido, adonde llega quien toca el link: puntaje, grilla, el desafío, cómo se juega en tres líneas y el CTA "Aceptá el desafío". Metadata OG/Twitter: título "Saqué 4/5 en Inflazo #42", descripción con desafío + pitch, imagen `/api/og?n=42&g=11011`. `grid` es una cadena de 5 dígitos 0/1; valores inválidos ⇒ 404.
 - `/api/og` — `ImageResponse` 1200×630 con forma de ticket de súper: puntaje, veredicto, qué es el juego, una línea por ronda con ✓/✗, período de precios y una franja con el desafío y el dominio. El llamado a la acción queda a la derecha porque X tapa la esquina inferior izquierda con el dominio. Parámetros inválidos ⇒ 400.
 - URL base desde `NEXT_PUBLIC_SITE_URL`.
 - Mobile-first; contraste AA; operable con teclado; respeta `prefers-reduced-motion` (sin contador animado).

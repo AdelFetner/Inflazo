@@ -1,3 +1,4 @@
+import { SITE_NAME } from '../site';
 import type { Answer, Round } from './types';
 
 export const ROUND_COUNT = 5;
@@ -75,7 +76,7 @@ export const SHARE_PITCH_PLAIN = `${PITCH}.`;
  */
 export function shareMessage(number: number, grid: string, siteUrl: string, streak = 0): ShareMessage {
   const score = gridScore(grid);
-  const lines = [`¿Qué subió más? #${number} · ${score}/${ROUND_COUNT}`, gridToEmoji(grid)];
+  const lines = [`${SITE_NAME} #${number} · ${score}/${ROUND_COUNT}`, gridToEmoji(grid)];
   if (streak >= MIN_SHARED_STREAK) lines.push(`🔥 Racha: ${streak}`);
   lines.push('', `${challenge(score)} ${SHARE_PITCH}`);
   return { text: lines.join('\n'), url: `${siteUrl.replace(/\/+$/, '')}${resultPath(number, grid)}` };

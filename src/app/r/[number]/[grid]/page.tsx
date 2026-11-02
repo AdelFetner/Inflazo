@@ -4,7 +4,7 @@ import { notFound } from 'next/navigation';
 import { connection } from 'next/server';
 import { getTodayNumber } from '@/lib/data/puzzles';
 import { ROUND_COUNT, SHARE_PITCH_PLAIN, challenge, gridScore, gridToEmoji, ogImagePath, parseResultParams } from '@/lib/game/share';
-import { getSiteUrl } from '@/lib/site';
+import { getSiteUrl, SITE_NAME } from '@/lib/site';
 
 /**
  * Request-time page: validity depends on today's puzzle number, so it is resolved per request
@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: PageProps<'/r/[number]/[grid]
   if (!result) return {};
   const score = gridScore(result.grid);
   // Link previews (WhatsApp, Telegram, LinkedIn, Facebook) show title + description under the image.
-  const title = `Saqué ${score}/${ROUND_COUNT} en ¿Qué subió más? #${result.number}`;
+  const title = `Saqué ${score}/${ROUND_COUNT} en ${SITE_NAME} #${result.number}`;
   const description = `${challenge(score)} ${SHARE_PITCH_PLAIN}`;
   const url = `${getSiteUrl()}/r/${result.number}/${result.grid}`;
   const image = `${getSiteUrl()}${ogImagePath(result.number, result.grid)}`;
@@ -37,7 +37,7 @@ export async function generateMetadata({ params }: PageProps<'/r/[number]/[grid]
       title,
       description,
       url,
-      siteName: '¿Qué subió más?',
+      siteName: SITE_NAME,
       locale: 'es_AR',
       type: 'website',
       images: [{ url: image, width: 1200, height: 630, alt: `${title}. ${description}` }],
@@ -55,7 +55,7 @@ export default async function SharedResult({ params }: PageProps<'/r/[number]/[g
     <main className="mx-auto w-full max-w-3xl flex-1 px-5 py-10 sm:px-8 sm:py-16">
       <p className="text-[15px] font-semibold tracking-[0.08em] text-ink-2 uppercase">Te desafiaron</p>
       <h1 className="condensed mt-2 text-[44px] leading-none font-bold tracking-[-0.02em] sm:text-[64px]">
-        ¿Qué subió más? <span className="figures">#{result.number}</span>
+        {SITE_NAME} <span className="figures">#{result.number}</span>
       </h1>
 
       <p className="condensed figures rise mt-8 text-[140px] leading-[0.82] font-bold tracking-[-0.04em] sm:text-[220px]">

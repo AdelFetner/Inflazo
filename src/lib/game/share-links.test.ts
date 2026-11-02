@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { MORE_NETWORKS, PRIMARY_NETWORKS, networkShareUrl, type ShareNetwork } from './share-links';
 import { shareMessage } from './share';
 
-const message = shareMessage(42, '11011', 'https://quesubiomas.ar', 7);
+const message = shareMessage(42, '11011', 'https://inflazo.adelfetner.com', 7);
 const full = `${message.text}\n${message.url}`;
 const params = (network: ShareNetwork) => new URL(networkShareUrl(network, message)).searchParams;
 
@@ -23,7 +23,7 @@ describe('networkShareUrl', () => {
   });
 
   it('fits in one X post with the link counted as 23 characters', () => {
-    const longest = shareMessage(99999, '00000', 'https://quesubiomas.ar', 99999);
+    const longest = shareMessage(99999, '00000', 'https://inflazo.adelfetner.com', 99999);
     const weighted = [...longest.text].reduce((n, ch) => n + (ch.codePointAt(0)! > 0x10ff ? 2 : 1), 0);
     expect(weighted + 1 + 23).toBeLessThanOrEqual(280);
   });
@@ -42,7 +42,7 @@ describe('networkShareUrl', () => {
     expect(params('threads').get('text')).toBe(full);
     expect(params('facebook').get('u')).toBe(message.url);
     expect(params('reddit').get('url')).toBe(message.url);
-    expect(params('reddit').get('title')).toBe('¿Qué subió más? #42 · 4/5');
+    expect(params('reddit').get('title')).toBe('Inflazo #42 · 4/5');
   });
 
   it('lists every network exactly once between the visible row and "Más"', () => {

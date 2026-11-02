@@ -62,7 +62,7 @@ export function ResultPanel({ puzzle, grid, spare, siteUrl, streak, onCountdownE
           <ShareActions
             message={message}
             imagePath={ogImagePath(puzzle.number, grid)}
-            imageName={`que-subio-mas-${puzzle.number}.png`}
+            imageName={`inflazo-${puzzle.number}.png`}
             onCopyFailed={() => selectText(preRef.current)}
           />
 
