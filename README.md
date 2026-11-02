@@ -26,6 +26,8 @@ NEXT_PUBLIC_SITE_URL=http://localhost:3000
 
 `.env.local` está en `.gitignore`: nunca commitear el token.
 
+Si `NEXT_PUBLIC_SITE_URL` no está definida, el sitio usa `https://$NEXT_PUBLIC_VERCEL_PROJECT_PRODUCTION_URL` (la variable que Vercel define con el dominio de producción) y, si tampoco existe, `http://localhost:3000`.
+
 ## Scripts
 
 | Script | Qué hace |
@@ -46,14 +48,20 @@ NEXT_PUBLIC_SITE_URL=http://localhost:3000
 
 ## Actualización automática de datos
 
-El workflow `.github/workflows/update-data.yml` corre `npm run data` todos los días a las 09:00 y a las 18:00 (hora de Argentina; también se puede lanzar a mano con *workflow_dispatch*). Si cambia algo en `data/`, commitea y pushea a `main`.
+El workflow `.github/workflows/update-data.yml` corre `npm run data` todos los días a las 09:17 y a las 18:17 (hora de Argentina; minuto impar porque los crons en punto de GitHub se demoran o se descartan cuando hay carga; también se puede lanzar a mano con *workflow_dispatch*). Si cambia algo en `data/`, commitea y pushea a `main`, y después dispara el Deploy Hook de Vercel (ver abajo).
 
-Requiere el secret del repositorio **`INDEC_API_TOKEN`** (Settings → Secrets and variables → Actions).
+Secrets del repositorio (Settings → Secrets and variables → Actions):
+
+- **`INDEC_API_TOKEN`** (obligatorio): token de la API del INDEC.
+- **`VERCEL_DEPLOY_HOOK_URL`** (recomendado): URL del Deploy Hook de Vercel. Si falta, el workflow avisa y no dispara el deploy.
 
 > **Importante:** el token del INDEC vence el **2027-05-03**. Renovarlo antes de esa fecha y actualizar el secret (y tu `.env.local`); si no, el workflow va a fallar y los datos dejarán de actualizarse.
 
 ## Deploy en Vercel
 
 1. En Vercel, *Add New → Project* e importar este repositorio (framework: Next.js, sin cambios en build).
-2. En *Environment Variables*, definir `NEXT_PUBLIC_SITE_URL` con la URL pública (por ejemplo `https://que-subio-mas.vercel.app`). El sitio no necesita `INDEC_API_TOKEN`: los datos ya están en el repo.
-3. Deploy. Cada commit de datos que hace el workflow en `main` dispara un nuevo deploy automáticamente.
+2. En *Environment Variables*, definir `NEXT_PUBLIC_SITE_URL` con la URL pública (por ejemplo `https://que-subio-mas.vercel.app`). Si no se define, se usa el dominio de producción de Vercel (`NEXT_PUBLIC_VERCEL_PROJECT_PRODUCTION_URL`). El sitio no necesita `INDEC_API_TOKEN`: los datos ya están en el repo.
+3. Deploy.
+4. Crear un Deploy Hook: *Project → Settings → Git → Deploy Hooks*, con branch `main`. Copiar la URL y guardarla en GitHub como el secret `VERCEL_DEPLOY_HOOK_URL`.
+
+¿Por qué el Deploy Hook? En el plan Hobby, con el repo privado, Vercel no despliega los commits hechos por `github-actions[bot]`, así que los datos nuevos nunca llegarían al sitio. El workflow llama al hook solo cuando pushea un commit de datos, y eso dispara el deploy de `main`.

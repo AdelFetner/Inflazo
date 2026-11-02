@@ -45,6 +45,12 @@ export async function GET(request: Request) {
         <div style={{ fontSize: 28, color: OG_COLORS.ink2 }}>Datos: INDEC · precios promedio GBA</div>
       </div>
     ),
-    { width: 1200, height: 630, fonts: OG_FONTS },
+    {
+      width: 1200,
+      height: 630,
+      fonts: OG_FONTS,
+      // A valid (n, g) always renders the same image, so browsers and the CDN may keep it forever.
+      headers: { 'cache-control': 'public, max-age=31536000, s-maxage=31536000, immutable' },
+    },
   );
 }

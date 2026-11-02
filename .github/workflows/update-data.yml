@@ -2,8 +2,8 @@ name: Actualizar datos INDEC
 
 on:
   schedule:
-    - cron: '0 12 * * *' # 09:00 ART
-    - cron: '0 21 * * *' # 18:00 ART
+    - cron: '17 12 * * *' # 09:17 ART (odd minute: :00 runs get delayed or dropped under load)
+    - cron: '17 21 * * *' # 18:17 ART
   workflow_dispatch:
 
 permissions:
@@ -27,6 +27,7 @@ jobs:
         env:
           INDEC_API_TOKEN: ${{ secrets.INDEC_API_TOKEN }}
       - name: Commit data changes
+        id: commit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -38,3 +39,15 @@ jobs:
           git commit -m "data: actualizar precios y puzzles del INDEC"
           git pull --rebase origin "$GITHUB_REF_NAME"
           git push
+          echo "pushed=true" >> "$GITHUB_OUTPUT"
+      # Vercel Hobby does not deploy bot-authored commits on private repos; trigger a Deploy Hook instead.
+      - name: Trigger Vercel deploy
+        if: steps.commit.outputs.pushed == 'true'
+        env:
+          VERCEL_DEPLOY_HOOK_URL: ${{ secrets.VERCEL_DEPLOY_HOOK_URL }}
+        run: |
+          if [ -z "$VERCEL_DEPLOY_HOOK_URL" ]; then
+            echo "::notice::VERCEL_DEPLOY_HOOK_URL is not set; skipping Vercel deploy hook"
+            exit 0
+          fi
+          curl -fsS -X POST "$VERCEL_DEPLOY_HOOK_URL"
