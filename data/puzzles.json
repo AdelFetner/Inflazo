@@ -1,0 +1,6122 @@
+[
+  {
+    "number": 1,
+    "date": "2026-11-03",
+    "period": "202609",
+    "rounds": [
+      {
+        "a": {
+          "code": "01.1.7.1.31",
+          "name": "Zapallo anco",
+          "unit": "kg",
+          "from": 922.05,
+          "to": 2816.26,
+          "yoy": 205.4
+        },
+        "b": {
+          "code": "01.1.6.1.11",
+          "name": "Manzana deliciosa",
+          "unit": "kg",
+          "from": 2602.07,
+          "to": 4064.45,
+          "yoy": 56.2
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "05.6.1.1.08",
+          "name": "Detergente líquido",
+          "unit": "750 cc",
+          "from": 1702.99,
+          "to": 2150.14,
+          "yoy": 26.3
+        },
+        "b": {
+          "code": "01.1.2.1.17",
+          "name": "Nalga",
+          "unit": "kg",
+          "from": 14598.47,
+          "to": 21914.04,
+          "yoy": 50.1
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.2.2.1.01",
+          "name": "Agua sin gas",
+          "unit": "1,5 litros",
+          "from": 1465.62,
+          "to": 1731.27,
+          "yoy": 18.1
+        },
+        "b": {
+          "code": "02.1.2.1.01",
+          "name": "Vino común",
+          "unit": "Litro",
+          "from": 2215.06,
+          "to": 2312.09,
+          "yoy": 4.4
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.7.2.08",
+          "name": "Tomate entero en conserva",
+          "unit": "Lata 230 g",
+          "from": 1212.13,
+          "to": 1512.8,
+          "yoy": 24.8
+        },
+        "b": {
+          "code": "01.1.4.2.03",
+          "name": "Queso cremoso",
+          "unit": "kg",
+          "from": 11290.15,
+          "to": 14603.36,
+          "yoy": 29.3
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.4.2.06",
+          "name": "Queso pategrás",
+          "unit": "kg",
+          "from": 22084.06,
+          "to": 28456.33,
+          "yoy": 28.9
+        },
+        "b": {
+          "code": "01.1.2.6.02",
+          "name": "Jamón cocido",
+          "unit": "kg",
+          "from": 16684.86,
+          "to": 21765.64,
+          "yoy": 30.5
+        },
+        "answer": "b"
+      }
+    ]
+  },
+  {
+    "number": 2,
+    "date": "2026-11-04",
+    "period": "202609",
+    "rounds": [
+      {
+        "a": {
+          "code": "01.1.7.1.08",
+          "name": "Batata",
+          "unit": "kg",
+          "from": 1476.54,
+          "to": 2527.1,
+          "yoy": 71.2
+        },
+        "b": {
+          "code": "06.1.2.1.02",
+          "name": "Algodón",
+          "unit": "100 g",
+          "from": 1635.68,
+          "to": 1815.63,
+          "yoy": 11
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.2.2.01",
+          "name": "Pollo entero",
+          "unit": "kg",
+          "from": 3722.78,
+          "to": 4787.75,
+          "yoy": 28.6
+        },
+        "b": {
+          "code": "01.1.2.1.08",
+          "name": "Carne picada común",
+          "unit": "kg",
+          "from": 7071.04,
+          "to": 10713.74,
+          "yoy": 51.5
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.9.1.01",
+          "name": "Sal fina",
+          "unit": "500 g",
+          "from": 1342.31,
+          "to": 1540.25,
+          "yoy": 14.7
+        },
+        "b": {
+          "code": "01.1.7.2.08",
+          "name": "Tomate entero en conserva",
+          "unit": "Lata 230 g",
+          "from": 1212.13,
+          "to": 1512.8,
+          "yoy": 24.8
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.4.1.01",
+          "name": "Leche fresca entera sachet",
+          "unit": "Litro",
+          "from": 1580.18,
+          "to": 2071.04,
+          "yoy": 31.1
+        },
+        "b": {
+          "code": "01.1.5.3.01",
+          "name": "Manteca",
+          "unit": "200 g",
+          "from": 3734.05,
+          "to": 4600.94,
+          "yoy": 23.2
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "02.1.2.1.01",
+          "name": "Vino común",
+          "unit": "Litro",
+          "from": 2215.06,
+          "to": 2312.09,
+          "yoy": 4.4
+        },
+        "b": {
+          "code": "01.1.6.1.09",
+          "name": "Limón",
+          "unit": "kg",
+          "from": 1477.72,
+          "to": 1501.99,
+          "yoy": 1.6
+        },
+        "answer": "a"
+      }
+    ]
+  },
+  {
+    "number": 3,
+    "date": "2026-11-05",
+    "period": "202609",
+    "rounds": [
+      {
+        "a": {
+          "code": "01.1.7.1.08",
+          "name": "Batata",
+          "unit": "kg",
+          "from": 1476.54,
+          "to": 2527.1,
+          "yoy": 71.2
+        },
+        "b": {
+          "code": "02.1.2.1.01",
+          "name": "Vino común",
+          "unit": "Litro",
+          "from": 2215.06,
+          "to": 2312.09,
+          "yoy": 4.4
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.2.1.12",
+          "name": "Hamburguesas congeladas",
+          "unit": "Env. 4 u",
+          "from": 5441.87,
+          "to": 8388.83,
+          "yoy": 54.2
+        },
+        "b": {
+          "code": "01.1.9.1.01",
+          "name": "Sal fina",
+          "unit": "500 g",
+          "from": 1342.31,
+          "to": 1540.25,
+          "yoy": 14.7
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.5.3.01",
+          "name": "Manteca",
+          "unit": "200 g",
+          "from": 3734.05,
+          "to": 4600.94,
+          "yoy": 23.2
+        },
+        "b": {
+          "code": "06.1.2.1.02",
+          "name": "Algodón",
+          "unit": "100 g",
+          "from": 1635.68,
+          "to": 1815.63,
+          "yoy": 11
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.2.6.11",
+          "name": "Salchichón",
+          "unit": "kg",
+          "from": 9430.3,
+          "to": 11406.23,
+          "yoy": 21
+        },
+        "b": {
+          "code": "01.2.1.1.12",
+          "name": "Yerba mate",
+          "unit": "500 g",
+          "from": 2353.86,
+          "to": 2652.39,
+          "yoy": 12.7
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.2.1.10",
+          "name": "Cuadril",
+          "unit": "kg",
+          "from": 14247.87,
+          "to": 21304.73,
+          "yoy": 49.5
+        },
+        "b": {
+          "code": "01.1.2.1.08",
+          "name": "Carne picada común",
+          "unit": "kg",
+          "from": 7071.04,
+          "to": 10713.74,
+          "yoy": 51.5
+        },
+        "answer": "b"
+      }
+    ]
+  },
+  {
+    "number": 4,
+    "date": "2026-11-06",
+    "period": "202609",
+    "rounds": [
+      {
+        "a": {
+          "code": "01.1.7.1.31",
+          "name": "Zapallo anco",
+          "unit": "kg",
+          "from": 922.05,
+          "to": 2816.26,
+          "yoy": 205.4
+        },
+        "b": {
+          "code": "01.1.7.2.04",
+          "name": "Arvejas secas remojadas",
+          "unit": "Lata 220 g",
+          "from": 842.18,
+          "to": 978.13,
+          "yoy": 16.1
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.2.1.02",
+          "name": "Asado",
+          "unit": "kg",
+          "from": 11190.54,
+          "to": 16836.34,
+          "yoy": 50.5
+        },
+        "b": {
+          "code": "01.1.2.6.11",
+          "name": "Salchichón",
+          "unit": "kg",
+          "from": 9430.3,
+          "to": 11406.23,
+          "yoy": 21
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.1.4.04",
+          "name": "Fideos secos tipo guisero",
+          "unit": "500 g",
+          "from": 1499.24,
+          "to": 1751.06,
+          "yoy": 16.8
+        },
+        "b": {
+          "code": "01.1.4.2.08",
+          "name": "Queso sardo",
+          "unit": "kg",
+          "from": 21643.24,
+          "to": 28423.52,
+          "yoy": 31.3
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.1.1.05",
+          "name": "Pan francés",
+          "unit": "kg",
+          "from": 3833.99,
+          "to": 4958.05,
+          "yoy": 29.3
+        },
+        "b": {
+          "code": "12.1.3.2.08",
+          "name": "Desodorante",
+          "unit": "150 cc",
+          "from": 3414.64,
+          "to": 4550.81,
+          "yoy": 33.3
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.7.1.17",
+          "name": "Lechuga",
+          "unit": "kg",
+          "from": 2940.98,
+          "to": 3634.2,
+          "yoy": 23.6
+        },
+        "b": {
+          "code": "01.1.4.3.05",
+          "name": "Dulce de leche",
+          "unit": "400 g",
+          "from": 3163.75,
+          "to": 3953.16,
+          "yoy": 25
+        },
+        "answer": "b"
+      }
+    ]
+  },
+  {
+    "number": 5,
+    "date": "2026-11-07",
+    "period": "202609",
+    "rounds": [
+      {
+        "a": {
+          "code": "01.1.7.1.26",
+          "name": "Tomate redondo",
+          "unit": "kg",
+          "from": 3310.32,
+          "to": 4038.58,
+          "yoy": 22
+        },
+        "b": {
+          "code": "01.1.7.1.08",
+          "name": "Batata",
+          "unit": "kg",
+          "from": 1476.54,
+          "to": 2527.1,
+          "yoy": 71.2
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.1.4.04",
+          "name": "Fideos secos tipo guisero",
+          "unit": "500 g",
+          "from": 1499.24,
+          "to": 1751.06,
+          "yoy": 16.8
+        },
+        "b": {
+          "code": "01.1.8.1.01",
+          "name": "Azúcar",
+          "unit": "kg",
+          "from": 1150.96,
+          "to": 1597.51,
+          "yoy": 38.8
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.4.1.05",
+          "name": "Leche en polvo entera",
+          "unit": "800 g",
+          "from": 10972.63,
+          "to": 13742.32,
+          "yoy": 25.2
+        },
+        "b": {
+          "code": "01.1.1.2.04",
+          "name": "Galletitas de agua envasadas",
+          "unit": "250 g",
+          "from": 1223.11,
+          "to": 1675.24,
+          "yoy": 37
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "05.6.1.1.10",
+          "name": "Jabón en pan",
+          "unit": "200 g",
+          "from": 1225.84,
+          "to": 1563.64,
+          "yoy": 27.6
+        },
+        "b": {
+          "code": "01.1.5.3.01",
+          "name": "Manteca",
+          "unit": "200 g",
+          "from": 3734.05,
+          "to": 4600.94,
+          "yoy": 23.2
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.9.1.01",
+          "name": "Sal fina",
+          "unit": "500 g",
+          "from": 1342.31,
+          "to": 1540.25,
+          "yoy": 14.7
+        },
+        "b": {
+          "code": "12.1.3.1.04",
+          "name": "Pañales descartables",
+          "unit": "10 u",
+          "from": 4223.13,
+          "to": 4709.66,
+          "yoy": 11.5
+        },
+        "answer": "a"
+      }
+    ]
+  },
+  {
+    "number": 6,
+    "date": "2026-11-08",
+    "period": "202609",
+    "rounds": [
+      {
+        "a": {
+          "code": "01.1.7.1.31",
+          "name": "Zapallo anco",
+          "unit": "kg",
+          "from": 922.05,
+          "to": 2816.26,
+          "yoy": 205.4
+        },
+        "b": {
+          "code": "01.1.4.3.05",
+          "name": "Dulce de leche",
+          "unit": "400 g",
+          "from": 3163.75,
+          "to": 3953.16,
+          "yoy": 25
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.3.1.03",
+          "name": "Filet de merluza fresco",
+          "unit": "kg",
+          "from": 10210.28,
+          "to": 14762.4,
+          "yoy": 44.6
+        },
+        "b": {
+          "code": "01.2.1.1.12",
+          "name": "Yerba mate",
+          "unit": "500 g",
+          "from": 2353.86,
+          "to": 2652.39,
+          "yoy": 12.7
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.2.6.11",
+          "name": "Salchichón",
+          "unit": "kg",
+          "from": 9430.3,
+          "to": 11406.23,
+          "yoy": 21
+        },
+        "b": {
+          "code": "06.1.2.1.02",
+          "name": "Algodón",
+          "unit": "100 g",
+          "from": 1635.68,
+          "to": 1815.63,
+          "yoy": 11
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.4.4.01",
+          "name": "Huevos de gallina",
+          "unit": "Docena",
+          "from": 3987.33,
+          "to": 3940.5,
+          "yoy": -1.2
+        },
+        "b": {
+          "code": "01.1.1.1.03",
+          "name": "Pan de mesa",
+          "unit": "390 g",
+          "from": 3194.04,
+          "to": 3308.31,
+          "yoy": 3.6
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "12.1.3.2.05",
+          "name": "Champú",
+          "unit": "400 cc",
+          "from": 5779.51,
+          "to": 7599.69,
+          "yoy": 31.5
+        },
+        "b": {
+          "code": "05.6.1.1.10",
+          "name": "Jabón en pan",
+          "unit": "200 g",
+          "from": 1225.84,
+          "to": 1563.64,
+          "yoy": 27.6
+        },
+        "answer": "a"
+      }
+    ]
+  },
+  {
+    "number": 7,
+    "date": "2026-11-09",
+    "period": "202609",
+    "rounds": [
+      {
+        "a": {
+          "code": "01.1.2.1.12",
+          "name": "Hamburguesas congeladas",
+          "unit": "Env. 4 u",
+          "from": 5441.87,
+          "to": 8388.83,
+          "yoy": 54.2
+        },
+        "b": {
+          "code": "01.1.1.1.03",
+          "name": "Pan de mesa",
+          "unit": "390 g",
+          "from": 3194.04,
+          "to": 3308.31,
+          "yoy": 3.6
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "12.1.3.1.04",
+          "name": "Pañales descartables",
+          "unit": "10 u",
+          "from": 4223.13,
+          "to": 4709.66,
+          "yoy": 11.5
+        },
+        "b": {
+          "code": "05.6.1.1.11",
+          "name": "Jabón en polvo para ropa",
+          "unit": "800 g",
+          "from": 2577.61,
+          "to": 3547.74,
+          "yoy": 37.6
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.3.1.03",
+          "name": "Filet de merluza fresco",
+          "unit": "kg",
+          "from": 10210.28,
+          "to": 14762.4,
+          "yoy": 44.6
+        },
+        "b": {
+          "code": "01.1.4.2.03",
+          "name": "Queso cremoso",
+          "unit": "kg",
+          "from": 11290.15,
+          "to": 14603.36,
+          "yoy": 29.3
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.2.6.11",
+          "name": "Salchichón",
+          "unit": "kg",
+          "from": 9430.3,
+          "to": 11406.23,
+          "yoy": 21
+        },
+        "b": {
+          "code": "01.1.7.2.04",
+          "name": "Arvejas secas remojadas",
+          "unit": "Lata 220 g",
+          "from": 842.18,
+          "to": 978.13,
+          "yoy": 16.1
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.7.1.26",
+          "name": "Tomate redondo",
+          "unit": "kg",
+          "from": 3310.32,
+          "to": 4038.58,
+          "yoy": 22
+        },
+        "b": {
+          "code": "01.1.4.1.05",
+          "name": "Leche en polvo entera",
+          "unit": "800 g",
+          "from": 10972.63,
+          "to": 13742.32,
+          "yoy": 25.2
+        },
+        "answer": "b"
+      }
+    ]
+  },
+  {
+    "number": 8,
+    "date": "2026-11-10",
+    "period": "202609",
+    "rounds": [
+      {
+        "a": {
+          "code": "01.1.1.4.04",
+          "name": "Fideos secos tipo guisero",
+          "unit": "500 g",
+          "from": 1499.24,
+          "to": 1751.06,
+          "yoy": 16.8
+        },
+        "b": {
+          "code": "01.1.7.1.31",
+          "name": "Zapallo anco",
+          "unit": "kg",
+          "from": 922.05,
+          "to": 2816.26,
+          "yoy": 205.4
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.2.2.1.01",
+          "name": "Agua sin gas",
+          "unit": "1,5 litros",
+          "from": 1465.62,
+          "to": 1731.27,
+          "yoy": 18.1
+        },
+        "b": {
+          "code": "01.1.2.1.08",
+          "name": "Carne picada común",
+          "unit": "kg",
+          "from": 7071.04,
+          "to": 10713.74,
+          "yoy": 51.5
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.4.2.03",
+          "name": "Queso cremoso",
+          "unit": "kg",
+          "from": 11290.15,
+          "to": 14603.36,
+          "yoy": 29.3
+        },
+        "b": {
+          "code": "06.1.2.1.02",
+          "name": "Algodón",
+          "unit": "100 g",
+          "from": 1635.68,
+          "to": 1815.63,
+          "yoy": 11
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "12.1.3.2.05",
+          "name": "Champú",
+          "unit": "400 cc",
+          "from": 5779.51,
+          "to": 7599.69,
+          "yoy": 31.5
+        },
+        "b": {
+          "code": "01.1.7.1.17",
+          "name": "Lechuga",
+          "unit": "kg",
+          "from": 2940.98,
+          "to": 3634.2,
+          "yoy": 23.6
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.2.6.11",
+          "name": "Salchichón",
+          "unit": "kg",
+          "from": 9430.3,
+          "to": 11406.23,
+          "yoy": 21
+        },
+        "b": {
+          "code": "01.2.1.1.02",
+          "name": "Café molido",
+          "unit": "500 g",
+          "from": 11954.58,
+          "to": 14027.98,
+          "yoy": 17.3
+        },
+        "answer": "a"
+      }
+    ]
+  },
+  {
+    "number": 9,
+    "date": "2026-11-11",
+    "period": "202609",
+    "rounds": [
+      {
+        "a": {
+          "code": "01.1.2.1.08",
+          "name": "Carne picada común",
+          "unit": "kg",
+          "from": 7071.04,
+          "to": 10713.74,
+          "yoy": 51.5
+        },
+        "b": {
+          "code": "01.1.7.1.31",
+          "name": "Zapallo anco",
+          "unit": "kg",
+          "from": 922.05,
+          "to": 2816.26,
+          "yoy": 205.4
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.1.3.01",
+          "name": "Arroz blanco simple",
+          "unit": "kg",
+          "from": 1745.29,
+          "to": 1905.45,
+          "yoy": 9.2
+        },
+        "b": {
+          "code": "01.1.2.6.02",
+          "name": "Jamón cocido",
+          "unit": "kg",
+          "from": 16684.86,
+          "to": 21765.64,
+          "yoy": 30.5
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.5.3.01",
+          "name": "Manteca",
+          "unit": "200 g",
+          "from": 3734.05,
+          "to": 4600.94,
+          "yoy": 23.2
+        },
+        "b": {
+          "code": "12.1.3.2.08",
+          "name": "Desodorante",
+          "unit": "150 cc",
+          "from": 3414.64,
+          "to": 4550.81,
+          "yoy": 33.3
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "12.1.3.1.04",
+          "name": "Pañales descartables",
+          "unit": "10 u",
+          "from": 4223.13,
+          "to": 4709.66,
+          "yoy": 11.5
+        },
+        "b": {
+          "code": "01.1.1.4.04",
+          "name": "Fideos secos tipo guisero",
+          "unit": "500 g",
+          "from": 1499.24,
+          "to": 1751.06,
+          "yoy": 16.8
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.1.2.05",
+          "name": "Galletitas dulces envasadas sin relleno",
+          "unit": "150 g",
+          "from": 1245.56,
+          "to": 1608.11,
+          "yoy": 29.1
+        },
+        "b": {
+          "code": "12.1.3.2.05",
+          "name": "Champú",
+          "unit": "400 cc",
+          "from": 5779.51,
+          "to": 7599.69,
+          "yoy": 31.5
+        },
+        "answer": "b"
+      }
+    ]
+  },
+  {
+    "number": 10,
+    "date": "2026-11-12",
+    "period": "202609",
+    "rounds": [
+      {
+        "a": {
+          "code": "01.1.4.3.02",
+          "name": "Yogur firme",
+          "unit": "195 cc",
+          "from": 2225.25,
+          "to": 2598.41,
+          "yoy": 16.8
+        },
+        "b": {
+          "code": "01.1.7.1.19",
+          "name": "Papa",
+          "unit": "kg",
+          "from": 823,
+          "to": 2201.11,
+          "yoy": 167.4
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "02.1.2.1.01",
+          "name": "Vino común",
+          "unit": "Litro",
+          "from": 2215.06,
+          "to": 2312.09,
+          "yoy": 4.4
+        },
+        "b": {
+          "code": "01.1.4.1.05",
+          "name": "Leche en polvo entera",
+          "unit": "800 g",
+          "from": 10972.63,
+          "to": 13742.32,
+          "yoy": 25.2
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.2.5.04",
+          "name": "Salchicha tipo viena",
+          "unit": "Env. 6 u",
+          "from": 2129.6,
+          "to": 2902.42,
+          "yoy": 36.3
+        },
+        "b": {
+          "code": "01.1.9.3.06",
+          "name": "Polvo para flan",
+          "unit": "8 porciones",
+          "from": 1115.04,
+          "to": 1354.77,
+          "yoy": 21.5
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.4.2.03",
+          "name": "Queso cremoso",
+          "unit": "kg",
+          "from": 11290.15,
+          "to": 14603.36,
+          "yoy": 29.3
+        },
+        "b": {
+          "code": "01.1.1.3.11",
+          "name": "Harina de trigo común",
+          "unit": "kg",
+          "from": 914.65,
+          "to": 1097.92,
+          "yoy": 20
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.1.1.05",
+          "name": "Pan francés",
+          "unit": "kg",
+          "from": 3833.99,
+          "to": 4958.05,
+          "yoy": 29.3
+        },
+        "b": {
+          "code": "01.1.4.2.08",
+          "name": "Queso sardo",
+          "unit": "kg",
+          "from": 21643.24,
+          "to": 28423.52,
+          "yoy": 31.3
+        },
+        "answer": "b"
+      }
+    ]
+  },
+  {
+    "number": 11,
+    "date": "2026-11-13",
+    "period": "202609",
+    "rounds": [
+      {
+        "a": {
+          "code": "01.1.4.3.05",
+          "name": "Dulce de leche",
+          "unit": "400 g",
+          "from": 3163.75,
+          "to": 3953.16,
+          "yoy": 25
+        },
+        "b": {
+          "code": "01.1.7.1.10",
+          "name": "Cebolla",
+          "unit": "kg",
+          "from": 753.4,
+          "to": 2696.23,
+          "yoy": 257.9
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.6.1.09",
+          "name": "Limón",
+          "unit": "kg",
+          "from": 1477.72,
+          "to": 1501.99,
+          "yoy": 1.6
+        },
+        "b": {
+          "code": "01.1.2.6.09",
+          "name": "Salame",
+          "unit": "kg",
+          "from": 20258.1,
+          "to": 26910.3,
+          "yoy": 32.8
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.7.2.04",
+          "name": "Arvejas secas remojadas",
+          "unit": "Lata 220 g",
+          "from": 842.18,
+          "to": 978.13,
+          "yoy": 16.1
+        },
+        "b": {
+          "code": "05.6.1.1.08",
+          "name": "Detergente líquido",
+          "unit": "750 cc",
+          "from": 1702.99,
+          "to": 2150.14,
+          "yoy": 26.3
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.2.2.01",
+          "name": "Pollo entero",
+          "unit": "kg",
+          "from": 3722.78,
+          "to": 4787.75,
+          "yoy": 28.6
+        },
+        "b": {
+          "code": "01.1.1.2.04",
+          "name": "Galletitas de agua envasadas",
+          "unit": "250 g",
+          "from": 1223.11,
+          "to": 1675.24,
+          "yoy": 37
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "12.1.3.2.05",
+          "name": "Champú",
+          "unit": "400 cc",
+          "from": 5779.51,
+          "to": 7599.69,
+          "yoy": 31.5
+        },
+        "b": {
+          "code": "01.1.4.2.03",
+          "name": "Queso cremoso",
+          "unit": "kg",
+          "from": 11290.15,
+          "to": 14603.36,
+          "yoy": 29.3
+        },
+        "answer": "a"
+      }
+    ]
+  },
+  {
+    "number": 12,
+    "date": "2026-11-14",
+    "period": "202609",
+    "rounds": [
+      {
+        "a": {
+          "code": "01.1.7.1.10",
+          "name": "Cebolla",
+          "unit": "kg",
+          "from": 753.4,
+          "to": 2696.23,
+          "yoy": 257.9
+        },
+        "b": {
+          "code": "01.1.2.1.17",
+          "name": "Nalga",
+          "unit": "kg",
+          "from": 14598.47,
+          "to": 21914.04,
+          "yoy": 50.1
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.4.4.01",
+          "name": "Huevos de gallina",
+          "unit": "Docena",
+          "from": 3987.33,
+          "to": 3940.5,
+          "yoy": -1.2
+        },
+        "b": {
+          "code": "01.1.2.6.09",
+          "name": "Salame",
+          "unit": "kg",
+          "from": 20258.1,
+          "to": 26910.3,
+          "yoy": 32.8
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.1.2.05",
+          "name": "Galletitas dulces envasadas sin relleno",
+          "unit": "150 g",
+          "from": 1245.56,
+          "to": 1608.11,
+          "yoy": 29.1
+        },
+        "b": {
+          "code": "06.1.2.1.02",
+          "name": "Algodón",
+          "unit": "100 g",
+          "from": 1635.68,
+          "to": 1815.63,
+          "yoy": 11
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.5.1.02",
+          "name": "Aceite de girasol",
+          "unit": "Bot. 1,5 litros",
+          "from": 4696.85,
+          "to": 6981.99,
+          "yoy": 48.7
+        },
+        "b": {
+          "code": "01.1.6.1.11",
+          "name": "Manzana deliciosa",
+          "unit": "kg",
+          "from": 2602.07,
+          "to": 4064.45,
+          "yoy": 56.2
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.4.2.06",
+          "name": "Queso pategrás",
+          "unit": "kg",
+          "from": 22084.06,
+          "to": 28456.33,
+          "yoy": 28.9
+        },
+        "b": {
+          "code": "01.1.4.2.08",
+          "name": "Queso sardo",
+          "unit": "kg",
+          "from": 21643.24,
+          "to": 28423.52,
+          "yoy": 31.3
+        },
+        "answer": "b"
+      }
+    ]
+  },
+  {
+    "number": 13,
+    "date": "2026-11-15",
+    "period": "202609",
+    "rounds": [
+      {
+        "a": {
+          "code": "01.1.7.1.10",
+          "name": "Cebolla",
+          "unit": "kg",
+          "from": 753.4,
+          "to": 2696.23,
+          "yoy": 257.9
+        },
+        "b": {
+          "code": "01.1.5.3.01",
+          "name": "Manteca",
+          "unit": "200 g",
+          "from": 3734.05,
+          "to": 4600.94,
+          "yoy": 23.2
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.2.1.17",
+          "name": "Nalga",
+          "unit": "kg",
+          "from": 14598.47,
+          "to": 21914.04,
+          "yoy": 50.1
+        },
+        "b": {
+          "code": "01.1.1.1.05",
+          "name": "Pan francés",
+          "unit": "kg",
+          "from": 3833.99,
+          "to": 4958.05,
+          "yoy": 29.3
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.2.1.08",
+          "name": "Carne picada común",
+          "unit": "kg",
+          "from": 7071.04,
+          "to": 10713.74,
+          "yoy": 51.5
+        },
+        "b": {
+          "code": "01.1.1.2.04",
+          "name": "Galletitas de agua envasadas",
+          "unit": "250 g",
+          "from": 1223.11,
+          "to": 1675.24,
+          "yoy": 37
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.9.1.01",
+          "name": "Sal fina",
+          "unit": "500 g",
+          "from": 1342.31,
+          "to": 1540.25,
+          "yoy": 14.7
+        },
+        "b": {
+          "code": "01.1.1.3.01",
+          "name": "Arroz blanco simple",
+          "unit": "kg",
+          "from": 1745.29,
+          "to": 1905.45,
+          "yoy": 9.2
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "02.1.3.1.01",
+          "name": "Cerveza en botella",
+          "unit": "Litro",
+          "from": 3432.12,
+          "to": 4394.49,
+          "yoy": 28
+        },
+        "b": {
+          "code": "01.1.4.2.03",
+          "name": "Queso cremoso",
+          "unit": "kg",
+          "from": 11290.15,
+          "to": 14603.36,
+          "yoy": 29.3
+        },
+        "answer": "b"
+      }
+    ]
+  },
+  {
+    "number": 14,
+    "date": "2026-11-16",
+    "period": "202609",
+    "rounds": [
+      {
+        "a": {
+          "code": "01.1.7.1.19",
+          "name": "Papa",
+          "unit": "kg",
+          "from": 823,
+          "to": 2201.11,
+          "yoy": 167.4
+        },
+        "b": {
+          "code": "01.1.4.1.05",
+          "name": "Leche en polvo entera",
+          "unit": "800 g",
+          "from": 10972.63,
+          "to": 13742.32,
+          "yoy": 25.2
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.2.1.18",
+          "name": "Paleta",
+          "unit": "kg",
+          "from": 11643.72,
+          "to": 17278.8,
+          "yoy": 48.4
+        },
+        "b": {
+          "code": "01.1.4.3.02",
+          "name": "Yogur firme",
+          "unit": "195 cc",
+          "from": 2225.25,
+          "to": 2598.41,
+          "yoy": 16.8
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.1.3.11",
+          "name": "Harina de trigo común",
+          "unit": "kg",
+          "from": 914.65,
+          "to": 1097.92,
+          "yoy": 20
+        },
+        "b": {
+          "code": "01.1.6.1.09",
+          "name": "Limón",
+          "unit": "kg",
+          "from": 1477.72,
+          "to": 1501.99,
+          "yoy": 1.6
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "02.1.2.1.01",
+          "name": "Vino común",
+          "unit": "Litro",
+          "from": 2215.06,
+          "to": 2312.09,
+          "yoy": 4.4
+        },
+        "b": {
+          "code": "01.1.4.4.01",
+          "name": "Huevos de gallina",
+          "unit": "Docena",
+          "from": 3987.33,
+          "to": 3940.5,
+          "yoy": -1.2
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.2.2.1.04",
+          "name": "Gaseosa base cola",
+          "unit": "1,5 litros",
+          "from": 2854.77,
+          "to": 3806.44,
+          "yoy": 33.3
+        },
+        "b": {
+          "code": "12.1.3.2.11",
+          "name": "Jabón de tocador",
+          "unit": "125 g",
+          "from": 1132.33,
+          "to": 1543.06,
+          "yoy": 36.3
+        },
+        "answer": "b"
+      }
+    ]
+  },
+  {
+    "number": 15,
+    "date": "2026-11-17",
+    "period": "202609",
+    "rounds": [
+      {
+        "a": {
+          "code": "01.1.2.1.12",
+          "name": "Hamburguesas congeladas",
+          "unit": "Env. 4 u",
+          "from": 5441.87,
+          "to": 8388.83,
+          "yoy": 54.2
+        },
+        "b": {
+          "code": "01.1.4.4.01",
+          "name": "Huevos de gallina",
+          "unit": "Docena",
+          "from": 3987.33,
+          "to": 3940.5,
+          "yoy": -1.2
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.2.1.10",
+          "name": "Cuadril",
+          "unit": "kg",
+          "from": 14247.87,
+          "to": 21304.73,
+          "yoy": 49.5
+        },
+        "b": {
+          "code": "01.1.9.3.06",
+          "name": "Polvo para flan",
+          "unit": "8 porciones",
+          "from": 1115.04,
+          "to": 1354.77,
+          "yoy": 21.5
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.1.4.04",
+          "name": "Fideos secos tipo guisero",
+          "unit": "500 g",
+          "from": 1499.24,
+          "to": 1751.06,
+          "yoy": 16.8
+        },
+        "b": {
+          "code": "01.1.2.6.09",
+          "name": "Salame",
+          "unit": "kg",
+          "from": 20258.1,
+          "to": 26910.3,
+          "yoy": 32.8
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.2.2.1.04",
+          "name": "Gaseosa base cola",
+          "unit": "1,5 litros",
+          "from": 2854.77,
+          "to": 3806.44,
+          "yoy": 33.3
+        },
+        "b": {
+          "code": "02.1.3.1.01",
+          "name": "Cerveza en botella",
+          "unit": "Litro",
+          "from": 3432.12,
+          "to": 4394.49,
+          "yoy": 28
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.2.6.02",
+          "name": "Jamón cocido",
+          "unit": "kg",
+          "from": 16684.86,
+          "to": 21765.64,
+          "yoy": 30.5
+        },
+        "b": {
+          "code": "01.1.1.2.05",
+          "name": "Galletitas dulces envasadas sin relleno",
+          "unit": "150 g",
+          "from": 1245.56,
+          "to": 1608.11,
+          "yoy": 29.1
+        },
+        "answer": "a"
+      }
+    ]
+  },
+  {
+    "number": 16,
+    "date": "2026-11-18",
+    "period": "202609",
+    "rounds": [
+      {
+        "a": {
+          "code": "01.1.6.1.11",
+          "name": "Manzana deliciosa",
+          "unit": "kg",
+          "from": 2602.07,
+          "to": 4064.45,
+          "yoy": 56.2
+        },
+        "b": {
+          "code": "01.2.1.1.12",
+          "name": "Yerba mate",
+          "unit": "500 g",
+          "from": 2353.86,
+          "to": 2652.39,
+          "yoy": 12.7
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "05.6.1.1.11",
+          "name": "Jabón en polvo para ropa",
+          "unit": "800 g",
+          "from": 2577.61,
+          "to": 3547.74,
+          "yoy": 37.6
+        },
+        "b": {
+          "code": "01.1.4.3.02",
+          "name": "Yogur firme",
+          "unit": "195 cc",
+          "from": 2225.25,
+          "to": 2598.41,
+          "yoy": 16.8
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.2.1.12",
+          "name": "Hamburguesas congeladas",
+          "unit": "Env. 4 u",
+          "from": 5441.87,
+          "to": 8388.83,
+          "yoy": 54.2
+        },
+        "b": {
+          "code": "01.1.2.5.04",
+          "name": "Salchicha tipo viena",
+          "unit": "Env. 6 u",
+          "from": 2129.6,
+          "to": 2902.42,
+          "yoy": 36.3
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.2.2.1.01",
+          "name": "Agua sin gas",
+          "unit": "1,5 litros",
+          "from": 1465.62,
+          "to": 1731.27,
+          "yoy": 18.1
+        },
+        "b": {
+          "code": "05.6.1.1.08",
+          "name": "Detergente líquido",
+          "unit": "750 cc",
+          "from": 1702.99,
+          "to": 2150.14,
+          "yoy": 26.3
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.1.3.11",
+          "name": "Harina de trigo común",
+          "unit": "kg",
+          "from": 914.65,
+          "to": 1097.92,
+          "yoy": 20
+        },
+        "b": {
+          "code": "01.1.7.1.17",
+          "name": "Lechuga",
+          "unit": "kg",
+          "from": 2940.98,
+          "to": 3634.2,
+          "yoy": 23.6
+        },
+        "answer": "b"
+      }
+    ]
+  },
+  {
+    "number": 17,
+    "date": "2026-11-19",
+    "period": "202609",
+    "rounds": [
+      {
+        "a": {
+          "code": "01.1.7.1.31",
+          "name": "Zapallo anco",
+          "unit": "kg",
+          "from": 922.05,
+          "to": 2816.26,
+          "yoy": 205.4
+        },
+        "b": {
+          "code": "01.1.7.1.08",
+          "name": "Batata",
+          "unit": "kg",
+          "from": 1476.54,
+          "to": 2527.1,
+          "yoy": 71.2
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.2.1.18",
+          "name": "Paleta",
+          "unit": "kg",
+          "from": 11643.72,
+          "to": 17278.8,
+          "yoy": 48.4
+        },
+        "b": {
+          "code": "01.1.6.1.02",
+          "name": "Banana",
+          "unit": "kg",
+          "from": 2627.06,
+          "to": 3239.46,
+          "yoy": 23.3
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.1.2.04",
+          "name": "Galletitas de agua envasadas",
+          "unit": "250 g",
+          "from": 1223.11,
+          "to": 1675.24,
+          "yoy": 37
+        },
+        "b": {
+          "code": "01.1.6.1.11",
+          "name": "Manzana deliciosa",
+          "unit": "kg",
+          "from": 2602.07,
+          "to": 4064.45,
+          "yoy": 56.2
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.5.3.01",
+          "name": "Manteca",
+          "unit": "200 g",
+          "from": 3734.05,
+          "to": 4600.94,
+          "yoy": 23.2
+        },
+        "b": {
+          "code": "01.1.2.2.01",
+          "name": "Pollo entero",
+          "unit": "kg",
+          "from": 3722.78,
+          "to": 4787.75,
+          "yoy": 28.6
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.5.1.02",
+          "name": "Aceite de girasol",
+          "unit": "Bot. 1,5 litros",
+          "from": 4696.85,
+          "to": 6981.99,
+          "yoy": 48.7
+        },
+        "b": {
+          "code": "01.1.2.1.02",
+          "name": "Asado",
+          "unit": "kg",
+          "from": 11190.54,
+          "to": 16836.34,
+          "yoy": 50.5
+        },
+        "answer": "b"
+      }
+    ]
+  },
+  {
+    "number": 18,
+    "date": "2026-11-20",
+    "period": "202609",
+    "rounds": [
+      {
+        "a": {
+          "code": "01.1.2.6.11",
+          "name": "Salchichón",
+          "unit": "kg",
+          "from": 9430.3,
+          "to": 11406.23,
+          "yoy": 21
+        },
+        "b": {
+          "code": "01.1.7.1.31",
+          "name": "Zapallo anco",
+          "unit": "kg",
+          "from": 922.05,
+          "to": 2816.26,
+          "yoy": 205.4
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.2.1.18",
+          "name": "Paleta",
+          "unit": "kg",
+          "from": 11643.72,
+          "to": 17278.8,
+          "yoy": 48.4
+        },
+        "b": {
+          "code": "01.1.7.1.17",
+          "name": "Lechuga",
+          "unit": "kg",
+          "from": 2940.98,
+          "to": 3634.2,
+          "yoy": 23.6
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.6.1.13",
+          "name": "Naranja",
+          "unit": "kg",
+          "from": 1060.6,
+          "to": 1207.35,
+          "yoy": 13.8
+        },
+        "b": {
+          "code": "01.1.7.2.08",
+          "name": "Tomate entero en conserva",
+          "unit": "Lata 230 g",
+          "from": 1212.13,
+          "to": 1512.8,
+          "yoy": 24.8
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.4.3.05",
+          "name": "Dulce de leche",
+          "unit": "400 g",
+          "from": 3163.75,
+          "to": 3953.16,
+          "yoy": 25
+        },
+        "b": {
+          "code": "01.1.7.2.04",
+          "name": "Arvejas secas remojadas",
+          "unit": "Lata 220 g",
+          "from": 842.18,
+          "to": 978.13,
+          "yoy": 16.1
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "05.6.1.1.08",
+          "name": "Detergente líquido",
+          "unit": "750 cc",
+          "from": 1702.99,
+          "to": 2150.14,
+          "yoy": 26.3
+        },
+        "b": {
+          "code": "01.1.1.2.05",
+          "name": "Galletitas dulces envasadas sin relleno",
+          "unit": "150 g",
+          "from": 1245.56,
+          "to": 1608.11,
+          "yoy": 29.1
+        },
+        "answer": "b"
+      }
+    ]
+  },
+  {
+    "number": 19,
+    "date": "2026-11-21",
+    "period": "202609",
+    "rounds": [
+      {
+        "a": {
+          "code": "01.1.7.1.19",
+          "name": "Papa",
+          "unit": "kg",
+          "from": 823,
+          "to": 2201.11,
+          "yoy": 167.4
+        },
+        "b": {
+          "code": "01.1.1.1.05",
+          "name": "Pan francés",
+          "unit": "kg",
+          "from": 3833.99,
+          "to": 4958.05,
+          "yoy": 29.3
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.4.3.02",
+          "name": "Yogur firme",
+          "unit": "195 cc",
+          "from": 2225.25,
+          "to": 2598.41,
+          "yoy": 16.8
+        },
+        "b": {
+          "code": "01.1.2.1.17",
+          "name": "Nalga",
+          "unit": "kg",
+          "from": 14598.47,
+          "to": 21914.04,
+          "yoy": 50.1
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "12.1.3.2.11",
+          "name": "Jabón de tocador",
+          "unit": "125 g",
+          "from": 1132.33,
+          "to": 1543.06,
+          "yoy": 36.3
+        },
+        "b": {
+          "code": "05.6.1.1.08",
+          "name": "Detergente líquido",
+          "unit": "750 cc",
+          "from": 1702.99,
+          "to": 2150.14,
+          "yoy": 26.3
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.7.1.17",
+          "name": "Lechuga",
+          "unit": "kg",
+          "from": 2940.98,
+          "to": 3634.2,
+          "yoy": 23.6
+        },
+        "b": {
+          "code": "01.1.4.2.08",
+          "name": "Queso sardo",
+          "unit": "kg",
+          "from": 21643.24,
+          "to": 28423.52,
+          "yoy": 31.3
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.4.2.06",
+          "name": "Queso pategrás",
+          "unit": "kg",
+          "from": 22084.06,
+          "to": 28456.33,
+          "yoy": 28.9
+        },
+        "b": {
+          "code": "01.1.4.1.01",
+          "name": "Leche fresca entera sachet",
+          "unit": "Litro",
+          "from": 1580.18,
+          "to": 2071.04,
+          "yoy": 31.1
+        },
+        "answer": "b"
+      }
+    ]
+  },
+  {
+    "number": 20,
+    "date": "2026-11-22",
+    "period": "202609",
+    "rounds": [
+      {
+        "a": {
+          "code": "01.1.7.1.10",
+          "name": "Cebolla",
+          "unit": "kg",
+          "from": 753.4,
+          "to": 2696.23,
+          "yoy": 257.9
+        },
+        "b": {
+          "code": "01.1.8.1.01",
+          "name": "Azúcar",
+          "unit": "kg",
+          "from": 1150.96,
+          "to": 1597.51,
+          "yoy": 38.8
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.2.5.04",
+          "name": "Salchicha tipo viena",
+          "unit": "Env. 6 u",
+          "from": 2129.6,
+          "to": 2902.42,
+          "yoy": 36.3
+        },
+        "b": {
+          "code": "01.1.9.1.01",
+          "name": "Sal fina",
+          "unit": "500 g",
+          "from": 1342.31,
+          "to": 1540.25,
+          "yoy": 14.7
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.5.1.02",
+          "name": "Aceite de girasol",
+          "unit": "Bot. 1,5 litros",
+          "from": 4696.85,
+          "to": 6981.99,
+          "yoy": 48.7
+        },
+        "b": {
+          "code": "01.1.2.6.02",
+          "name": "Jamón cocido",
+          "unit": "kg",
+          "from": 16684.86,
+          "to": 21765.64,
+          "yoy": 30.5
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.5.3.01",
+          "name": "Manteca",
+          "unit": "200 g",
+          "from": 3734.05,
+          "to": 4600.94,
+          "yoy": 23.2
+        },
+        "b": {
+          "code": "12.1.3.2.05",
+          "name": "Champú",
+          "unit": "400 cc",
+          "from": 5779.51,
+          "to": 7599.69,
+          "yoy": 31.5
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.4.2.08",
+          "name": "Queso sardo",
+          "unit": "kg",
+          "from": 21643.24,
+          "to": 28423.52,
+          "yoy": 31.3
+        },
+        "b": {
+          "code": "01.1.2.6.09",
+          "name": "Salame",
+          "unit": "kg",
+          "from": 20258.1,
+          "to": 26910.3,
+          "yoy": 32.8
+        },
+        "answer": "b"
+      }
+    ]
+  },
+  {
+    "number": 21,
+    "date": "2026-11-23",
+    "period": "202609",
+    "rounds": [
+      {
+        "a": {
+          "code": "01.1.7.1.31",
+          "name": "Zapallo anco",
+          "unit": "kg",
+          "from": 922.05,
+          "to": 2816.26,
+          "yoy": 205.4
+        },
+        "b": {
+          "code": "01.1.4.1.01",
+          "name": "Leche fresca entera sachet",
+          "unit": "Litro",
+          "from": 1580.18,
+          "to": 2071.04,
+          "yoy": 31.1
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.2.1.08",
+          "name": "Carne picada común",
+          "unit": "kg",
+          "from": 7071.04,
+          "to": 10713.74,
+          "yoy": 51.5
+        },
+        "b": {
+          "code": "01.1.4.1.05",
+          "name": "Leche en polvo entera",
+          "unit": "800 g",
+          "from": 10972.63,
+          "to": 13742.32,
+          "yoy": 25.2
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.6.1.13",
+          "name": "Naranja",
+          "unit": "kg",
+          "from": 1060.6,
+          "to": 1207.35,
+          "yoy": 13.8
+        },
+        "b": {
+          "code": "01.1.2.6.09",
+          "name": "Salame",
+          "unit": "kg",
+          "from": 20258.1,
+          "to": 26910.3,
+          "yoy": 32.8
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.9.3.06",
+          "name": "Polvo para flan",
+          "unit": "8 porciones",
+          "from": 1115.04,
+          "to": 1354.77,
+          "yoy": 21.5
+        },
+        "b": {
+          "code": "01.2.1.1.02",
+          "name": "Café molido",
+          "unit": "500 g",
+          "from": 11954.58,
+          "to": 14027.98,
+          "yoy": 17.3
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.2.6.02",
+          "name": "Jamón cocido",
+          "unit": "kg",
+          "from": 16684.86,
+          "to": 21765.64,
+          "yoy": 30.5
+        },
+        "b": {
+          "code": "12.1.3.2.05",
+          "name": "Champú",
+          "unit": "400 cc",
+          "from": 5779.51,
+          "to": 7599.69,
+          "yoy": 31.5
+        },
+        "answer": "b"
+      }
+    ]
+  },
+  {
+    "number": 22,
+    "date": "2026-11-24",
+    "period": "202609",
+    "rounds": [
+      {
+        "a": {
+          "code": "01.1.7.1.19",
+          "name": "Papa",
+          "unit": "kg",
+          "from": 823,
+          "to": 2201.11,
+          "yoy": 167.4
+        },
+        "b": {
+          "code": "01.1.6.1.11",
+          "name": "Manzana deliciosa",
+          "unit": "kg",
+          "from": 2602.07,
+          "to": 4064.45,
+          "yoy": 56.2
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.2.1.02",
+          "name": "Asado",
+          "unit": "kg",
+          "from": 11190.54,
+          "to": 16836.34,
+          "yoy": 50.5
+        },
+        "b": {
+          "code": "01.1.4.1.05",
+          "name": "Leche en polvo entera",
+          "unit": "800 g",
+          "from": 10972.63,
+          "to": 13742.32,
+          "yoy": 25.2
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "05.6.1.1.11",
+          "name": "Jabón en polvo para ropa",
+          "unit": "800 g",
+          "from": 2577.61,
+          "to": 3547.74,
+          "yoy": 37.6
+        },
+        "b": {
+          "code": "01.1.2.1.18",
+          "name": "Paleta",
+          "unit": "kg",
+          "from": 11643.72,
+          "to": 17278.8,
+          "yoy": 48.4
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "05.6.1.1.08",
+          "name": "Detergente líquido",
+          "unit": "750 cc",
+          "from": 1702.99,
+          "to": 2150.14,
+          "yoy": 26.3
+        },
+        "b": {
+          "code": "01.1.2.6.09",
+          "name": "Salame",
+          "unit": "kg",
+          "from": 20258.1,
+          "to": 26910.3,
+          "yoy": 32.8
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.6.1.13",
+          "name": "Naranja",
+          "unit": "kg",
+          "from": 1060.6,
+          "to": 1207.35,
+          "yoy": 13.8
+        },
+        "b": {
+          "code": "05.6.1.1.12",
+          "name": "Lavandina",
+          "unit": "1.000 cc",
+          "from": 1223.55,
+          "to": 1380.53,
+          "yoy": 12.8
+        },
+        "answer": "a"
+      }
+    ]
+  },
+  {
+    "number": 23,
+    "date": "2026-11-25",
+    "period": "202609",
+    "rounds": [
+      {
+        "a": {
+          "code": "01.1.2.1.02",
+          "name": "Asado",
+          "unit": "kg",
+          "from": 11190.54,
+          "to": 16836.34,
+          "yoy": 50.5
+        },
+        "b": {
+          "code": "01.1.1.3.01",
+          "name": "Arroz blanco simple",
+          "unit": "kg",
+          "from": 1745.29,
+          "to": 1905.45,
+          "yoy": 9.2
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.4.1.01",
+          "name": "Leche fresca entera sachet",
+          "unit": "Litro",
+          "from": 1580.18,
+          "to": 2071.04,
+          "yoy": 31.1
+        },
+        "b": {
+          "code": "02.1.2.1.01",
+          "name": "Vino común",
+          "unit": "Litro",
+          "from": 2215.06,
+          "to": 2312.09,
+          "yoy": 4.4
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.2.1.18",
+          "name": "Paleta",
+          "unit": "kg",
+          "from": 11643.72,
+          "to": 17278.8,
+          "yoy": 48.4
+        },
+        "b": {
+          "code": "01.1.4.2.08",
+          "name": "Queso sardo",
+          "unit": "kg",
+          "from": 21643.24,
+          "to": 28423.52,
+          "yoy": 31.3
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.8.1.01",
+          "name": "Azúcar",
+          "unit": "kg",
+          "from": 1150.96,
+          "to": 1597.51,
+          "yoy": 38.8
+        },
+        "b": {
+          "code": "01.1.3.1.03",
+          "name": "Filet de merluza fresco",
+          "unit": "kg",
+          "from": 10210.28,
+          "to": 14762.4,
+          "yoy": 44.6
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.2.2.1.01",
+          "name": "Agua sin gas",
+          "unit": "1,5 litros",
+          "from": 1465.62,
+          "to": 1731.27,
+          "yoy": 18.1
+        },
+        "b": {
+          "code": "01.1.7.2.04",
+          "name": "Arvejas secas remojadas",
+          "unit": "Lata 220 g",
+          "from": 842.18,
+          "to": 978.13,
+          "yoy": 16.1
+        },
+        "answer": "a"
+      }
+    ]
+  },
+  {
+    "number": 24,
+    "date": "2026-11-26",
+    "period": "202609",
+    "rounds": [
+      {
+        "a": {
+          "code": "01.1.2.2.01",
+          "name": "Pollo entero",
+          "unit": "kg",
+          "from": 3722.78,
+          "to": 4787.75,
+          "yoy": 28.6
+        },
+        "b": {
+          "code": "01.1.7.1.10",
+          "name": "Cebolla",
+          "unit": "kg",
+          "from": 753.4,
+          "to": 2696.23,
+          "yoy": 257.9
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.2.1.08",
+          "name": "Carne picada común",
+          "unit": "kg",
+          "from": 7071.04,
+          "to": 10713.74,
+          "yoy": 51.5
+        },
+        "b": {
+          "code": "01.1.4.3.05",
+          "name": "Dulce de leche",
+          "unit": "400 g",
+          "from": 3163.75,
+          "to": 3953.16,
+          "yoy": 25
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.4.1.01",
+          "name": "Leche fresca entera sachet",
+          "unit": "Litro",
+          "from": 1580.18,
+          "to": 2071.04,
+          "yoy": 31.1
+        },
+        "b": {
+          "code": "01.1.6.1.13",
+          "name": "Naranja",
+          "unit": "kg",
+          "from": 1060.6,
+          "to": 1207.35,
+          "yoy": 13.8
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.9.3.06",
+          "name": "Polvo para flan",
+          "unit": "8 porciones",
+          "from": 1115.04,
+          "to": 1354.77,
+          "yoy": 21.5
+        },
+        "b": {
+          "code": "01.1.1.4.04",
+          "name": "Fideos secos tipo guisero",
+          "unit": "500 g",
+          "from": 1499.24,
+          "to": 1751.06,
+          "yoy": 16.8
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.9.1.01",
+          "name": "Sal fina",
+          "unit": "500 g",
+          "from": 1342.31,
+          "to": 1540.25,
+          "yoy": 14.7
+        },
+        "b": {
+          "code": "01.2.2.1.01",
+          "name": "Agua sin gas",
+          "unit": "1,5 litros",
+          "from": 1465.62,
+          "to": 1731.27,
+          "yoy": 18.1
+        },
+        "answer": "b"
+      }
+    ]
+  },
+  {
+    "number": 25,
+    "date": "2026-11-27",
+    "period": "202609",
+    "rounds": [
+      {
+        "a": {
+          "code": "01.1.6.1.09",
+          "name": "Limón",
+          "unit": "kg",
+          "from": 1477.72,
+          "to": 1501.99,
+          "yoy": 1.6
+        },
+        "b": {
+          "code": "01.1.7.1.08",
+          "name": "Batata",
+          "unit": "kg",
+          "from": 1476.54,
+          "to": 2527.1,
+          "yoy": 71.2
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.2.1.1.02",
+          "name": "Café molido",
+          "unit": "500 g",
+          "from": 11954.58,
+          "to": 14027.98,
+          "yoy": 17.3
+        },
+        "b": {
+          "code": "01.1.2.1.18",
+          "name": "Paleta",
+          "unit": "kg",
+          "from": 11643.72,
+          "to": 17278.8,
+          "yoy": 48.4
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.2.1.02",
+          "name": "Asado",
+          "unit": "kg",
+          "from": 11190.54,
+          "to": 16836.34,
+          "yoy": 50.5
+        },
+        "b": {
+          "code": "12.1.3.2.05",
+          "name": "Champú",
+          "unit": "400 cc",
+          "from": 5779.51,
+          "to": 7599.69,
+          "yoy": 31.5
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "05.6.1.1.11",
+          "name": "Jabón en polvo para ropa",
+          "unit": "800 g",
+          "from": 2577.61,
+          "to": 3547.74,
+          "yoy": 37.6
+        },
+        "b": {
+          "code": "01.1.2.6.02",
+          "name": "Jamón cocido",
+          "unit": "kg",
+          "from": 16684.86,
+          "to": 21765.64,
+          "yoy": 30.5
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.2.5.04",
+          "name": "Salchicha tipo viena",
+          "unit": "Env. 6 u",
+          "from": 2129.6,
+          "to": 2902.42,
+          "yoy": 36.3
+        },
+        "b": {
+          "code": "01.1.2.6.09",
+          "name": "Salame",
+          "unit": "kg",
+          "from": 20258.1,
+          "to": 26910.3,
+          "yoy": 32.8
+        },
+        "answer": "a"
+      }
+    ]
+  },
+  {
+    "number": 26,
+    "date": "2026-11-28",
+    "period": "202609",
+    "rounds": [
+      {
+        "a": {
+          "code": "01.1.4.3.05",
+          "name": "Dulce de leche",
+          "unit": "400 g",
+          "from": 3163.75,
+          "to": 3953.16,
+          "yoy": 25
+        },
+        "b": {
+          "code": "01.1.7.1.19",
+          "name": "Papa",
+          "unit": "kg",
+          "from": 823,
+          "to": 2201.11,
+          "yoy": 167.4
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.2.1.17",
+          "name": "Nalga",
+          "unit": "kg",
+          "from": 14598.47,
+          "to": 21914.04,
+          "yoy": 50.1
+        },
+        "b": {
+          "code": "12.1.3.1.04",
+          "name": "Pañales descartables",
+          "unit": "10 u",
+          "from": 4223.13,
+          "to": 4709.66,
+          "yoy": 11.5
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "02.1.2.1.01",
+          "name": "Vino común",
+          "unit": "Litro",
+          "from": 2215.06,
+          "to": 2312.09,
+          "yoy": 4.4
+        },
+        "b": {
+          "code": "01.1.7.1.17",
+          "name": "Lechuga",
+          "unit": "kg",
+          "from": 2940.98,
+          "to": 3634.2,
+          "yoy": 23.6
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "12.1.3.2.05",
+          "name": "Champú",
+          "unit": "400 cc",
+          "from": 5779.51,
+          "to": 7599.69,
+          "yoy": 31.5
+        },
+        "b": {
+          "code": "05.6.1.1.11",
+          "name": "Jabón en polvo para ropa",
+          "unit": "800 g",
+          "from": 2577.61,
+          "to": 3547.74,
+          "yoy": 37.6
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "06.1.2.1.02",
+          "name": "Algodón",
+          "unit": "100 g",
+          "from": 1635.68,
+          "to": 1815.63,
+          "yoy": 11
+        },
+        "b": {
+          "code": "01.1.6.1.13",
+          "name": "Naranja",
+          "unit": "kg",
+          "from": 1060.6,
+          "to": 1207.35,
+          "yoy": 13.8
+        },
+        "answer": "b"
+      }
+    ]
+  },
+  {
+    "number": 27,
+    "date": "2026-11-29",
+    "period": "202609",
+    "rounds": [
+      {
+        "a": {
+          "code": "01.1.3.1.03",
+          "name": "Filet de merluza fresco",
+          "unit": "kg",
+          "from": 10210.28,
+          "to": 14762.4,
+          "yoy": 44.6
+        },
+        "b": {
+          "code": "01.1.6.1.09",
+          "name": "Limón",
+          "unit": "kg",
+          "from": 1477.72,
+          "to": 1501.99,
+          "yoy": 1.6
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.4.1.01",
+          "name": "Leche fresca entera sachet",
+          "unit": "Litro",
+          "from": 1580.18,
+          "to": 2071.04,
+          "yoy": 31.1
+        },
+        "b": {
+          "code": "01.1.1.1.03",
+          "name": "Pan de mesa",
+          "unit": "390 g",
+          "from": 3194.04,
+          "to": 3308.31,
+          "yoy": 3.6
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "12.1.3.2.11",
+          "name": "Jabón de tocador",
+          "unit": "125 g",
+          "from": 1132.33,
+          "to": 1543.06,
+          "yoy": 36.3
+        },
+        "b": {
+          "code": "01.1.7.1.26",
+          "name": "Tomate redondo",
+          "unit": "kg",
+          "from": 3310.32,
+          "to": 4038.58,
+          "yoy": 22
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.1.4.04",
+          "name": "Fideos secos tipo guisero",
+          "unit": "500 g",
+          "from": 1499.24,
+          "to": 1751.06,
+          "yoy": 16.8
+        },
+        "b": {
+          "code": "05.6.1.1.12",
+          "name": "Lavandina",
+          "unit": "1.000 cc",
+          "from": 1223.55,
+          "to": 1380.53,
+          "yoy": 12.8
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.2.6.11",
+          "name": "Salchichón",
+          "unit": "kg",
+          "from": 9430.3,
+          "to": 11406.23,
+          "yoy": 21
+        },
+        "b": {
+          "code": "01.1.5.3.01",
+          "name": "Manteca",
+          "unit": "200 g",
+          "from": 3734.05,
+          "to": 4600.94,
+          "yoy": 23.2
+        },
+        "answer": "b"
+      }
+    ]
+  },
+  {
+    "number": 28,
+    "date": "2026-11-30",
+    "period": "202609",
+    "rounds": [
+      {
+        "a": {
+          "code": "01.1.4.1.01",
+          "name": "Leche fresca entera sachet",
+          "unit": "Litro",
+          "from": 1580.18,
+          "to": 2071.04,
+          "yoy": 31.1
+        },
+        "b": {
+          "code": "01.1.7.1.19",
+          "name": "Papa",
+          "unit": "kg",
+          "from": 823,
+          "to": 2201.11,
+          "yoy": 167.4
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.4.4.01",
+          "name": "Huevos de gallina",
+          "unit": "Docena",
+          "from": 3987.33,
+          "to": 3940.5,
+          "yoy": -1.2
+        },
+        "b": {
+          "code": "01.1.7.1.17",
+          "name": "Lechuga",
+          "unit": "kg",
+          "from": 2940.98,
+          "to": 3634.2,
+          "yoy": 23.6
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.2.1.08",
+          "name": "Carne picada común",
+          "unit": "kg",
+          "from": 7071.04,
+          "to": 10713.74,
+          "yoy": 51.5
+        },
+        "b": {
+          "code": "01.1.2.5.04",
+          "name": "Salchicha tipo viena",
+          "unit": "Env. 6 u",
+          "from": 2129.6,
+          "to": 2902.42,
+          "yoy": 36.3
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.8.1.01",
+          "name": "Azúcar",
+          "unit": "kg",
+          "from": 1150.96,
+          "to": 1597.51,
+          "yoy": 38.8
+        },
+        "b": {
+          "code": "01.1.2.6.09",
+          "name": "Salame",
+          "unit": "kg",
+          "from": 20258.1,
+          "to": 26910.3,
+          "yoy": 32.8
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "05.6.1.1.11",
+          "name": "Jabón en polvo para ropa",
+          "unit": "800 g",
+          "from": 2577.61,
+          "to": 3547.74,
+          "yoy": 37.6
+        },
+        "b": {
+          "code": "12.1.3.2.11",
+          "name": "Jabón de tocador",
+          "unit": "125 g",
+          "from": 1132.33,
+          "to": 1543.06,
+          "yoy": 36.3
+        },
+        "answer": "a"
+      }
+    ]
+  },
+  {
+    "number": 29,
+    "date": "2026-12-01",
+    "period": "202609",
+    "rounds": [
+      {
+        "a": {
+          "code": "01.1.2.1.08",
+          "name": "Carne picada común",
+          "unit": "kg",
+          "from": 7071.04,
+          "to": 10713.74,
+          "yoy": 51.5
+        },
+        "b": {
+          "code": "06.1.2.1.02",
+          "name": "Algodón",
+          "unit": "100 g",
+          "from": 1635.68,
+          "to": 1815.63,
+          "yoy": 11
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.2.1.10",
+          "name": "Cuadril",
+          "unit": "kg",
+          "from": 14247.87,
+          "to": 21304.73,
+          "yoy": 49.5
+        },
+        "b": {
+          "code": "01.1.6.1.02",
+          "name": "Banana",
+          "unit": "kg",
+          "from": 2627.06,
+          "to": 3239.46,
+          "yoy": 23.3
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.2.2.01",
+          "name": "Pollo entero",
+          "unit": "kg",
+          "from": 3722.78,
+          "to": 4787.75,
+          "yoy": 28.6
+        },
+        "b": {
+          "code": "12.1.3.1.04",
+          "name": "Pañales descartables",
+          "unit": "10 u",
+          "from": 4223.13,
+          "to": 4709.66,
+          "yoy": 11.5
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.2.5.04",
+          "name": "Salchicha tipo viena",
+          "unit": "Env. 6 u",
+          "from": 2129.6,
+          "to": 2902.42,
+          "yoy": 36.3
+        },
+        "b": {
+          "code": "12.1.3.2.05",
+          "name": "Champú",
+          "unit": "400 cc",
+          "from": 5779.51,
+          "to": 7599.69,
+          "yoy": 31.5
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.1.4.04",
+          "name": "Fideos secos tipo guisero",
+          "unit": "500 g",
+          "from": 1499.24,
+          "to": 1751.06,
+          "yoy": 16.8
+        },
+        "b": {
+          "code": "01.1.6.1.13",
+          "name": "Naranja",
+          "unit": "kg",
+          "from": 1060.6,
+          "to": 1207.35,
+          "yoy": 13.8
+        },
+        "answer": "a"
+      }
+    ]
+  },
+  {
+    "number": 30,
+    "date": "2026-12-02",
+    "period": "202609",
+    "rounds": [
+      {
+        "a": {
+          "code": "01.2.2.1.01",
+          "name": "Agua sin gas",
+          "unit": "1,5 litros",
+          "from": 1465.62,
+          "to": 1731.27,
+          "yoy": 18.1
+        },
+        "b": {
+          "code": "01.1.7.1.19",
+          "name": "Papa",
+          "unit": "kg",
+          "from": 823,
+          "to": 2201.11,
+          "yoy": 167.4
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.2.1.12",
+          "name": "Hamburguesas congeladas",
+          "unit": "Env. 4 u",
+          "from": 5441.87,
+          "to": 8388.83,
+          "yoy": 54.2
+        },
+        "b": {
+          "code": "01.1.7.1.26",
+          "name": "Tomate redondo",
+          "unit": "kg",
+          "from": 3310.32,
+          "to": 4038.58,
+          "yoy": 22
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.6.1.02",
+          "name": "Banana",
+          "unit": "kg",
+          "from": 2627.06,
+          "to": 3239.46,
+          "yoy": 23.3
+        },
+        "b": {
+          "code": "01.1.1.3.01",
+          "name": "Arroz blanco simple",
+          "unit": "kg",
+          "from": 1745.29,
+          "to": 1905.45,
+          "yoy": 9.2
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "12.1.3.2.08",
+          "name": "Desodorante",
+          "unit": "150 cc",
+          "from": 3414.64,
+          "to": 4550.81,
+          "yoy": 33.3
+        },
+        "b": {
+          "code": "01.1.7.2.08",
+          "name": "Tomate entero en conserva",
+          "unit": "Lata 230 g",
+          "from": 1212.13,
+          "to": 1512.8,
+          "yoy": 24.8
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.9.1.01",
+          "name": "Sal fina",
+          "unit": "500 g",
+          "from": 1342.31,
+          "to": 1540.25,
+          "yoy": 14.7
+        },
+        "b": {
+          "code": "06.1.2.1.02",
+          "name": "Algodón",
+          "unit": "100 g",
+          "from": 1635.68,
+          "to": 1815.63,
+          "yoy": 11
+        },
+        "answer": "a"
+      }
+    ]
+  },
+  {
+    "number": 31,
+    "date": "2026-12-03",
+    "period": "202609",
+    "rounds": [
+      {
+        "a": {
+          "code": "01.1.7.2.04",
+          "name": "Arvejas secas remojadas",
+          "unit": "Lata 220 g",
+          "from": 842.18,
+          "to": 978.13,
+          "yoy": 16.1
+        },
+        "b": {
+          "code": "01.1.7.1.08",
+          "name": "Batata",
+          "unit": "kg",
+          "from": 1476.54,
+          "to": 2527.1,
+          "yoy": 71.2
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.7.1.26",
+          "name": "Tomate redondo",
+          "unit": "kg",
+          "from": 3310.32,
+          "to": 4038.58,
+          "yoy": 22
+        },
+        "b": {
+          "code": "01.1.4.4.01",
+          "name": "Huevos de gallina",
+          "unit": "Docena",
+          "from": 3987.33,
+          "to": 3940.5,
+          "yoy": -1.2
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.2.5.04",
+          "name": "Salchicha tipo viena",
+          "unit": "Env. 6 u",
+          "from": 2129.6,
+          "to": 2902.42,
+          "yoy": 36.3
+        },
+        "b": {
+          "code": "01.1.2.6.11",
+          "name": "Salchichón",
+          "unit": "kg",
+          "from": 9430.3,
+          "to": 11406.23,
+          "yoy": 21
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.1.2.05",
+          "name": "Galletitas dulces envasadas sin relleno",
+          "unit": "150 g",
+          "from": 1245.56,
+          "to": 1608.11,
+          "yoy": 29.1
+        },
+        "b": {
+          "code": "01.1.1.2.04",
+          "name": "Galletitas de agua envasadas",
+          "unit": "250 g",
+          "from": 1223.11,
+          "to": 1675.24,
+          "yoy": 37
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.7.1.17",
+          "name": "Lechuga",
+          "unit": "kg",
+          "from": 2940.98,
+          "to": 3634.2,
+          "yoy": 23.6
+        },
+        "b": {
+          "code": "01.1.7.2.08",
+          "name": "Tomate entero en conserva",
+          "unit": "Lata 230 g",
+          "from": 1212.13,
+          "to": 1512.8,
+          "yoy": 24.8
+        },
+        "answer": "b"
+      }
+    ]
+  },
+  {
+    "number": 32,
+    "date": "2026-12-04",
+    "period": "202609",
+    "rounds": [
+      {
+        "a": {
+          "code": "01.1.2.6.09",
+          "name": "Salame",
+          "unit": "kg",
+          "from": 20258.1,
+          "to": 26910.3,
+          "yoy": 32.8
+        },
+        "b": {
+          "code": "01.1.7.1.31",
+          "name": "Zapallo anco",
+          "unit": "kg",
+          "from": 922.05,
+          "to": 2816.26,
+          "yoy": 205.4
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.9.3.06",
+          "name": "Polvo para flan",
+          "unit": "8 porciones",
+          "from": 1115.04,
+          "to": 1354.77,
+          "yoy": 21.5
+        },
+        "b": {
+          "code": "01.1.2.1.02",
+          "name": "Asado",
+          "unit": "kg",
+          "from": 11190.54,
+          "to": 16836.34,
+          "yoy": 50.5
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.4.1.05",
+          "name": "Leche en polvo entera",
+          "unit": "800 g",
+          "from": 10972.63,
+          "to": 13742.32,
+          "yoy": 25.2
+        },
+        "b": {
+          "code": "06.1.2.1.02",
+          "name": "Algodón",
+          "unit": "100 g",
+          "from": 1635.68,
+          "to": 1815.63,
+          "yoy": 11
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.1.1.03",
+          "name": "Pan de mesa",
+          "unit": "390 g",
+          "from": 3194.04,
+          "to": 3308.31,
+          "yoy": 3.6
+        },
+        "b": {
+          "code": "05.6.1.1.12",
+          "name": "Lavandina",
+          "unit": "1.000 cc",
+          "from": 1223.55,
+          "to": 1380.53,
+          "yoy": 12.8
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.6.1.13",
+          "name": "Naranja",
+          "unit": "kg",
+          "from": 1060.6,
+          "to": 1207.35,
+          "yoy": 13.8
+        },
+        "b": {
+          "code": "01.1.7.2.04",
+          "name": "Arvejas secas remojadas",
+          "unit": "Lata 220 g",
+          "from": 842.18,
+          "to": 978.13,
+          "yoy": 16.1
+        },
+        "answer": "b"
+      }
+    ]
+  },
+  {
+    "number": 33,
+    "date": "2026-12-05",
+    "period": "202609",
+    "rounds": [
+      {
+        "a": {
+          "code": "01.1.5.1.02",
+          "name": "Aceite de girasol",
+          "unit": "Bot. 1,5 litros",
+          "from": 4696.85,
+          "to": 6981.99,
+          "yoy": 48.7
+        },
+        "b": {
+          "code": "01.1.7.1.31",
+          "name": "Zapallo anco",
+          "unit": "kg",
+          "from": 922.05,
+          "to": 2816.26,
+          "yoy": 205.4
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.2.5.04",
+          "name": "Salchicha tipo viena",
+          "unit": "Env. 6 u",
+          "from": 2129.6,
+          "to": 2902.42,
+          "yoy": 36.3
+        },
+        "b": {
+          "code": "12.1.3.1.04",
+          "name": "Pañales descartables",
+          "unit": "10 u",
+          "from": 4223.13,
+          "to": 4709.66,
+          "yoy": 11.5
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.2.2.1.01",
+          "name": "Agua sin gas",
+          "unit": "1,5 litros",
+          "from": 1465.62,
+          "to": 1731.27,
+          "yoy": 18.1
+        },
+        "b": {
+          "code": "01.1.2.6.02",
+          "name": "Jamón cocido",
+          "unit": "kg",
+          "from": 16684.86,
+          "to": 21765.64,
+          "yoy": 30.5
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.1.4.04",
+          "name": "Fideos secos tipo guisero",
+          "unit": "500 g",
+          "from": 1499.24,
+          "to": 1751.06,
+          "yoy": 16.8
+        },
+        "b": {
+          "code": "01.1.7.1.17",
+          "name": "Lechuga",
+          "unit": "kg",
+          "from": 2940.98,
+          "to": 3634.2,
+          "yoy": 23.6
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.6.1.02",
+          "name": "Banana",
+          "unit": "kg",
+          "from": 2627.06,
+          "to": 3239.46,
+          "yoy": 23.3
+        },
+        "b": {
+          "code": "05.6.1.1.08",
+          "name": "Detergente líquido",
+          "unit": "750 cc",
+          "from": 1702.99,
+          "to": 2150.14,
+          "yoy": 26.3
+        },
+        "answer": "b"
+      }
+    ]
+  },
+  {
+    "number": 34,
+    "date": "2026-12-06",
+    "period": "202609",
+    "rounds": [
+      {
+        "a": {
+          "code": "01.1.6.1.13",
+          "name": "Naranja",
+          "unit": "kg",
+          "from": 1060.6,
+          "to": 1207.35,
+          "yoy": 13.8
+        },
+        "b": {
+          "code": "01.1.6.1.11",
+          "name": "Manzana deliciosa",
+          "unit": "kg",
+          "from": 2602.07,
+          "to": 4064.45,
+          "yoy": 56.2
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.1.2.04",
+          "name": "Galletitas de agua envasadas",
+          "unit": "250 g",
+          "from": 1223.11,
+          "to": 1675.24,
+          "yoy": 37
+        },
+        "b": {
+          "code": "06.1.2.1.02",
+          "name": "Algodón",
+          "unit": "100 g",
+          "from": 1635.68,
+          "to": 1815.63,
+          "yoy": 11
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.1.3.01",
+          "name": "Arroz blanco simple",
+          "unit": "kg",
+          "from": 1745.29,
+          "to": 1905.45,
+          "yoy": 9.2
+        },
+        "b": {
+          "code": "01.1.9.3.06",
+          "name": "Polvo para flan",
+          "unit": "8 porciones",
+          "from": 1115.04,
+          "to": 1354.77,
+          "yoy": 21.5
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.2.6.11",
+          "name": "Salchichón",
+          "unit": "kg",
+          "from": 9430.3,
+          "to": 11406.23,
+          "yoy": 21
+        },
+        "b": {
+          "code": "05.6.1.1.10",
+          "name": "Jabón en pan",
+          "unit": "200 g",
+          "from": 1225.84,
+          "to": 1563.64,
+          "yoy": 27.6
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.2.1.08",
+          "name": "Carne picada común",
+          "unit": "kg",
+          "from": 7071.04,
+          "to": 10713.74,
+          "yoy": 51.5
+        },
+        "b": {
+          "code": "01.1.2.1.02",
+          "name": "Asado",
+          "unit": "kg",
+          "from": 11190.54,
+          "to": 16836.34,
+          "yoy": 50.5
+        },
+        "answer": "a"
+      }
+    ]
+  },
+  {
+    "number": 35,
+    "date": "2026-12-07",
+    "period": "202609",
+    "rounds": [
+      {
+        "a": {
+          "code": "01.1.1.1.03",
+          "name": "Pan de mesa",
+          "unit": "390 g",
+          "from": 3194.04,
+          "to": 3308.31,
+          "yoy": 3.6
+        },
+        "b": {
+          "code": "01.1.2.1.08",
+          "name": "Carne picada común",
+          "unit": "kg",
+          "from": 7071.04,
+          "to": 10713.74,
+          "yoy": 51.5
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.4.4.01",
+          "name": "Huevos de gallina",
+          "unit": "Docena",
+          "from": 3987.33,
+          "to": 3940.5,
+          "yoy": -1.2
+        },
+        "b": {
+          "code": "12.1.3.2.05",
+          "name": "Champú",
+          "unit": "400 cc",
+          "from": 5779.51,
+          "to": 7599.69,
+          "yoy": 31.5
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.2.5.04",
+          "name": "Salchicha tipo viena",
+          "unit": "Env. 6 u",
+          "from": 2129.6,
+          "to": 2902.42,
+          "yoy": 36.3
+        },
+        "b": {
+          "code": "01.1.6.1.02",
+          "name": "Banana",
+          "unit": "kg",
+          "from": 2627.06,
+          "to": 3239.46,
+          "yoy": 23.3
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.9.3.06",
+          "name": "Polvo para flan",
+          "unit": "8 porciones",
+          "from": 1115.04,
+          "to": 1354.77,
+          "yoy": 21.5
+        },
+        "b": {
+          "code": "01.1.2.6.02",
+          "name": "Jamón cocido",
+          "unit": "kg",
+          "from": 16684.86,
+          "to": 21765.64,
+          "yoy": 30.5
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "02.1.3.1.01",
+          "name": "Cerveza en botella",
+          "unit": "Litro",
+          "from": 3432.12,
+          "to": 4394.49,
+          "yoy": 28
+        },
+        "b": {
+          "code": "01.1.7.2.08",
+          "name": "Tomate entero en conserva",
+          "unit": "Lata 230 g",
+          "from": 1212.13,
+          "to": 1512.8,
+          "yoy": 24.8
+        },
+        "answer": "a"
+      }
+    ]
+  },
+  {
+    "number": 36,
+    "date": "2026-12-08",
+    "period": "202609",
+    "rounds": [
+      {
+        "a": {
+          "code": "02.1.3.1.01",
+          "name": "Cerveza en botella",
+          "unit": "Litro",
+          "from": 3432.12,
+          "to": 4394.49,
+          "yoy": 28
+        },
+        "b": {
+          "code": "01.1.7.1.31",
+          "name": "Zapallo anco",
+          "unit": "kg",
+          "from": 922.05,
+          "to": 2816.26,
+          "yoy": 205.4
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.2.1.02",
+          "name": "Asado",
+          "unit": "kg",
+          "from": 11190.54,
+          "to": 16836.34,
+          "yoy": 50.5
+        },
+        "b": {
+          "code": "01.1.7.2.08",
+          "name": "Tomate entero en conserva",
+          "unit": "Lata 230 g",
+          "from": 1212.13,
+          "to": 1512.8,
+          "yoy": 24.8
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.6.1.09",
+          "name": "Limón",
+          "unit": "kg",
+          "from": 1477.72,
+          "to": 1501.99,
+          "yoy": 1.6
+        },
+        "b": {
+          "code": "01.2.2.1.01",
+          "name": "Agua sin gas",
+          "unit": "1,5 litros",
+          "from": 1465.62,
+          "to": 1731.27,
+          "yoy": 18.1
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.4.1.05",
+          "name": "Leche en polvo entera",
+          "unit": "800 g",
+          "from": 10972.63,
+          "to": 13742.32,
+          "yoy": 25.2
+        },
+        "b": {
+          "code": "12.1.3.2.05",
+          "name": "Champú",
+          "unit": "400 cc",
+          "from": 5779.51,
+          "to": 7599.69,
+          "yoy": 31.5
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.5.3.01",
+          "name": "Manteca",
+          "unit": "200 g",
+          "from": 3734.05,
+          "to": 4600.94,
+          "yoy": 23.2
+        },
+        "b": {
+          "code": "01.1.9.3.06",
+          "name": "Polvo para flan",
+          "unit": "8 porciones",
+          "from": 1115.04,
+          "to": 1354.77,
+          "yoy": 21.5
+        },
+        "answer": "a"
+      }
+    ]
+  },
+  {
+    "number": 37,
+    "date": "2026-12-09",
+    "period": "202609",
+    "rounds": [
+      {
+        "a": {
+          "code": "01.1.4.4.01",
+          "name": "Huevos de gallina",
+          "unit": "Docena",
+          "from": 3987.33,
+          "to": 3940.5,
+          "yoy": -1.2
+        },
+        "b": {
+          "code": "01.1.6.1.11",
+          "name": "Manzana deliciosa",
+          "unit": "kg",
+          "from": 2602.07,
+          "to": 4064.45,
+          "yoy": 56.2
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.1.1.03",
+          "name": "Pan de mesa",
+          "unit": "390 g",
+          "from": 3194.04,
+          "to": 3308.31,
+          "yoy": 3.6
+        },
+        "b": {
+          "code": "01.1.4.2.06",
+          "name": "Queso pategrás",
+          "unit": "kg",
+          "from": 22084.06,
+          "to": 28456.33,
+          "yoy": 28.9
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.1.4.04",
+          "name": "Fideos secos tipo guisero",
+          "unit": "500 g",
+          "from": 1499.24,
+          "to": 1751.06,
+          "yoy": 16.8
+        },
+        "b": {
+          "code": "01.1.2.5.04",
+          "name": "Salchicha tipo viena",
+          "unit": "Env. 6 u",
+          "from": 2129.6,
+          "to": 2902.42,
+          "yoy": 36.3
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "02.1.2.1.01",
+          "name": "Vino común",
+          "unit": "Litro",
+          "from": 2215.06,
+          "to": 2312.09,
+          "yoy": 4.4
+        },
+        "b": {
+          "code": "01.1.1.3.01",
+          "name": "Arroz blanco simple",
+          "unit": "kg",
+          "from": 1745.29,
+          "to": 1905.45,
+          "yoy": 9.2
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.4.3.02",
+          "name": "Yogur firme",
+          "unit": "195 cc",
+          "from": 2225.25,
+          "to": 2598.41,
+          "yoy": 16.8
+        },
+        "b": {
+          "code": "01.1.9.1.01",
+          "name": "Sal fina",
+          "unit": "500 g",
+          "from": 1342.31,
+          "to": 1540.25,
+          "yoy": 14.7
+        },
+        "answer": "a"
+      }
+    ]
+  },
+  {
+    "number": 38,
+    "date": "2026-12-10",
+    "period": "202609",
+    "rounds": [
+      {
+        "a": {
+          "code": "01.1.7.1.17",
+          "name": "Lechuga",
+          "unit": "kg",
+          "from": 2940.98,
+          "to": 3634.2,
+          "yoy": 23.6
+        },
+        "b": {
+          "code": "01.1.7.1.10",
+          "name": "Cebolla",
+          "unit": "kg",
+          "from": 753.4,
+          "to": 2696.23,
+          "yoy": 257.9
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.4.4.01",
+          "name": "Huevos de gallina",
+          "unit": "Docena",
+          "from": 3987.33,
+          "to": 3940.5,
+          "yoy": -1.2
+        },
+        "b": {
+          "code": "01.1.1.1.05",
+          "name": "Pan francés",
+          "unit": "kg",
+          "from": 3833.99,
+          "to": 4958.05,
+          "yoy": 29.3
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "12.1.3.2.05",
+          "name": "Champú",
+          "unit": "400 cc",
+          "from": 5779.51,
+          "to": 7599.69,
+          "yoy": 31.5
+        },
+        "b": {
+          "code": "01.1.6.1.13",
+          "name": "Naranja",
+          "unit": "kg",
+          "from": 1060.6,
+          "to": 1207.35,
+          "yoy": 13.8
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.4.2.03",
+          "name": "Queso cremoso",
+          "unit": "kg",
+          "from": 11290.15,
+          "to": 14603.36,
+          "yoy": 29.3
+        },
+        "b": {
+          "code": "01.1.2.6.11",
+          "name": "Salchichón",
+          "unit": "kg",
+          "from": 9430.3,
+          "to": 11406.23,
+          "yoy": 21
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "02.1.3.1.01",
+          "name": "Cerveza en botella",
+          "unit": "Litro",
+          "from": 3432.12,
+          "to": 4394.49,
+          "yoy": 28
+        },
+        "b": {
+          "code": "05.6.1.1.08",
+          "name": "Detergente líquido",
+          "unit": "750 cc",
+          "from": 1702.99,
+          "to": 2150.14,
+          "yoy": 26.3
+        },
+        "answer": "a"
+      }
+    ]
+  },
+  {
+    "number": 39,
+    "date": "2026-12-11",
+    "period": "202609",
+    "rounds": [
+      {
+        "a": {
+          "code": "01.1.1.2.04",
+          "name": "Galletitas de agua envasadas",
+          "unit": "250 g",
+          "from": 1223.11,
+          "to": 1675.24,
+          "yoy": 37
+        },
+        "b": {
+          "code": "01.1.7.1.31",
+          "name": "Zapallo anco",
+          "unit": "kg",
+          "from": 922.05,
+          "to": 2816.26,
+          "yoy": 205.4
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.2.2.01",
+          "name": "Pollo entero",
+          "unit": "kg",
+          "from": 3722.78,
+          "to": 4787.75,
+          "yoy": 28.6
+        },
+        "b": {
+          "code": "01.1.6.1.09",
+          "name": "Limón",
+          "unit": "kg",
+          "from": 1477.72,
+          "to": 1501.99,
+          "yoy": 1.6
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.7.2.04",
+          "name": "Arvejas secas remojadas",
+          "unit": "Lata 220 g",
+          "from": 842.18,
+          "to": 978.13,
+          "yoy": 16.1
+        },
+        "b": {
+          "code": "12.1.3.2.08",
+          "name": "Desodorante",
+          "unit": "150 cc",
+          "from": 3414.64,
+          "to": 4550.81,
+          "yoy": 33.3
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.1.3.01",
+          "name": "Arroz blanco simple",
+          "unit": "kg",
+          "from": 1745.29,
+          "to": 1905.45,
+          "yoy": 9.2
+        },
+        "b": {
+          "code": "01.1.1.1.03",
+          "name": "Pan de mesa",
+          "unit": "390 g",
+          "from": 3194.04,
+          "to": 3308.31,
+          "yoy": 3.6
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "12.1.3.1.04",
+          "name": "Pañales descartables",
+          "unit": "10 u",
+          "from": 4223.13,
+          "to": 4709.66,
+          "yoy": 11.5
+        },
+        "b": {
+          "code": "01.2.1.1.12",
+          "name": "Yerba mate",
+          "unit": "500 g",
+          "from": 2353.86,
+          "to": 2652.39,
+          "yoy": 12.7
+        },
+        "answer": "b"
+      }
+    ]
+  },
+  {
+    "number": 40,
+    "date": "2026-12-12",
+    "period": "202609",
+    "rounds": [
+      {
+        "a": {
+          "code": "01.1.6.1.13",
+          "name": "Naranja",
+          "unit": "kg",
+          "from": 1060.6,
+          "to": 1207.35,
+          "yoy": 13.8
+        },
+        "b": {
+          "code": "01.1.7.1.08",
+          "name": "Batata",
+          "unit": "kg",
+          "from": 1476.54,
+          "to": 2527.1,
+          "yoy": 71.2
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.1.1.03",
+          "name": "Pan de mesa",
+          "unit": "390 g",
+          "from": 3194.04,
+          "to": 3308.31,
+          "yoy": 3.6
+        },
+        "b": {
+          "code": "01.1.4.2.08",
+          "name": "Queso sardo",
+          "unit": "kg",
+          "from": 21643.24,
+          "to": 28423.52,
+          "yoy": 31.3
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.4.1.01",
+          "name": "Leche fresca entera sachet",
+          "unit": "Litro",
+          "from": 1580.18,
+          "to": 2071.04,
+          "yoy": 31.1
+        },
+        "b": {
+          "code": "01.1.2.1.18",
+          "name": "Paleta",
+          "unit": "kg",
+          "from": 11643.72,
+          "to": 17278.8,
+          "yoy": 48.4
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.7.1.17",
+          "name": "Lechuga",
+          "unit": "kg",
+          "from": 2940.98,
+          "to": 3634.2,
+          "yoy": 23.6
+        },
+        "b": {
+          "code": "01.1.4.3.02",
+          "name": "Yogur firme",
+          "unit": "195 cc",
+          "from": 2225.25,
+          "to": 2598.41,
+          "yoy": 16.8
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.4.1.05",
+          "name": "Leche en polvo entera",
+          "unit": "800 g",
+          "from": 10972.63,
+          "to": 13742.32,
+          "yoy": 25.2
+        },
+        "b": {
+          "code": "01.1.1.2.05",
+          "name": "Galletitas dulces envasadas sin relleno",
+          "unit": "150 g",
+          "from": 1245.56,
+          "to": 1608.11,
+          "yoy": 29.1
+        },
+        "answer": "b"
+      }
+    ]
+  },
+  {
+    "number": 41,
+    "date": "2026-12-13",
+    "period": "202609",
+    "rounds": [
+      {
+        "a": {
+          "code": "01.1.9.3.06",
+          "name": "Polvo para flan",
+          "unit": "8 porciones",
+          "from": 1115.04,
+          "to": 1354.77,
+          "yoy": 21.5
+        },
+        "b": {
+          "code": "01.1.7.1.19",
+          "name": "Papa",
+          "unit": "kg",
+          "from": 823,
+          "to": 2201.11,
+          "yoy": 167.4
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.6.1.13",
+          "name": "Naranja",
+          "unit": "kg",
+          "from": 1060.6,
+          "to": 1207.35,
+          "yoy": 13.8
+        },
+        "b": {
+          "code": "01.1.3.1.03",
+          "name": "Filet de merluza fresco",
+          "unit": "kg",
+          "from": 10210.28,
+          "to": 14762.4,
+          "yoy": 44.6
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.7.1.26",
+          "name": "Tomate redondo",
+          "unit": "kg",
+          "from": 3310.32,
+          "to": 4038.58,
+          "yoy": 22
+        },
+        "b": {
+          "code": "06.1.2.1.02",
+          "name": "Algodón",
+          "unit": "100 g",
+          "from": 1635.68,
+          "to": 1815.63,
+          "yoy": 11
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.2.2.1.01",
+          "name": "Agua sin gas",
+          "unit": "1,5 litros",
+          "from": 1465.62,
+          "to": 1731.27,
+          "yoy": 18.1
+        },
+        "b": {
+          "code": "01.2.1.1.12",
+          "name": "Yerba mate",
+          "unit": "500 g",
+          "from": 2353.86,
+          "to": 2652.39,
+          "yoy": 12.7
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "05.6.1.1.10",
+          "name": "Jabón en pan",
+          "unit": "200 g",
+          "from": 1225.84,
+          "to": 1563.64,
+          "yoy": 27.6
+        },
+        "b": {
+          "code": "01.1.1.1.05",
+          "name": "Pan francés",
+          "unit": "kg",
+          "from": 3833.99,
+          "to": 4958.05,
+          "yoy": 29.3
+        },
+        "answer": "b"
+      }
+    ]
+  },
+  {
+    "number": 42,
+    "date": "2026-12-14",
+    "period": "202609",
+    "rounds": [
+      {
+        "a": {
+          "code": "01.1.7.1.10",
+          "name": "Cebolla",
+          "unit": "kg",
+          "from": 753.4,
+          "to": 2696.23,
+          "yoy": 257.9
+        },
+        "b": {
+          "code": "01.1.6.1.09",
+          "name": "Limón",
+          "unit": "kg",
+          "from": 1477.72,
+          "to": 1501.99,
+          "yoy": 1.6
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.2.2.1.04",
+          "name": "Gaseosa base cola",
+          "unit": "1,5 litros",
+          "from": 2854.77,
+          "to": 3806.44,
+          "yoy": 33.3
+        },
+        "b": {
+          "code": "01.1.6.1.11",
+          "name": "Manzana deliciosa",
+          "unit": "kg",
+          "from": 2602.07,
+          "to": 4064.45,
+          "yoy": 56.2
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.1.3.01",
+          "name": "Arroz blanco simple",
+          "unit": "kg",
+          "from": 1745.29,
+          "to": 1905.45,
+          "yoy": 9.2
+        },
+        "b": {
+          "code": "01.1.4.3.05",
+          "name": "Dulce de leche",
+          "unit": "400 g",
+          "from": 3163.75,
+          "to": 3953.16,
+          "yoy": 25
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.3.1.03",
+          "name": "Filet de merluza fresco",
+          "unit": "kg",
+          "from": 10210.28,
+          "to": 14762.4,
+          "yoy": 44.6
+        },
+        "b": {
+          "code": "01.1.2.1.12",
+          "name": "Hamburguesas congeladas",
+          "unit": "Env. 4 u",
+          "from": 5441.87,
+          "to": 8388.83,
+          "yoy": 54.2
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.7.2.08",
+          "name": "Tomate entero en conserva",
+          "unit": "Lata 230 g",
+          "from": 1212.13,
+          "to": 1512.8,
+          "yoy": 24.8
+        },
+        "b": {
+          "code": "01.1.9.3.06",
+          "name": "Polvo para flan",
+          "unit": "8 porciones",
+          "from": 1115.04,
+          "to": 1354.77,
+          "yoy": 21.5
+        },
+        "answer": "a"
+      }
+    ]
+  },
+  {
+    "number": 43,
+    "date": "2026-12-15",
+    "period": "202609",
+    "rounds": [
+      {
+        "a": {
+          "code": "01.1.7.1.31",
+          "name": "Zapallo anco",
+          "unit": "kg",
+          "from": 922.05,
+          "to": 2816.26,
+          "yoy": 205.4
+        },
+        "b": {
+          "code": "12.1.3.2.11",
+          "name": "Jabón de tocador",
+          "unit": "125 g",
+          "from": 1132.33,
+          "to": 1543.06,
+          "yoy": 36.3
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.2.1.18",
+          "name": "Paleta",
+          "unit": "kg",
+          "from": 11643.72,
+          "to": 17278.8,
+          "yoy": 48.4
+        },
+        "b": {
+          "code": "01.1.5.3.01",
+          "name": "Manteca",
+          "unit": "200 g",
+          "from": 3734.05,
+          "to": 4600.94,
+          "yoy": 23.2
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "05.6.1.1.12",
+          "name": "Lavandina",
+          "unit": "1.000 cc",
+          "from": 1223.55,
+          "to": 1380.53,
+          "yoy": 12.8
+        },
+        "b": {
+          "code": "01.1.1.1.05",
+          "name": "Pan francés",
+          "unit": "kg",
+          "from": 3833.99,
+          "to": 4958.05,
+          "yoy": 29.3
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.1.2.04",
+          "name": "Galletitas de agua envasadas",
+          "unit": "250 g",
+          "from": 1223.11,
+          "to": 1675.24,
+          "yoy": 37
+        },
+        "b": {
+          "code": "02.1.3.1.01",
+          "name": "Cerveza en botella",
+          "unit": "Litro",
+          "from": 3432.12,
+          "to": 4394.49,
+          "yoy": 28
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.7.2.04",
+          "name": "Arvejas secas remojadas",
+          "unit": "Lata 220 g",
+          "from": 842.18,
+          "to": 978.13,
+          "yoy": 16.1
+        },
+        "b": {
+          "code": "01.1.9.1.01",
+          "name": "Sal fina",
+          "unit": "500 g",
+          "from": 1342.31,
+          "to": 1540.25,
+          "yoy": 14.7
+        },
+        "answer": "a"
+      }
+    ]
+  },
+  {
+    "number": 44,
+    "date": "2026-12-16",
+    "period": "202609",
+    "rounds": [
+      {
+        "a": {
+          "code": "01.1.7.1.19",
+          "name": "Papa",
+          "unit": "kg",
+          "from": 823,
+          "to": 2201.11,
+          "yoy": 167.4
+        },
+        "b": {
+          "code": "01.1.7.1.26",
+          "name": "Tomate redondo",
+          "unit": "kg",
+          "from": 3310.32,
+          "to": 4038.58,
+          "yoy": 22
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.4.4.01",
+          "name": "Huevos de gallina",
+          "unit": "Docena",
+          "from": 3987.33,
+          "to": 3940.5,
+          "yoy": -1.2
+        },
+        "b": {
+          "code": "01.1.1.2.04",
+          "name": "Galletitas de agua envasadas",
+          "unit": "250 g",
+          "from": 1223.11,
+          "to": 1675.24,
+          "yoy": 37
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.4.2.08",
+          "name": "Queso sardo",
+          "unit": "kg",
+          "from": 21643.24,
+          "to": 28423.52,
+          "yoy": 31.3
+        },
+        "b": {
+          "code": "01.1.4.3.02",
+          "name": "Yogur firme",
+          "unit": "195 cc",
+          "from": 2225.25,
+          "to": 2598.41,
+          "yoy": 16.8
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.4.1.01",
+          "name": "Leche fresca entera sachet",
+          "unit": "Litro",
+          "from": 1580.18,
+          "to": 2071.04,
+          "yoy": 31.1
+        },
+        "b": {
+          "code": "01.1.4.3.05",
+          "name": "Dulce de leche",
+          "unit": "400 g",
+          "from": 3163.75,
+          "to": 3953.16,
+          "yoy": 25
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.5.3.01",
+          "name": "Manteca",
+          "unit": "200 g",
+          "from": 3734.05,
+          "to": 4600.94,
+          "yoy": 23.2
+        },
+        "b": {
+          "code": "01.1.4.1.05",
+          "name": "Leche en polvo entera",
+          "unit": "800 g",
+          "from": 10972.63,
+          "to": 13742.32,
+          "yoy": 25.2
+        },
+        "answer": "b"
+      }
+    ]
+  },
+  {
+    "number": 45,
+    "date": "2026-12-17",
+    "period": "202609",
+    "rounds": [
+      {
+        "a": {
+          "code": "01.1.1.1.03",
+          "name": "Pan de mesa",
+          "unit": "390 g",
+          "from": 3194.04,
+          "to": 3308.31,
+          "yoy": 3.6
+        },
+        "b": {
+          "code": "01.1.7.1.10",
+          "name": "Cebolla",
+          "unit": "kg",
+          "from": 753.4,
+          "to": 2696.23,
+          "yoy": 257.9
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.5.1.02",
+          "name": "Aceite de girasol",
+          "unit": "Bot. 1,5 litros",
+          "from": 4696.85,
+          "to": 6981.99,
+          "yoy": 48.7
+        },
+        "b": {
+          "code": "05.6.1.1.10",
+          "name": "Jabón en pan",
+          "unit": "200 g",
+          "from": 1225.84,
+          "to": 1563.64,
+          "yoy": 27.6
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.3.1.03",
+          "name": "Filet de merluza fresco",
+          "unit": "kg",
+          "from": 10210.28,
+          "to": 14762.4,
+          "yoy": 44.6
+        },
+        "b": {
+          "code": "01.1.2.6.09",
+          "name": "Salame",
+          "unit": "kg",
+          "from": 20258.1,
+          "to": 26910.3,
+          "yoy": 32.8
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.6.1.02",
+          "name": "Banana",
+          "unit": "kg",
+          "from": 2627.06,
+          "to": 3239.46,
+          "yoy": 23.3
+        },
+        "b": {
+          "code": "01.1.1.1.05",
+          "name": "Pan francés",
+          "unit": "kg",
+          "from": 3833.99,
+          "to": 4958.05,
+          "yoy": 29.3
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.4.1.05",
+          "name": "Leche en polvo entera",
+          "unit": "800 g",
+          "from": 10972.63,
+          "to": 13742.32,
+          "yoy": 25.2
+        },
+        "b": {
+          "code": "05.6.1.1.08",
+          "name": "Detergente líquido",
+          "unit": "750 cc",
+          "from": 1702.99,
+          "to": 2150.14,
+          "yoy": 26.3
+        },
+        "answer": "b"
+      }
+    ]
+  },
+  {
+    "number": 46,
+    "date": "2026-12-18",
+    "period": "202609",
+    "rounds": [
+      {
+        "a": {
+          "code": "01.1.1.2.04",
+          "name": "Galletitas de agua envasadas",
+          "unit": "250 g",
+          "from": 1223.11,
+          "to": 1675.24,
+          "yoy": 37
+        },
+        "b": {
+          "code": "01.1.7.1.10",
+          "name": "Cebolla",
+          "unit": "kg",
+          "from": 753.4,
+          "to": 2696.23,
+          "yoy": 257.9
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.4.2.06",
+          "name": "Queso pategrás",
+          "unit": "kg",
+          "from": 22084.06,
+          "to": 28456.33,
+          "yoy": 28.9
+        },
+        "b": {
+          "code": "01.1.2.1.17",
+          "name": "Nalga",
+          "unit": "kg",
+          "from": 14598.47,
+          "to": 21914.04,
+          "yoy": 50.1
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.2.1.02",
+          "name": "Asado",
+          "unit": "kg",
+          "from": 11190.54,
+          "to": 16836.34,
+          "yoy": 50.5
+        },
+        "b": {
+          "code": "01.1.4.1.01",
+          "name": "Leche fresca entera sachet",
+          "unit": "Litro",
+          "from": 1580.18,
+          "to": 2071.04,
+          "yoy": 31.1
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.6.1.02",
+          "name": "Banana",
+          "unit": "kg",
+          "from": 2627.06,
+          "to": 3239.46,
+          "yoy": 23.3
+        },
+        "b": {
+          "code": "01.1.4.3.02",
+          "name": "Yogur firme",
+          "unit": "195 cc",
+          "from": 2225.25,
+          "to": 2598.41,
+          "yoy": 16.8
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.7.1.26",
+          "name": "Tomate redondo",
+          "unit": "kg",
+          "from": 3310.32,
+          "to": 4038.58,
+          "yoy": 22
+        },
+        "b": {
+          "code": "01.1.7.1.17",
+          "name": "Lechuga",
+          "unit": "kg",
+          "from": 2940.98,
+          "to": 3634.2,
+          "yoy": 23.6
+        },
+        "answer": "b"
+      }
+    ]
+  },
+  {
+    "number": 47,
+    "date": "2026-12-19",
+    "period": "202609",
+    "rounds": [
+      {
+        "a": {
+          "code": "01.1.6.1.11",
+          "name": "Manzana deliciosa",
+          "unit": "kg",
+          "from": 2602.07,
+          "to": 4064.45,
+          "yoy": 56.2
+        },
+        "b": {
+          "code": "02.1.2.1.01",
+          "name": "Vino común",
+          "unit": "Litro",
+          "from": 2215.06,
+          "to": 2312.09,
+          "yoy": 4.4
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.2.1.1.02",
+          "name": "Café molido",
+          "unit": "500 g",
+          "from": 11954.58,
+          "to": 14027.98,
+          "yoy": 17.3
+        },
+        "b": {
+          "code": "01.1.2.1.12",
+          "name": "Hamburguesas congeladas",
+          "unit": "Env. 4 u",
+          "from": 5441.87,
+          "to": 8388.83,
+          "yoy": 54.2
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.2.6.11",
+          "name": "Salchichón",
+          "unit": "kg",
+          "from": 9430.3,
+          "to": 11406.23,
+          "yoy": 21
+        },
+        "b": {
+          "code": "01.2.2.1.04",
+          "name": "Gaseosa base cola",
+          "unit": "1,5 litros",
+          "from": 2854.77,
+          "to": 3806.44,
+          "yoy": 33.3
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.4.2.08",
+          "name": "Queso sardo",
+          "unit": "kg",
+          "from": 21643.24,
+          "to": 28423.52,
+          "yoy": 31.3
+        },
+        "b": {
+          "code": "05.6.1.1.11",
+          "name": "Jabón en polvo para ropa",
+          "unit": "800 g",
+          "from": 2577.61,
+          "to": 3547.74,
+          "yoy": 37.6
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.1.1.05",
+          "name": "Pan francés",
+          "unit": "kg",
+          "from": 3833.99,
+          "to": 4958.05,
+          "yoy": 29.3
+        },
+        "b": {
+          "code": "01.1.2.6.09",
+          "name": "Salame",
+          "unit": "kg",
+          "from": 20258.1,
+          "to": 26910.3,
+          "yoy": 32.8
+        },
+        "answer": "b"
+      }
+    ]
+  },
+  {
+    "number": 48,
+    "date": "2026-12-20",
+    "period": "202609",
+    "rounds": [
+      {
+        "a": {
+          "code": "01.1.8.1.01",
+          "name": "Azúcar",
+          "unit": "kg",
+          "from": 1150.96,
+          "to": 1597.51,
+          "yoy": 38.8
+        },
+        "b": {
+          "code": "01.1.7.1.19",
+          "name": "Papa",
+          "unit": "kg",
+          "from": 823,
+          "to": 2201.11,
+          "yoy": 167.4
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.2.1.02",
+          "name": "Asado",
+          "unit": "kg",
+          "from": 11190.54,
+          "to": 16836.34,
+          "yoy": 50.5
+        },
+        "b": {
+          "code": "01.1.9.1.01",
+          "name": "Sal fina",
+          "unit": "500 g",
+          "from": 1342.31,
+          "to": 1540.25,
+          "yoy": 14.7
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.2.6.11",
+          "name": "Salchichón",
+          "unit": "kg",
+          "from": 9430.3,
+          "to": 11406.23,
+          "yoy": 21
+        },
+        "b": {
+          "code": "01.1.2.6.09",
+          "name": "Salame",
+          "unit": "kg",
+          "from": 20258.1,
+          "to": 26910.3,
+          "yoy": 32.8
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.2.2.1.04",
+          "name": "Gaseosa base cola",
+          "unit": "1,5 litros",
+          "from": 2854.77,
+          "to": 3806.44,
+          "yoy": 33.3
+        },
+        "b": {
+          "code": "01.1.1.2.05",
+          "name": "Galletitas dulces envasadas sin relleno",
+          "unit": "150 g",
+          "from": 1245.56,
+          "to": 1608.11,
+          "yoy": 29.1
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.6.1.02",
+          "name": "Banana",
+          "unit": "kg",
+          "from": 2627.06,
+          "to": 3239.46,
+          "yoy": 23.3
+        },
+        "b": {
+          "code": "01.1.7.2.08",
+          "name": "Tomate entero en conserva",
+          "unit": "Lata 230 g",
+          "from": 1212.13,
+          "to": 1512.8,
+          "yoy": 24.8
+        },
+        "answer": "b"
+      }
+    ]
+  },
+  {
+    "number": 49,
+    "date": "2026-12-21",
+    "period": "202609",
+    "rounds": [
+      {
+        "a": {
+          "code": "01.1.2.6.02",
+          "name": "Jamón cocido",
+          "unit": "kg",
+          "from": 16684.86,
+          "to": 21765.64,
+          "yoy": 30.5
+        },
+        "b": {
+          "code": "01.1.7.1.10",
+          "name": "Cebolla",
+          "unit": "kg",
+          "from": 753.4,
+          "to": 2696.23,
+          "yoy": 257.9
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.5.1.02",
+          "name": "Aceite de girasol",
+          "unit": "Bot. 1,5 litros",
+          "from": 4696.85,
+          "to": 6981.99,
+          "yoy": 48.7
+        },
+        "b": {
+          "code": "01.1.9.1.01",
+          "name": "Sal fina",
+          "unit": "500 g",
+          "from": 1342.31,
+          "to": 1540.25,
+          "yoy": 14.7
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.3.1.03",
+          "name": "Filet de merluza fresco",
+          "unit": "kg",
+          "from": 10210.28,
+          "to": 14762.4,
+          "yoy": 44.6
+        },
+        "b": {
+          "code": "01.1.4.2.08",
+          "name": "Queso sardo",
+          "unit": "kg",
+          "from": 21643.24,
+          "to": 28423.52,
+          "yoy": 31.3
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.4.3.02",
+          "name": "Yogur firme",
+          "unit": "195 cc",
+          "from": 2225.25,
+          "to": 2598.41,
+          "yoy": 16.8
+        },
+        "b": {
+          "code": "01.1.2.6.11",
+          "name": "Salchichón",
+          "unit": "kg",
+          "from": 9430.3,
+          "to": 11406.23,
+          "yoy": 21
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.1.1.05",
+          "name": "Pan francés",
+          "unit": "kg",
+          "from": 3833.99,
+          "to": 4958.05,
+          "yoy": 29.3
+        },
+        "b": {
+          "code": "02.1.3.1.01",
+          "name": "Cerveza en botella",
+          "unit": "Litro",
+          "from": 3432.12,
+          "to": 4394.49,
+          "yoy": 28
+        },
+        "answer": "a"
+      }
+    ]
+  },
+  {
+    "number": 50,
+    "date": "2026-12-22",
+    "period": "202609",
+    "rounds": [
+      {
+        "a": {
+          "code": "01.1.7.1.31",
+          "name": "Zapallo anco",
+          "unit": "kg",
+          "from": 922.05,
+          "to": 2816.26,
+          "yoy": 205.4
+        },
+        "b": {
+          "code": "01.1.4.4.01",
+          "name": "Huevos de gallina",
+          "unit": "Docena",
+          "from": 3987.33,
+          "to": 3940.5,
+          "yoy": -1.2
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.2.1.08",
+          "name": "Carne picada común",
+          "unit": "kg",
+          "from": 7071.04,
+          "to": 10713.74,
+          "yoy": 51.5
+        },
+        "b": {
+          "code": "05.6.1.1.10",
+          "name": "Jabón en pan",
+          "unit": "200 g",
+          "from": 1225.84,
+          "to": 1563.64,
+          "yoy": 27.6
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.1.2.04",
+          "name": "Galletitas de agua envasadas",
+          "unit": "250 g",
+          "from": 1223.11,
+          "to": 1675.24,
+          "yoy": 37
+        },
+        "b": {
+          "code": "01.1.2.1.12",
+          "name": "Hamburguesas congeladas",
+          "unit": "Env. 4 u",
+          "from": 5441.87,
+          "to": 8388.83,
+          "yoy": 54.2
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.1.3.11",
+          "name": "Harina de trigo común",
+          "unit": "kg",
+          "from": 914.65,
+          "to": 1097.92,
+          "yoy": 20
+        },
+        "b": {
+          "code": "01.1.6.1.13",
+          "name": "Naranja",
+          "unit": "kg",
+          "from": 1060.6,
+          "to": 1207.35,
+          "yoy": 13.8
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.2.1.1.02",
+          "name": "Café molido",
+          "unit": "500 g",
+          "from": 11954.58,
+          "to": 14027.98,
+          "yoy": 17.3
+        },
+        "b": {
+          "code": "01.1.9.1.01",
+          "name": "Sal fina",
+          "unit": "500 g",
+          "from": 1342.31,
+          "to": 1540.25,
+          "yoy": 14.7
+        },
+        "answer": "a"
+      }
+    ]
+  },
+  {
+    "number": 51,
+    "date": "2026-12-23",
+    "period": "202609",
+    "rounds": [
+      {
+        "a": {
+          "code": "01.1.7.1.08",
+          "name": "Batata",
+          "unit": "kg",
+          "from": 1476.54,
+          "to": 2527.1,
+          "yoy": 71.2
+        },
+        "b": {
+          "code": "01.1.1.4.04",
+          "name": "Fideos secos tipo guisero",
+          "unit": "500 g",
+          "from": 1499.24,
+          "to": 1751.06,
+          "yoy": 16.8
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.2.1.12",
+          "name": "Hamburguesas congeladas",
+          "unit": "Env. 4 u",
+          "from": 5441.87,
+          "to": 8388.83,
+          "yoy": 54.2
+        },
+        "b": {
+          "code": "01.1.7.1.17",
+          "name": "Lechuga",
+          "unit": "kg",
+          "from": 2940.98,
+          "to": 3634.2,
+          "yoy": 23.6
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.2.1.10",
+          "name": "Cuadril",
+          "unit": "kg",
+          "from": 14247.87,
+          "to": 21304.73,
+          "yoy": 49.5
+        },
+        "b": {
+          "code": "01.1.4.2.08",
+          "name": "Queso sardo",
+          "unit": "kg",
+          "from": 21643.24,
+          "to": 28423.52,
+          "yoy": 31.3
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.3.1.03",
+          "name": "Filet de merluza fresco",
+          "unit": "kg",
+          "from": 10210.28,
+          "to": 14762.4,
+          "yoy": 44.6
+        },
+        "b": {
+          "code": "05.6.1.1.11",
+          "name": "Jabón en polvo para ropa",
+          "unit": "800 g",
+          "from": 2577.61,
+          "to": 3547.74,
+          "yoy": 37.6
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.2.2.1.01",
+          "name": "Agua sin gas",
+          "unit": "1,5 litros",
+          "from": 1465.62,
+          "to": 1731.27,
+          "yoy": 18.1
+        },
+        "b": {
+          "code": "01.1.9.3.06",
+          "name": "Polvo para flan",
+          "unit": "8 porciones",
+          "from": 1115.04,
+          "to": 1354.77,
+          "yoy": 21.5
+        },
+        "answer": "b"
+      }
+    ]
+  },
+  {
+    "number": 52,
+    "date": "2026-12-24",
+    "period": "202609",
+    "rounds": [
+      {
+        "a": {
+          "code": "01.1.2.1.10",
+          "name": "Cuadril",
+          "unit": "kg",
+          "from": 14247.87,
+          "to": 21304.73,
+          "yoy": 49.5
+        },
+        "b": {
+          "code": "01.1.4.4.01",
+          "name": "Huevos de gallina",
+          "unit": "Docena",
+          "from": 3987.33,
+          "to": 3940.5,
+          "yoy": -1.2
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.4.1.05",
+          "name": "Leche en polvo entera",
+          "unit": "800 g",
+          "from": 10972.63,
+          "to": 13742.32,
+          "yoy": 25.2
+        },
+        "b": {
+          "code": "01.1.2.1.17",
+          "name": "Nalga",
+          "unit": "kg",
+          "from": 14598.47,
+          "to": 21914.04,
+          "yoy": 50.1
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.4.2.03",
+          "name": "Queso cremoso",
+          "unit": "kg",
+          "from": 11290.15,
+          "to": 14603.36,
+          "yoy": 29.3
+        },
+        "b": {
+          "code": "01.1.5.1.02",
+          "name": "Aceite de girasol",
+          "unit": "Bot. 1,5 litros",
+          "from": 4696.85,
+          "to": 6981.99,
+          "yoy": 48.7
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.3.1.03",
+          "name": "Filet de merluza fresco",
+          "unit": "kg",
+          "from": 10210.28,
+          "to": 14762.4,
+          "yoy": 44.6
+        },
+        "b": {
+          "code": "01.1.1.2.04",
+          "name": "Galletitas de agua envasadas",
+          "unit": "250 g",
+          "from": 1223.11,
+          "to": 1675.24,
+          "yoy": 37
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.9.3.06",
+          "name": "Polvo para flan",
+          "unit": "8 porciones",
+          "from": 1115.04,
+          "to": 1354.77,
+          "yoy": 21.5
+        },
+        "b": {
+          "code": "01.1.7.1.17",
+          "name": "Lechuga",
+          "unit": "kg",
+          "from": 2940.98,
+          "to": 3634.2,
+          "yoy": 23.6
+        },
+        "answer": "b"
+      }
+    ]
+  },
+  {
+    "number": 53,
+    "date": "2026-12-25",
+    "period": "202609",
+    "rounds": [
+      {
+        "a": {
+          "code": "01.1.1.2.04",
+          "name": "Galletitas de agua envasadas",
+          "unit": "250 g",
+          "from": 1223.11,
+          "to": 1675.24,
+          "yoy": 37
+        },
+        "b": {
+          "code": "01.1.7.1.19",
+          "name": "Papa",
+          "unit": "kg",
+          "from": 823,
+          "to": 2201.11,
+          "yoy": 167.4
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.1.1.05",
+          "name": "Pan francés",
+          "unit": "kg",
+          "from": 3833.99,
+          "to": 4958.05,
+          "yoy": 29.3
+        },
+        "b": {
+          "code": "01.1.2.1.10",
+          "name": "Cuadril",
+          "unit": "kg",
+          "from": 14247.87,
+          "to": 21304.73,
+          "yoy": 49.5
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.1.3.01",
+          "name": "Arroz blanco simple",
+          "unit": "kg",
+          "from": 1745.29,
+          "to": 1905.45,
+          "yoy": 9.2
+        },
+        "b": {
+          "code": "01.1.2.6.11",
+          "name": "Salchichón",
+          "unit": "kg",
+          "from": 9430.3,
+          "to": 11406.23,
+          "yoy": 21
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.1.3.11",
+          "name": "Harina de trigo común",
+          "unit": "kg",
+          "from": 914.65,
+          "to": 1097.92,
+          "yoy": 20
+        },
+        "b": {
+          "code": "01.1.4.1.05",
+          "name": "Leche en polvo entera",
+          "unit": "800 g",
+          "from": 10972.63,
+          "to": 13742.32,
+          "yoy": 25.2
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "05.6.1.1.10",
+          "name": "Jabón en pan",
+          "unit": "200 g",
+          "from": 1225.84,
+          "to": 1563.64,
+          "yoy": 27.6
+        },
+        "b": {
+          "code": "01.1.4.2.06",
+          "name": "Queso pategrás",
+          "unit": "kg",
+          "from": 22084.06,
+          "to": 28456.33,
+          "yoy": 28.9
+        },
+        "answer": "b"
+      }
+    ]
+  },
+  {
+    "number": 54,
+    "date": "2026-12-26",
+    "period": "202609",
+    "rounds": [
+      {
+        "a": {
+          "code": "01.2.1.1.12",
+          "name": "Yerba mate",
+          "unit": "500 g",
+          "from": 2353.86,
+          "to": 2652.39,
+          "yoy": 12.7
+        },
+        "b": {
+          "code": "01.1.2.1.12",
+          "name": "Hamburguesas congeladas",
+          "unit": "Env. 4 u",
+          "from": 5441.87,
+          "to": 8388.83,
+          "yoy": 54.2
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.2.1.08",
+          "name": "Carne picada común",
+          "unit": "kg",
+          "from": 7071.04,
+          "to": 10713.74,
+          "yoy": 51.5
+        },
+        "b": {
+          "code": "01.1.7.2.08",
+          "name": "Tomate entero en conserva",
+          "unit": "Lata 230 g",
+          "from": 1212.13,
+          "to": 1512.8,
+          "yoy": 24.8
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.2.5.04",
+          "name": "Salchicha tipo viena",
+          "unit": "Env. 6 u",
+          "from": 2129.6,
+          "to": 2902.42,
+          "yoy": 36.3
+        },
+        "b": {
+          "code": "01.1.2.1.17",
+          "name": "Nalga",
+          "unit": "kg",
+          "from": 14598.47,
+          "to": 21914.04,
+          "yoy": 50.1
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.4.2.03",
+          "name": "Queso cremoso",
+          "unit": "kg",
+          "from": 11290.15,
+          "to": 14603.36,
+          "yoy": 29.3
+        },
+        "b": {
+          "code": "12.1.3.2.11",
+          "name": "Jabón de tocador",
+          "unit": "125 g",
+          "from": 1132.33,
+          "to": 1543.06,
+          "yoy": 36.3
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "05.6.1.1.12",
+          "name": "Lavandina",
+          "unit": "1.000 cc",
+          "from": 1223.55,
+          "to": 1380.53,
+          "yoy": 12.8
+        },
+        "b": {
+          "code": "12.1.3.1.04",
+          "name": "Pañales descartables",
+          "unit": "10 u",
+          "from": 4223.13,
+          "to": 4709.66,
+          "yoy": 11.5
+        },
+        "answer": "a"
+      }
+    ]
+  },
+  {
+    "number": 55,
+    "date": "2026-12-27",
+    "period": "202609",
+    "rounds": [
+      {
+        "a": {
+          "code": "01.1.4.2.03",
+          "name": "Queso cremoso",
+          "unit": "kg",
+          "from": 11290.15,
+          "to": 14603.36,
+          "yoy": 29.3
+        },
+        "b": {
+          "code": "01.1.7.1.08",
+          "name": "Batata",
+          "unit": "kg",
+          "from": 1476.54,
+          "to": 2527.1,
+          "yoy": 71.2
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.4.3.02",
+          "name": "Yogur firme",
+          "unit": "195 cc",
+          "from": 2225.25,
+          "to": 2598.41,
+          "yoy": 16.8
+        },
+        "b": {
+          "code": "01.1.5.1.02",
+          "name": "Aceite de girasol",
+          "unit": "Bot. 1,5 litros",
+          "from": 4696.85,
+          "to": 6981.99,
+          "yoy": 48.7
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.1.1.05",
+          "name": "Pan francés",
+          "unit": "kg",
+          "from": 3833.99,
+          "to": 4958.05,
+          "yoy": 29.3
+        },
+        "b": {
+          "code": "06.1.2.1.02",
+          "name": "Algodón",
+          "unit": "100 g",
+          "from": 1635.68,
+          "to": 1815.63,
+          "yoy": 11
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.4.1.01",
+          "name": "Leche fresca entera sachet",
+          "unit": "Litro",
+          "from": 1580.18,
+          "to": 2071.04,
+          "yoy": 31.1
+        },
+        "b": {
+          "code": "01.1.7.2.08",
+          "name": "Tomate entero en conserva",
+          "unit": "Lata 230 g",
+          "from": 1212.13,
+          "to": 1512.8,
+          "yoy": 24.8
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.2.6.09",
+          "name": "Salame",
+          "unit": "kg",
+          "from": 20258.1,
+          "to": 26910.3,
+          "yoy": 32.8
+        },
+        "b": {
+          "code": "12.1.3.2.05",
+          "name": "Champú",
+          "unit": "400 cc",
+          "from": 5779.51,
+          "to": 7599.69,
+          "yoy": 31.5
+        },
+        "answer": "a"
+      }
+    ]
+  },
+  {
+    "number": 56,
+    "date": "2026-12-28",
+    "period": "202609",
+    "rounds": [
+      {
+        "a": {
+          "code": "01.1.2.1.02",
+          "name": "Asado",
+          "unit": "kg",
+          "from": 11190.54,
+          "to": 16836.34,
+          "yoy": 50.5
+        },
+        "b": {
+          "code": "01.1.4.4.01",
+          "name": "Huevos de gallina",
+          "unit": "Docena",
+          "from": 3987.33,
+          "to": 3940.5,
+          "yoy": -1.2
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.5.1.02",
+          "name": "Aceite de girasol",
+          "unit": "Bot. 1,5 litros",
+          "from": 4696.85,
+          "to": 6981.99,
+          "yoy": 48.7
+        },
+        "b": {
+          "code": "01.1.6.1.02",
+          "name": "Banana",
+          "unit": "kg",
+          "from": 2627.06,
+          "to": 3239.46,
+          "yoy": 23.3
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.6.1.13",
+          "name": "Naranja",
+          "unit": "kg",
+          "from": 1060.6,
+          "to": 1207.35,
+          "yoy": 13.8
+        },
+        "b": {
+          "code": "01.1.2.6.02",
+          "name": "Jamón cocido",
+          "unit": "kg",
+          "from": 16684.86,
+          "to": 21765.64,
+          "yoy": 30.5
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.2.1.1.02",
+          "name": "Café molido",
+          "unit": "500 g",
+          "from": 11954.58,
+          "to": 14027.98,
+          "yoy": 17.3
+        },
+        "b": {
+          "code": "05.6.1.1.12",
+          "name": "Lavandina",
+          "unit": "1.000 cc",
+          "from": 1223.55,
+          "to": 1380.53,
+          "yoy": 12.8
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "02.1.3.1.01",
+          "name": "Cerveza en botella",
+          "unit": "Litro",
+          "from": 3432.12,
+          "to": 4394.49,
+          "yoy": 28
+        },
+        "b": {
+          "code": "01.1.4.3.05",
+          "name": "Dulce de leche",
+          "unit": "400 g",
+          "from": 3163.75,
+          "to": 3953.16,
+          "yoy": 25
+        },
+        "answer": "a"
+      }
+    ]
+  },
+  {
+    "number": 57,
+    "date": "2026-12-29",
+    "period": "202609",
+    "rounds": [
+      {
+        "a": {
+          "code": "01.1.7.1.10",
+          "name": "Cebolla",
+          "unit": "kg",
+          "from": 753.4,
+          "to": 2696.23,
+          "yoy": 257.9
+        },
+        "b": {
+          "code": "01.1.7.2.08",
+          "name": "Tomate entero en conserva",
+          "unit": "Lata 230 g",
+          "from": 1212.13,
+          "to": 1512.8,
+          "yoy": 24.8
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.1.3.01",
+          "name": "Arroz blanco simple",
+          "unit": "kg",
+          "from": 1745.29,
+          "to": 1905.45,
+          "yoy": 9.2
+        },
+        "b": {
+          "code": "01.1.4.1.01",
+          "name": "Leche fresca entera sachet",
+          "unit": "Litro",
+          "from": 1580.18,
+          "to": 2071.04,
+          "yoy": 31.1
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.2.2.1.01",
+          "name": "Agua sin gas",
+          "unit": "1,5 litros",
+          "from": 1465.62,
+          "to": 1731.27,
+          "yoy": 18.1
+        },
+        "b": {
+          "code": "01.1.2.6.09",
+          "name": "Salame",
+          "unit": "kg",
+          "from": 20258.1,
+          "to": 26910.3,
+          "yoy": 32.8
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.2.1.1.12",
+          "name": "Yerba mate",
+          "unit": "500 g",
+          "from": 2353.86,
+          "to": 2652.39,
+          "yoy": 12.7
+        },
+        "b": {
+          "code": "01.1.1.4.04",
+          "name": "Fideos secos tipo guisero",
+          "unit": "500 g",
+          "from": 1499.24,
+          "to": 1751.06,
+          "yoy": 16.8
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "12.1.3.2.08",
+          "name": "Desodorante",
+          "unit": "150 cc",
+          "from": 3414.64,
+          "to": 4550.81,
+          "yoy": 33.3
+        },
+        "b": {
+          "code": "01.1.2.6.02",
+          "name": "Jamón cocido",
+          "unit": "kg",
+          "from": 16684.86,
+          "to": 21765.64,
+          "yoy": 30.5
+        },
+        "answer": "a"
+      }
+    ]
+  },
+  {
+    "number": 58,
+    "date": "2026-12-30",
+    "period": "202609",
+    "rounds": [
+      {
+        "a": {
+          "code": "01.1.4.3.02",
+          "name": "Yogur firme",
+          "unit": "195 cc",
+          "from": 2225.25,
+          "to": 2598.41,
+          "yoy": 16.8
+        },
+        "b": {
+          "code": "01.1.7.1.08",
+          "name": "Batata",
+          "unit": "kg",
+          "from": 1476.54,
+          "to": 2527.1,
+          "yoy": 71.2
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.6.1.11",
+          "name": "Manzana deliciosa",
+          "unit": "kg",
+          "from": 2602.07,
+          "to": 4064.45,
+          "yoy": 56.2
+        },
+        "b": {
+          "code": "01.1.4.2.08",
+          "name": "Queso sardo",
+          "unit": "kg",
+          "from": 21643.24,
+          "to": 28423.52,
+          "yoy": 31.3
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.7.2.08",
+          "name": "Tomate entero en conserva",
+          "unit": "Lata 230 g",
+          "from": 1212.13,
+          "to": 1512.8,
+          "yoy": 24.8
+        },
+        "b": {
+          "code": "12.1.3.1.04",
+          "name": "Pañales descartables",
+          "unit": "10 u",
+          "from": 4223.13,
+          "to": 4709.66,
+          "yoy": 11.5
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.2.6.11",
+          "name": "Salchichón",
+          "unit": "kg",
+          "from": 9430.3,
+          "to": 11406.23,
+          "yoy": 21
+        },
+        "b": {
+          "code": "01.1.4.1.05",
+          "name": "Leche en polvo entera",
+          "unit": "800 g",
+          "from": 10972.63,
+          "to": 13742.32,
+          "yoy": 25.2
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.6.1.02",
+          "name": "Banana",
+          "unit": "kg",
+          "from": 2627.06,
+          "to": 3239.46,
+          "yoy": 23.3
+        },
+        "b": {
+          "code": "01.1.7.1.26",
+          "name": "Tomate redondo",
+          "unit": "kg",
+          "from": 3310.32,
+          "to": 4038.58,
+          "yoy": 22
+        },
+        "answer": "a"
+      }
+    ]
+  },
+  {
+    "number": 59,
+    "date": "2026-12-31",
+    "period": "202609",
+    "rounds": [
+      {
+        "a": {
+          "code": "01.1.2.6.11",
+          "name": "Salchichón",
+          "unit": "kg",
+          "from": 9430.3,
+          "to": 11406.23,
+          "yoy": 21
+        },
+        "b": {
+          "code": "01.1.7.1.19",
+          "name": "Papa",
+          "unit": "kg",
+          "from": 823,
+          "to": 2201.11,
+          "yoy": 167.4
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.2.1.02",
+          "name": "Asado",
+          "unit": "kg",
+          "from": 11190.54,
+          "to": 16836.34,
+          "yoy": 50.5
+        },
+        "b": {
+          "code": "05.6.1.1.10",
+          "name": "Jabón en pan",
+          "unit": "200 g",
+          "from": 1225.84,
+          "to": 1563.64,
+          "yoy": 27.6
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.9.1.01",
+          "name": "Sal fina",
+          "unit": "500 g",
+          "from": 1342.31,
+          "to": 1540.25,
+          "yoy": 14.7
+        },
+        "b": {
+          "code": "01.1.1.2.05",
+          "name": "Galletitas dulces envasadas sin relleno",
+          "unit": "150 g",
+          "from": 1245.56,
+          "to": 1608.11,
+          "yoy": 29.1
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.2.5.04",
+          "name": "Salchicha tipo viena",
+          "unit": "Env. 6 u",
+          "from": 2129.6,
+          "to": 2902.42,
+          "yoy": 36.3
+        },
+        "b": {
+          "code": "01.1.2.2.01",
+          "name": "Pollo entero",
+          "unit": "kg",
+          "from": 3722.78,
+          "to": 4787.75,
+          "yoy": 28.6
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "05.6.1.1.12",
+          "name": "Lavandina",
+          "unit": "1.000 cc",
+          "from": 1223.55,
+          "to": 1380.53,
+          "yoy": 12.8
+        },
+        "b": {
+          "code": "06.1.2.1.02",
+          "name": "Algodón",
+          "unit": "100 g",
+          "from": 1635.68,
+          "to": 1815.63,
+          "yoy": 11
+        },
+        "answer": "a"
+      }
+    ]
+  },
+  {
+    "number": 60,
+    "date": "2027-01-01",
+    "period": "202609",
+    "rounds": [
+      {
+        "a": {
+          "code": "01.1.2.1.18",
+          "name": "Paleta",
+          "unit": "kg",
+          "from": 11643.72,
+          "to": 17278.8,
+          "yoy": 48.4
+        },
+        "b": {
+          "code": "01.1.6.1.09",
+          "name": "Limón",
+          "unit": "kg",
+          "from": 1477.72,
+          "to": 1501.99,
+          "yoy": 1.6
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.5.3.01",
+          "name": "Manteca",
+          "unit": "200 g",
+          "from": 3734.05,
+          "to": 4600.94,
+          "yoy": 23.2
+        },
+        "b": {
+          "code": "01.1.2.1.02",
+          "name": "Asado",
+          "unit": "kg",
+          "from": 11190.54,
+          "to": 16836.34,
+          "yoy": 50.5
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "12.1.3.1.04",
+          "name": "Pañales descartables",
+          "unit": "10 u",
+          "from": 4223.13,
+          "to": 4709.66,
+          "yoy": 11.5
+        },
+        "b": {
+          "code": "01.1.4.2.06",
+          "name": "Queso pategrás",
+          "unit": "kg",
+          "from": 22084.06,
+          "to": 28456.33,
+          "yoy": 28.9
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.2.2.1.01",
+          "name": "Agua sin gas",
+          "unit": "1,5 litros",
+          "from": 1465.62,
+          "to": 1731.27,
+          "yoy": 18.1
+        },
+        "b": {
+          "code": "01.1.7.2.08",
+          "name": "Tomate entero en conserva",
+          "unit": "Lata 230 g",
+          "from": 1212.13,
+          "to": 1512.8,
+          "yoy": 24.8
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.6.1.13",
+          "name": "Naranja",
+          "unit": "kg",
+          "from": 1060.6,
+          "to": 1207.35,
+          "yoy": 13.8
+        },
+        "b": {
+          "code": "01.2.1.1.02",
+          "name": "Café molido",
+          "unit": "500 g",
+          "from": 11954.58,
+          "to": 14027.98,
+          "yoy": 17.3
+        },
+        "answer": "b"
+      }
+    ]
+  }
+]
