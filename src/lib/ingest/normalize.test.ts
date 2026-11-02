@@ -6,11 +6,15 @@ import { countComparableProducts, datasetsEqual, normalizeRows } from './normali
 const fixture = rows as IndecRow[];
 const dataset = normalizeRows(fixture, '2026-11-02T18:00:00Z');
 const byName = (name: string) => dataset.products.find((p) => p.name === name)!;
+const cebollaGba = fixture.find((r) => r.descripcion.trim() === 'Cebolla' && r.periodo === '202609')!;
+const cuyoRows: IndecRow[] = [{ ...cebollaGba, region: 'Cuyo', valor: 9999.99 }];
 
 describe('normalizeRows', () => {
   it('keeps GBA rows only', () => {
-    expect(byName('Cebolla').prices['202609']).toBe(2696.23);
-    expect(byName('Cebolla').prices['202509']).toBe(753.4);
+    const mixed = normalizeRows([...fixture, ...cuyoRows], '2026-11-02T18:00:00Z');
+    const cebolla = mixed.products.find((p) => p.name === 'Cebolla')!;
+    expect(cebolla.prices['202609']).toBe(2696.23);
+    expect(cebolla.prices['202509']).toBe(753.4);
   });
 
   it('drops rows carrying a null marker instead of a value', () => {
@@ -30,7 +34,7 @@ describe('normalizeRows', () => {
   });
 
   it('fails when no usable rows exist', () => {
-    expect(() => normalizeRows(fixture.filter((r) => r.region !== 'GBA'), 'x')).toThrow('No usable');
+    expect(() => normalizeRows(cuyoRows, 'x')).toThrow('No usable');
   });
 });
 
