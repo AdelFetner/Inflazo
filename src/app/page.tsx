@@ -4,9 +4,10 @@ import { getTodayPuzzle } from '@/lib/data/puzzles';
 import { getSiteUrl } from '@/lib/site';
 
 /**
- * Today's puzzle, recomputed at most once a minute so it flips shortly after Argentina midnight.
- * The `minutes` profile: revalidate 60 s, expire 1 h, client stale 5 min (Game calls router.refresh()
- * itself when the day has rolled over, so the client stale time never shows yesterday's puzzle for long).
+ * Today's puzzle. The `minutes` profile (stale 5 min, revalidate 60 s, expire 1 h) serves the cached
+ * copy to the first request after 60 s and rebuilds it in the background, so right after Argentina
+ * midnight a request may still get yesterday's puzzle. Game copes: while its puzzle is behind the
+ * Argentina date it keeps calling router.refresh() until the new number arrives.
  */
 async function todaysPuzzle() {
   'use cache';
@@ -16,5 +17,6 @@ async function todaysPuzzle() {
 
 export default async function Home() {
   const { puzzle, spare } = await todaysPuzzle();
-  return <Game puzzle={puzzle} spare={spare} siteUrl={getSiteUrl()} />;
+  // Keyed by number: a refresh that brings a new puzzle remounts Game, resetting its round state.
+  return <Game key={puzzle.number} puzzle={puzzle} spare={spare} siteUrl={getSiteUrl()} />;
 }

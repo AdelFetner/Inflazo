@@ -27,7 +27,7 @@ export function RoundCard({ side, item, revealed, correct, chosen, onChoose, ref
         : revealed
           ? 'bg-paper-2 text-ink'
           : 'bg-paper-2 text-ink hover:bg-paper-3 active:scale-[0.985]';
-  const muted = result ? 'text-white/85' : 'text-ink-2';
+  const muted = result ? 'text-white' : 'text-ink-2';
   const verdict = result === 'correct' ? (chosen === side ? 'Subió más · tu elección' : 'Subió más') : result === 'wrong' ? 'Tu elección' : null;
 
   return (

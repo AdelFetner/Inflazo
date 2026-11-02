@@ -8,6 +8,7 @@ import { Countdown } from './Countdown';
 interface ResultPanelProps {
   puzzle: Puzzle;
   grid: string;
+  spare: boolean;
   siteUrl: string;
   onCountdownEnd: () => void;
   headingRef?: Ref<HTMLHeadingElement>;
@@ -31,7 +32,7 @@ function selectText(node: HTMLElement | null) {
   selection.addRange(range);
 }
 
-export function ResultPanel({ puzzle, grid, siteUrl, onCountdownEnd, headingRef }: ResultPanelProps) {
+export function ResultPanel({ puzzle, grid, spare, siteUrl, onCountdownEnd, headingRef }: ResultPanelProps) {
   const text = shareText(puzzle.number, grid, siteUrl);
   const score = gridScore(grid);
   const preRef = useRef<HTMLPreElement>(null);
@@ -103,8 +104,7 @@ export function ResultPanel({ puzzle, grid, siteUrl, onCountdownEnd, headingRef 
 
           <div className="mt-4 bg-ink p-5 text-paper">
             <p className="text-[15px]">
-              Próximo puzzle en{' '}
-              <Countdown onEnd={onCountdownEnd} className="condensed figures text-[24px] font-bold" />
+              <Countdown day={spare ? null : puzzle.date} onEnd={onCountdownEnd} />
             </p>
           </div>
         </div>

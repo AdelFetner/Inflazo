@@ -27,29 +27,39 @@ function formatRemaining(ms: number): string {
 }
 
 interface CountdownProps {
+  /**
+   * Argentina day (`YYYY-MM-DD`) of the puzzle on screen; the countdown ends once that day is over.
+   * `null` for a spare puzzle (it is not today's): it then ends at the first midnight it sees.
+   */
+  day: string | null;
   onEnd: () => void;
-  className?: string;
 }
 
-/** `HH:MM:SS` until the next Argentina midnight; calls `onEnd` once the day rolls over. */
-export function Countdown({ onEnd, className }: CountdownProps) {
+/** `Próximo puzzle en HH:MM:SS`; calls `onEnd` once and shows a loading line after the day is over. */
+export function Countdown({ day, onEnd }: CountdownProps) {
   const seconds = useSyncExternalStore(subscribe, nowSeconds, serverSnapshot);
-  const startDay = useRef<string | null>(null);
+  const today = seconds === null ? null : argentinaDate(new Date(seconds * 1000));
+  const firstDay = useRef<string | null>(null);
+  const ended = useRef(false);
 
   useEffect(() => {
-    if (seconds === null) return;
-    const day = argentinaDate(new Date(seconds * 1000));
-    if (startDay.current === null) startDay.current = day;
-    else if (day !== startDay.current) {
-      startDay.current = day;
+    if (today === null || ended.current) return;
+    firstDay.current ??= today;
+    if (today > (day ?? firstDay.current)) {
+      ended.current = true;
       onEnd();
     }
-  }, [seconds, onEnd]);
+  }, [today, day, onEnd]);
 
-  const label = seconds === null ? '--:--:--' : formatRemaining(msUntilNextPuzzle(new Date(seconds * 1000)));
+  if (day !== null && today !== null && today > day) {
+    return <span role="status">Cargando el puzzle de hoy…</span>;
+  }
   return (
-    <time className={className} suppressHydrationWarning>
-      {label}
-    </time>
+    <>
+      Próximo puzzle en{' '}
+      <time className="condensed figures text-[24px] font-bold">
+        {seconds === null ? '--:--:--' : formatRemaining(msUntilNextPuzzle(new Date(seconds * 1000)))}
+      </time>
+    </>
   );
 }

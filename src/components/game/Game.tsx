@@ -21,11 +21,17 @@ interface GameProps {
 
 type FocusTarget = 'advance' | 'option' | 'result';
 
+/** Refresh cadence while waiting for the new day's puzzle; 40 × 15 s covers 10 minutes. */
+const ROLLOVER_REFRESH_MS = 15_000;
+const MAX_ROLLOVER_REFRESHES = 40;
+
 export function Game({ puzzle, spare, siteUrl }: GameProps) {
   const router = useRouter();
   const [state, setState] = useState<SavedState | null>(null); // null until localStorage is read (avoids hydration mismatch)
   const [revealing, setRevealing] = useState(false);
   const [todayNumber, setTodayNumber] = useState(puzzle.number);
+  /** Bumped when the countdown reaches midnight; (re)starts the refresh loop. */
+  const [rolloverRequests, setRolloverRequests] = useState(0);
 
   const rulesRef = useRef<HTMLDialogElement>(null);
   const statsRef = useRef<HTMLDialogElement>(null);
@@ -40,10 +46,20 @@ export function Game({ puzzle, spare, siteUrl }: GameProps) {
     setState(loadState(getBrowserStorage()));
   }, []);
 
-  // Cached HTML from before Argentina midnight: fetch the new day's puzzle.
+  // The day rolled over (cached HTML from before Argentina midnight, or the countdown just ended):
+  // the first request after midnight may still get yesterday's cached page while the server rebuilds
+  // it, so keep refreshing until a new puzzle number arrives (page.tsx keys Game by it, which
+  // remounts this component and clears the interval). Bounded so a stuck server isn't polled forever.
   useEffect(() => {
-    if (!spare && puzzleNumberForDate(argentinaDate(new Date())) > puzzle.number) router.refresh();
-  }, [puzzle.number, spare, router]);
+    if (rolloverRequests === 0 && (spare || puzzleNumberForDate(argentinaDate(new Date())) <= puzzle.number)) return;
+    router.refresh();
+    let attempts = 1;
+    const id = window.setInterval(() => {
+      if (attempts++ >= MAX_ROLLOVER_REFRESHES) window.clearInterval(id);
+      else router.refresh();
+    }, ROLLOVER_REFRESH_MS);
+    return () => window.clearInterval(id);
+  }, [puzzle.number, spare, router, rolloverRequests]);
 
   // Keyboard play: keep focus on the next thing to do after each step.
   useEffect(() => {
@@ -66,7 +82,7 @@ export function Game({ puzzle, spare, siteUrl }: GameProps) {
     [state, revealing, puzzle],
   );
 
-  const refresh = useCallback(() => router.refresh(), [router]);
+  const requestRollover = useCallback(() => setRolloverRequests((n) => n + 1), []);
 
   const openStats = () => {
     // Before launch day the calendar number is ≤ 0 while puzzle #1 is on screen.
@@ -126,7 +142,14 @@ export function Game({ puzzle, spare, siteUrl }: GameProps) {
       {banner}
 
       {finished ? (
-        <ResultPanel puzzle={puzzle} grid={grid} siteUrl={siteUrl} onCountdownEnd={refresh} headingRef={resultRef} />
+        <ResultPanel
+          puzzle={puzzle}
+          grid={grid}
+          spare={spare}
+          siteUrl={siteUrl}
+          onCountdownEnd={requestRollover}
+          headingRef={resultRef}
+        />
       ) : (
         <section aria-labelledby="question" className="mt-8 sm:mt-12">
           <div className="flex items-center justify-between gap-4">
