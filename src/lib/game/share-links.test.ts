@@ -14,11 +14,12 @@ describe('networkShareUrl', () => {
     expect(url.searchParams.get('text')).toBe(full);
   });
 
-  it('gives X the link separately so t.co shortens it and the card renders', () => {
+  it('puts the link on its own line in the X text, so it is not glued to the pitch', () => {
     const url = new URL(networkShareUrl('x', message));
     expect(url.origin + url.pathname).toBe('https://x.com/intent/tweet');
-    expect(url.searchParams.get('text')).toBe(message.text);
-    expect(url.searchParams.get('url')).toBe(message.url);
+    // X appends a `url` param after a space; inside `text`, the newline before it survives.
+    expect(url.searchParams.get('text')).toBe(full);
+    expect(url.searchParams.has('url')).toBe(false);
   });
 
   it('fits in one X post with the link counted as 23 characters', () => {
@@ -27,11 +28,11 @@ describe('networkShareUrl', () => {
     expect(weighted + 1 + 23).toBeLessThanOrEqual(280);
   });
 
-  it('prefills the LinkedIn composer with the grid and the link', () => {
+  it('prefills the LinkedIn composer with the grid, the link and hashtags', () => {
     const url = new URL(networkShareUrl('linkedin', message));
     expect(url.origin + url.pathname).toBe('https://www.linkedin.com/feed/');
     expect(url.searchParams.get('shareActive')).toBe('true');
-    expect(url.searchParams.get('text')).toBe(full);
+    expect(url.searchParams.get('text')).toBe(`${full}\n\n#INDEC #Inflación #Economía #Precios`);
   });
 
   it('builds the remaining networks with the fields each one accepts', () => {
@@ -41,7 +42,7 @@ describe('networkShareUrl', () => {
     expect(params('threads').get('text')).toBe(full);
     expect(params('facebook').get('u')).toBe(message.url);
     expect(params('reddit').get('url')).toBe(message.url);
-    expect(params('reddit').get('title')).toBe('¿Qué subió más? #42 4/5');
+    expect(params('reddit').get('title')).toBe('¿Qué subió más? #42 · 4/5');
   });
 
   it('lists every network exactly once between the visible row and "Más"', () => {

@@ -28,7 +28,7 @@ export function ogImagePath(number: number, grid: string): string {
   return `/api/og?n=${number}&g=${grid}`;
 }
 
-/** Share message split in two: networks like X and Telegram take the link as a separate field. */
+/** Share message split in two: Telegram, Facebook and Reddit take the link as a separate field. */
 export interface ShareMessage {
   text: string;
   url: string;
@@ -37,15 +37,56 @@ export interface ShareMessage {
 /** Streaks shorter than this are not worth bragging about, so the line is left out. */
 const MIN_SHARED_STREAK = 2;
 
+/** What the player throws at whoever reads the post, by score. */
+export function challenge(score: number): string {
+  if (score >= ROUND_COUNT) return '¿Me igualás?';
+  if (score >= 3) return '¿Me ganás?';
+  return '¿Vos lo hacés mejor?';
+}
+
+/** The verdict under the score: a count in words, then a one-liner. */
+const VERDICTS = [
+  ['Ni una.', 'Mañana hay revancha.'],
+  ['Una de cinco.', 'La inflación es traicionera.'],
+  ['Dos de cinco.', 'Cuesta seguirle el ritmo.'],
+  ['Tres de cinco.', 'Bien ahí.'],
+  ['Cuatro de cinco.', 'Tenés ojo de góndola.'],
+  ['Cinco de cinco.', 'Ni el INDEC lo sabía tan bien.'],
+] as const;
+
+export function verdict(score: number): string {
+  return VERDICTS[score].join(' ');
+}
+
+/** The one-liner alone, for places where the score is already shown in figures. */
+export function verdictLine(score: number): string {
+  return VERDICTS[score][1];
+}
+
+const PITCH = 'Adiviná qué aumentó más en el súper, con precios del INDEC';
+/** Pitch in the share text, pointing down at the link on the next line. */
+export const SHARE_PITCH = `${PITCH} 👇`;
+/** Pitch for link-preview descriptions, where there is no link below to point at. */
+export const SHARE_PITCH_PLAIN = `${PITCH}.`;
+
+/**
+ * Result block, a blank line, then the pitch. The link is kept apart so each network can place it;
+ * joined, it goes on its own last line.
+ */
 export function shareMessage(number: number, grid: string, siteUrl: string, streak = 0): ShareMessage {
-  const lines = [`¿Qué subió más? #${number} ${gridScore(grid)}/${ROUND_COUNT}`, gridToEmoji(grid)];
+  const score = gridScore(grid);
+  const lines = [`¿Qué subió más? #${number} · ${score}/${ROUND_COUNT}`, gridToEmoji(grid)];
   if (streak >= MIN_SHARED_STREAK) lines.push(`🔥 Racha: ${streak}`);
+  lines.push('', `${challenge(score)} ${SHARE_PITCH}`);
   return { text: lines.join('\n'), url: `${siteUrl.replace(/\/+$/, '')}${resultPath(number, grid)}` };
 }
 
-export function shareText(number: number, grid: string, siteUrl: string, streak = 0): string {
-  const { text, url } = shareMessage(number, grid, siteUrl, streak);
+export function joinShareMessage({ text, url }: ShareMessage): string {
   return `${text}\n${url}`;
+}
+
+export function shareText(number: number, grid: string, siteUrl: string, streak = 0): string {
+  return joinShareMessage(shareMessage(number, grid, siteUrl, streak));
 }
 
 export function parseResultParams(

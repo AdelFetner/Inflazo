@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useId, useState } from 'react';
-import type { ShareMessage } from '@/lib/game/share';
+import { joinShareMessage, type ShareMessage } from '@/lib/game/share';
 import { MORE_NETWORKS, PRIMARY_NETWORKS, networkShareUrl, type NetworkOption } from '@/lib/game/share-links';
 
 interface ShareActionsProps {
@@ -17,7 +17,7 @@ const chip =
   'inline-flex h-11 items-center px-4 border border-ink/25 text-[15px] font-semibold transition-colors duration-150 hover:bg-paper-2 active:bg-paper-3';
 
 export function ShareActions({ message, imagePath, imageName, onCopyFailed }: ShareActionsProps) {
-  const text = `${message.text}\n${message.url}`;
+  const text = joinShareMessage(message);
   const [copied, setCopied] = useState(false);
   const [moreOpen, setMoreOpen] = useState(false);
   // Only set where the browser can share files (most phones, desktop Chrome/Edge/Safari).

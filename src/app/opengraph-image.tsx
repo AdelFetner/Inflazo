@@ -1,37 +1,40 @@
 import { ImageResponse } from 'next/og';
-import { OG_COLORS, OG_DISPLAY_FONT, OG_FONTS, OG_TEXT_FONT } from './fonts/og';
+import { OgFrame, OG_SIZE, Receipt } from './_og/parts';
+import { OG_COLORS, OG_DISPLAY_FONT, OG_FONTS } from './fonts/og';
 
-export const size = { width: 1200, height: 630 };
+export const size = OG_SIZE;
 export const contentType = 'image/png';
-export const alt = '¿Qué subió más?';
+export const alt = '¿Qué subió más? Un juego diario con los precios del INDEC';
 
 export default function OpengraphImage() {
   return new ImageResponse(
     (
-      <div
-        style={{
-          width: '100%',
-          height: '100%',
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'center',
-          background: OG_COLORS.paper,
-          color: OG_COLORS.ink,
-          fontFamily: OG_TEXT_FONT,
-          gap: 32,
-        }}
+      <OgFrame
+        cta="Jugá el de hoy"
+        receipt={<Receipt title="TICKET DE HOY" subtitle="Precios promedio GBA" marks={Array(5).fill('unknown')} total="?/5" />}
       >
-        <div style={{ fontFamily: OG_DISPLAY_FONT, fontSize: 128, fontWeight: 800, letterSpacing: '-0.02em' }}>
-          ¿Qué subió más?
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            marginTop: 34,
+            fontFamily: OG_DISPLAY_FONT,
+            fontSize: 128,
+            fontWeight: 800,
+            lineHeight: 0.9,
+            letterSpacing: '-0.03em',
+          }}
+        >
+          <div style={{ display: 'flex' }}>¿Qué subió</div>
+          <div style={{ display: 'flex' }}>más?</div>
         </div>
-        <div style={{ fontSize: 40, color: OG_COLORS.ink2 }}>Adiviná qué producto aumentó más. Datos del INDEC.</div>
-        <div style={{ display: 'flex', gap: 20 }}>
-          {[OG_COLORS.up, OG_COLORS.down, OG_COLORS.up, OG_COLORS.up, OG_COLORS.down].map((color, i) => (
-            <div key={i} style={{ width: 72, height: 72, borderRadius: 12, background: color }} />
-          ))}
+        <div style={{ display: 'flex', fontSize: 36, lineHeight: 1.25, marginTop: 24, width: 600 }}>
+          Dos productos del súper. Adiviná cuál aumentó más en el último año.
         </div>
-      </div>
+        <div style={{ display: 'flex', fontSize: 24, color: OG_COLORS.ink2, marginTop: 14 }}>
+          Cinco rondas por día · Datos del INDEC
+        </div>
+      </OgFrame>
     ),
     { ...size, fonts: OG_FONTS },
   );

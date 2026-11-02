@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { connection } from 'next/server';
 import { getTodayNumber } from '@/lib/data/puzzles';
-import { ROUND_COUNT, gridScore, gridToEmoji, ogImagePath, parseResultParams } from '@/lib/game/share';
+import { ROUND_COUNT, SHARE_PITCH_PLAIN, challenge, gridScore, gridToEmoji, ogImagePath, parseResultParams } from '@/lib/game/share';
 import { getSiteUrl } from '@/lib/site';
 
 /**
@@ -24,12 +24,25 @@ async function resolve(params: PageProps<'/r/[number]/[grid]'>['params']) {
 export async function generateMetadata({ params }: PageProps<'/r/[number]/[grid]'>): Promise<Metadata> {
   const result = await resolve(params);
   if (!result) return {};
-  const title = `¿Qué subió más? #${result.number} — ${gridScore(result.grid)}/${ROUND_COUNT}`;
+  const score = gridScore(result.grid);
+  // Link previews (WhatsApp, Telegram, LinkedIn, Facebook) show title + description under the image.
+  const title = `Saqué ${score}/${ROUND_COUNT} en ¿Qué subió más? #${result.number}`;
+  const description = `${challenge(score)} ${SHARE_PITCH_PLAIN}`;
+  const url = `${getSiteUrl()}/r/${result.number}/${result.grid}`;
   const image = `${getSiteUrl()}${ogImagePath(result.number, result.grid)}`;
   return {
     title,
-    openGraph: { title, images: [{ url: image, width: 1200, height: 630 }] },
-    twitter: { card: 'summary_large_image', title, images: [image] },
+    description,
+    openGraph: {
+      title,
+      description,
+      url,
+      siteName: '¿Qué subió más?',
+      locale: 'es_AR',
+      type: 'website',
+      images: [{ url: image, width: 1200, height: 630, alt: `${title}. ${description}` }],
+    },
+    twitter: { card: 'summary_large_image', title, description, images: [image] },
   };
 }
 
@@ -40,7 +53,7 @@ export default async function SharedResult({ params }: PageProps<'/r/[number]/[g
 
   return (
     <main className="mx-auto w-full max-w-3xl flex-1 px-5 py-10 sm:px-8 sm:py-16">
-      <p className="text-[15px] font-semibold tracking-[0.08em] text-ink-2 uppercase">Resultado compartido</p>
+      <p className="text-[15px] font-semibold tracking-[0.08em] text-ink-2 uppercase">Te desafiaron</p>
       <h1 className="condensed mt-2 text-[44px] leading-none font-bold tracking-[-0.02em] sm:text-[64px]">
         ¿Qué subió más? <span className="figures">#{result.number}</span>
       </h1>
@@ -51,12 +64,25 @@ export default async function SharedResult({ params }: PageProps<'/r/[number]/[g
       <p className="mt-6 text-[28px] leading-none tracking-[0.08em]" aria-label={`${score} de ${ROUND_COUNT} correctas`}>
         {gridToEmoji(result.grid)}
       </p>
+      <p className="condensed mt-8 text-[36px] leading-tight font-bold sm:text-[44px]">{challenge(score)}</p>
+
+      <ol className="mt-6 grid gap-3 text-[17px] leading-snug sm:text-[19px]">
+        <li>
+          <span className="font-semibold">Dos productos del súper.</span> Elegí cuál aumentó más en el último año.
+        </li>
+        <li>
+          <span className="font-semibold">Cinco rondas,</span> cada una más difícil. Un puzzle nuevo por día.
+        </li>
+        <li>
+          <span className="font-semibold">Precios oficiales del INDEC</span> (promedios del Gran Buenos Aires).
+        </li>
+      </ol>
 
       <Link
         href="/"
         className="mt-10 inline-flex h-14 items-center justify-center bg-ink px-8 text-[17px] font-semibold text-paper transition-[background-color,transform] duration-150 hover:bg-accent active:scale-[0.98]"
       >
-        Jugá el de hoy
+        Aceptá el desafío
       </Link>
 
       <p className="mt-10 text-[14px] text-ink-2">Fuente: INDEC, API ipc_nacional (precios promedio GBA).</p>

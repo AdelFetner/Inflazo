@@ -6,10 +6,16 @@ const item = (code: string) => ({ code, name: code, unit: 'kg', from: 1, to: 2, 
 const round = (answer: 'a' | 'b'): Round => ({ a: item('A'), b: item('B'), answer });
 
 describe('share text', () => {
-  it('matches the exact share format', () => {
+  it('matches the exact share format: result, blank line, challenge + pitch, link', () => {
     expect(shareText(42, '11011', 'https://quesubiomas.ar')).toBe(
-      '¿Qué subió más? #42 4/5\n🟩🟩🟥🟩🟩\nhttps://quesubiomas.ar/r/42/11011',
+      '¿Qué subió más? #42 · 4/5\n🟩🟩🟥🟩🟩\n\n¿Me ganás? Adiviná qué aumentó más en el súper, con precios del INDEC 👇\nhttps://quesubiomas.ar/r/42/11011',
     );
+  });
+
+  it('picks the challenge by score', () => {
+    expect(shareText(1, '11111', 'https://x.ar')).toContain('¿Me igualás?');
+    expect(shareText(1, '11100', 'https://x.ar')).toContain('¿Me ganás?');
+    expect(shareText(1, '11000', 'https://x.ar')).toContain('¿Vos lo hacés mejor?');
   });
 
   it('does not double the slash when the site URL ends with one', () => {
@@ -22,14 +28,14 @@ describe('share text', () => {
 
   it('adds the streak line from two days in a row', () => {
     expect(shareText(42, '11011', 'https://quesubiomas.ar', 7)).toBe(
-      '¿Qué subió más? #42 4/5\n🟩🟩🟥🟩🟩\n🔥 Racha: 7\nhttps://quesubiomas.ar/r/42/11011',
+      '¿Qué subió más? #42 · 4/5\n🟩🟩🟥🟩🟩\n🔥 Racha: 7\n\n¿Me ganás? Adiviná qué aumentó más en el súper, con precios del INDEC 👇\nhttps://quesubiomas.ar/r/42/11011',
     );
     expect(shareText(42, '11011', 'https://quesubiomas.ar', 1)).not.toContain('Racha');
   });
 
   it('splits the message into text and link for networks that take the link apart', () => {
     expect(shareMessage(42, '11011', 'https://quesubiomas.ar/', 3)).toEqual({
-      text: '¿Qué subió más? #42 4/5\n🟩🟩🟥🟩🟩\n🔥 Racha: 3',
+      text: '¿Qué subió más? #42 · 4/5\n🟩🟩🟥🟩🟩\n🔥 Racha: 3\n\n¿Me ganás? Adiviná qué aumentó más en el súper, con precios del INDEC 👇',
       url: 'https://quesubiomas.ar/r/42/11011',
     });
   });

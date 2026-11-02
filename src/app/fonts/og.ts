@@ -7,10 +7,13 @@ type OgFont = NonNullable<NonNullable<ConstructorParameters<typeof ImageResponse
 // Shared by the ImageResponse OG images. Palette mirrors src/app/globals.css (@theme).
 export const OG_COLORS = {
   paper: '#f2f1ec',
+  paper3: '#d6d3c8',
   ink: '#141413',
   ink2: '#55534c',
   up: '#0e7a3d',
   down: '#bf2a1e',
+  /** Thermal-paper white for the receipt; a touch warmer than pure white against `paper`. */
+  receipt: '#fffdf6',
 } as const;
 
 // Satori can't use the site's variable Archivo (wdth 72%, wght 800 title), so static upstream

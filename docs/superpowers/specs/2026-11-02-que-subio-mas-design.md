@@ -79,17 +79,21 @@ Juego web diario, estilo Wordle, basado en precios oficiales del INDEC. Cada dí
   - Al elegir: revela en ambas tarjetas precio anterior → actual y la variación % con contador animado; marca acierto/error; botón "Siguiente".
   - Final: puntaje N/5, grilla, botón Compartir (Web Share API en mobile; fallback copiar al portapapeles), botones por red (WhatsApp, X, LinkedIn, Copiar, Compartir imagen cuando el navegador comparte archivos; "Más": Telegram, Bluesky, Threads, Facebook, Reddit), cuenta regresiva al próximo puzzle, fuente "Datos: INDEC, precios promedio GBA". Endpoints y motivos: `docs/research/2026-11-02-share-ux.md`.
 - Estado local (`localStorage`): progreso del día (se puede recargar y retomar), historial por número de puzzle, racha actual, mejor racha, distribución de puntajes 0–5. Sin backend ni cuentas.
-- Texto compartido (la línea de racha aparece solo con racha ≥ 2):
+- Texto compartido (la línea de racha aparece solo con racha ≥ 2; el desafío depende del puntaje: 5 → "¿Me igualás?", 3–4 → "¿Me ganás?", 0–2 → "¿Vos lo hacés mejor?"):
 
   ```
-  ¿Qué subió más? #42 4/5
+  ¿Qué subió más? #42 · 4/5
   🟩🟩🟥🟩🟩
   🔥 Racha: 7
+
+  ¿Me ganás? Adiviná qué aumentó más en el súper, con precios del INDEC 👇
   https://<sitio>/r/42/11011
   ```
 
-- `/r/[number]/[grid]` — página de resultado compartido: metadata OG apuntando a `/api/og?n=42&g=11011`; muestra el resultado y un CTA "Jugá el de hoy". `grid` es una cadena de 5 dígitos 0/1; valores inválidos ⇒ 404.
-- `/api/og` — `ImageResponse` 1200×630 con número, puntaje y grilla. Parámetros inválidos ⇒ 400.
+  En X el link va dentro del texto (si va en `url`, X lo pega a la última línea). En LinkedIn se agrega al final `#INDEC #Inflación #Economía #Precios`.
+
+- `/r/[number]/[grid]` — página de resultado compartido, adonde llega quien toca el link: puntaje, grilla, el desafío, cómo se juega en tres líneas y el CTA "Aceptá el desafío". Metadata OG/Twitter: título "Saqué 4/5 en ¿Qué subió más? #42", descripción con desafío + pitch, imagen `/api/og?n=42&g=11011`. `grid` es una cadena de 5 dígitos 0/1; valores inválidos ⇒ 404.
+- `/api/og` — `ImageResponse` 1200×630 con forma de ticket de súper: puntaje, veredicto, qué es el juego, una línea por ronda con ✓/✗, período de precios y una franja con el desafío y el dominio. El llamado a la acción queda a la derecha porque X tapa la esquina inferior izquierda con el dominio. Parámetros inválidos ⇒ 400.
 - URL base desde `NEXT_PUBLIC_SITE_URL`.
 - Mobile-first; contraste AA; operable con teclado; respeta `prefers-reduced-motion` (sin contador animado).
 

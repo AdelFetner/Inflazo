@@ -1,7 +1,7 @@
 'use client';
 
 import { useRef, type Ref } from 'react';
-import { gridScore, gridToEmoji, ogImagePath, ROUND_COUNT, shareMessage } from '@/lib/game/share';
+import { gridScore, gridToEmoji, joinShareMessage, ogImagePath, ROUND_COUNT, shareMessage, verdict } from '@/lib/game/share';
 import type { Puzzle } from '@/lib/game/types';
 import { Countdown } from './Countdown';
 import { ShareActions } from './ShareActions';
@@ -16,15 +16,6 @@ interface ResultPanelProps {
   onCountdownEnd: () => void;
   headingRef?: Ref<HTMLHeadingElement>;
 }
-
-const VERDICTS = [
-  'Ni una. Mañana hay revancha.',
-  'Una de cinco. La inflación es traicionera.',
-  'Dos de cinco. Cuesta seguirle el ritmo.',
-  'Tres de cinco. Bien ahí.',
-  'Cuatro de cinco. Tenés ojo de góndola.',
-  'Cinco de cinco. Ni el INDEC lo sabía tan bien.',
-];
 
 function selectText(node: HTMLElement | null) {
   const selection = window.getSelection();
@@ -54,7 +45,7 @@ export function ResultPanel({ puzzle, grid, spare, siteUrl, streak, onCountdownE
           >
             {score}/{ROUND_COUNT}
           </p>
-          <p className="mt-5 text-[19px] leading-snug text-balance sm:text-[22px]">{VERDICTS[score]}</p>
+          <p className="mt-5 text-[19px] leading-snug text-balance sm:text-[22px]">{verdict(score)}</p>
           <p className="mt-6 text-[28px] leading-none tracking-[0.08em]" aria-label={`${score} de ${ROUND_COUNT} correctas`}>
             {gridToEmoji(grid)}
           </p>
@@ -64,9 +55,9 @@ export function ResultPanel({ puzzle, grid, spare, siteUrl, streak, onCountdownE
           <pre
             ref={preRef}
             data-testid="share-text"
-            className="bg-paper-2 p-4 font-sans text-[15px] leading-relaxed break-all whitespace-pre-wrap select-all"
+            className="bg-paper-2 p-4 font-sans text-[15px] leading-relaxed wrap-break-word whitespace-pre-wrap select-all"
           >
-            {`${message.text}\n${message.url}`}
+            {joinShareMessage(message)}
           </pre>
           <ShareActions
             message={message}

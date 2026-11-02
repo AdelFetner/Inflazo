@@ -12,3 +12,7 @@ export function getTodayPuzzle(now: Date = new Date()): PuzzleSelection {
 export function getTodayNumber(now: Date = new Date()): number {
   return Math.max(1, puzzleNumberForDate(argentinaDate(now)));
 }
+
+export function getPuzzle(number: number): Puzzle | undefined {
+  return PUZZLES.find((p) => p.number === number);
+}
