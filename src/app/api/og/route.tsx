@@ -1,14 +1,8 @@
 import { ImageResponse } from 'next/og';
 import { connection } from 'next/server';
+import { OG_COLORS, OG_DISPLAY_FONT, OG_FONTS, OG_TEXT_FONT } from '@/app/fonts/og';
 import { getTodayNumber } from '@/lib/data/puzzles';
 import { ROUND_COUNT, gridScore, parseResultParams } from '@/lib/game/share';
-
-// Palette mirrors src/app/globals.css (@theme).
-const PAPER = '#f2f1ec';
-const INK = '#141413';
-const INK_2 = '#55534c';
-const UP = '#0e7a3d';
-const DOWN = '#bf2a1e';
 
 export async function GET(request: Request) {
   // Request-time: today's number changes daily, so the upper bound must be read per request.
@@ -30,21 +24,27 @@ export async function GET(request: Request) {
           flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'center',
-          background: PAPER,
-          color: INK,
+          background: OG_COLORS.paper,
+          color: OG_COLORS.ink,
+          fontFamily: OG_TEXT_FONT,
           gap: 32,
         }}
       >
-        <div style={{ fontSize: 72, fontWeight: 800 }}>¿Qué subió más?</div>
+        <div style={{ fontFamily: OG_DISPLAY_FONT, fontSize: 96, fontWeight: 800, letterSpacing: '-0.02em' }}>
+          ¿Qué subió más?
+        </div>
         <div style={{ fontSize: 48 }}>{`#${params.number} · ${gridScore(params.grid)}/${ROUND_COUNT}`}</div>
         <div style={{ display: 'flex', gap: 20 }}>
           {cells.map((cell, i) => (
-            <div key={i} style={{ width: 110, height: 110, borderRadius: 16, background: cell === '1' ? UP : DOWN }} />
+            <div
+              key={i}
+              style={{ width: 110, height: 110, borderRadius: 16, background: cell === '1' ? OG_COLORS.up : OG_COLORS.down }}
+            />
           ))}
         </div>
-        <div style={{ fontSize: 28, color: INK_2 }}>Datos: INDEC · precios promedio GBA</div>
+        <div style={{ fontSize: 28, color: OG_COLORS.ink2 }}>Datos: INDEC · precios promedio GBA</div>
       </div>
     ),
-    { width: 1200, height: 630 },
+    { width: 1200, height: 630, fonts: OG_FONTS },
   );
 }

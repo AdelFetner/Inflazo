@@ -8,7 +8,9 @@ import { getSiteUrl } from '@/lib/site';
 
 /**
  * Request-time page: validity depends on today's puzzle number, so it is resolved per request
- * (connection()) with no Suspense boundary above notFound(), keeping a real HTTP 404 for bad links.
+ * (connection()). The HTTP 404 for bad links comes from src/proxy.ts: under Cache Components this
+ * route is partially prerendered, so its shell streams with 200 before notFound() below can run.
+ * notFound() here is defense in depth (client navigations, proxy bypass); do not remove the proxy.
  * `instant = false` allows this blocking render under Cache Components.
  */
 export const instant = false;

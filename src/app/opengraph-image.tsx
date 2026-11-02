@@ -1,11 +1,5 @@
 import { ImageResponse } from 'next/og';
-
-// Palette mirrors src/app/globals.css (@theme).
-const PAPER = '#f2f1ec';
-const INK = '#141413';
-const INK_2 = '#55534c';
-const UP = '#0e7a3d';
-const DOWN = '#bf2a1e';
+import { OG_COLORS, OG_DISPLAY_FONT, OG_FONTS, OG_TEXT_FONT } from './fonts/og';
 
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
@@ -22,20 +16,23 @@ export default function OpengraphImage() {
           flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'center',
-          background: PAPER,
-          color: INK,
+          background: OG_COLORS.paper,
+          color: OG_COLORS.ink,
+          fontFamily: OG_TEXT_FONT,
           gap: 32,
         }}
       >
-        <div style={{ fontSize: 96, fontWeight: 800 }}>¿Qué subió más?</div>
-        <div style={{ fontSize: 40, color: INK_2 }}>Adiviná qué producto aumentó más. Datos del INDEC.</div>
+        <div style={{ fontFamily: OG_DISPLAY_FONT, fontSize: 128, fontWeight: 800, letterSpacing: '-0.02em' }}>
+          ¿Qué subió más?
+        </div>
+        <div style={{ fontSize: 40, color: OG_COLORS.ink2 }}>Adiviná qué producto aumentó más. Datos del INDEC.</div>
         <div style={{ display: 'flex', gap: 20 }}>
-          {[UP, DOWN, UP, UP, DOWN].map((color, i) => (
+          {[OG_COLORS.up, OG_COLORS.down, OG_COLORS.up, OG_COLORS.up, OG_COLORS.down].map((color, i) => (
             <div key={i} style={{ width: 72, height: 72, borderRadius: 12, background: color }} />
           ))}
         </div>
       </div>
     ),
-    size,
+    { ...size, fonts: OG_FONTS },
   );
 }
