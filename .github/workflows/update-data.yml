@@ -36,4 +36,5 @@ jobs:
             exit 0
           fi
           git commit -m "data: actualizar precios y puzzles del INDEC"
+          git pull --rebase origin "$GITHUB_REF_NAME"
           git push

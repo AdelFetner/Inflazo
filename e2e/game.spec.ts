@@ -1,16 +1,22 @@
-import { expect, test } from '@playwright/test';
+import { expect, test, type Page } from '@playwright/test';
 import puzzles from '../data/puzzles.json';
-import { argentinaDate } from '../src/lib/game/calendar';
-import { selectPuzzle } from '../src/lib/game/select';
 import { shareText } from '../src/lib/game/share';
 import type { Puzzle } from '../src/lib/game/types';
 
 const BASE_URL = 'http://localhost:3100';
-const today = selectPuzzle(puzzles as Puzzle[], argentinaDate(new Date())).puzzle;
 const wrongOn = 2; // answer round 3 wrong → grid 11011
 
-async function answerRound(page: import('@playwright/test').Page, index: number) {
-  const round = today.rounds[index];
+/** The puzzle the page actually renders (header "#n · …"), so a run crossing midnight stays consistent. */
+async function renderedPuzzle(page: Page): Promise<Puzzle> {
+  const header = await page.getByText(/^#\d+ · Precios promedio en GBA/).textContent();
+  const number = Number(header?.match(/^#(\d+)/)?.[1]);
+  const puzzle = (puzzles as Puzzle[]).find((p) => p.number === number);
+  if (!puzzle) throw new Error(`Rendered puzzle #${number} not found in data/puzzles.json`);
+  return puzzle;
+}
+
+async function answerRound(page: Page, puzzle: Puzzle, index: number) {
+  const round = puzzle.rounds[index];
   const pick = index === wrongOn ? (round.answer === 'a' ? 'b' : 'a') : round.answer;
   await expect(page.getByText(`Ronda ${index + 1} de 5`)).toBeVisible();
   await page.getByTestId(`option-${pick}`).click();
@@ -20,16 +26,17 @@ async function answerRound(page: import('@playwright/test').Page, index: number)
 test('plays the daily puzzle, shares, and keeps the result after reload', async ({ page, context }) => {
   await context.grantPermissions(['clipboard-read', 'clipboard-write']);
   await page.goto('/');
-  for (let i = 0; i < 5; i++) await answerRound(page, i);
+  const today = await renderedPuzzle(page);
+  for (let i = 0; i < 5; i++) await answerRound(page, today, i);
 
   const expected = shareText(today.number, '11011', BASE_URL);
   await expect(page.getByTestId('final-score')).toHaveText('4/5');
   await expect(page.getByTestId('share-text')).toHaveText(expected);
   await page.getByRole('button', { name: 'Compartir' }).click();
   await expect(page.getByText('¡Copiado!')).toBeVisible();
-  // The OS clipboard on Windows turns LF into CRLF; the app writes LF.
   const copied = await page.evaluate(() => navigator.clipboard.readText());
-  expect(copied.replace(/\r\n/g, '\n')).toBe(expected);
+  // The Windows clipboard turns LF into CRLF on read; the app writes LF.
+  expect(process.platform === 'win32' ? copied.replace(/\r\n/g, '\n') : copied).toBe(expected);
 
   await page.reload();
   await expect(page.getByTestId('final-score')).toHaveText('4/5');
@@ -37,8 +44,9 @@ test('plays the daily puzzle, shares, and keeps the result after reload', async 
 
 test('resumes at the next unanswered round after reload', async ({ page }) => {
   await page.goto('/');
-  await answerRound(page, 0);
-  await answerRound(page, 1);
+  const today = await renderedPuzzle(page);
+  await answerRound(page, today, 0);
+  await answerRound(page, today, 1);
   await page.reload();
   await expect(page.getByText('Ronda 3 de 5')).toBeVisible();
 });
