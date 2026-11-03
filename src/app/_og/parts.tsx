@@ -1,11 +1,10 @@
 import type { ReactNode } from 'react';
-import { OG_COLORS, OG_DISPLAY_FONT, OG_TEXT_FONT } from '@/app/fonts/og';
+import { OG_COLORS, OG_DISPLAY_FONT, OG_TEXT_FONT } from './theme';
 import { getSiteUrl, SITE_NAME } from '@/lib/site';
 
-// Building blocks shared by the site card (opengraph-image.tsx) and the result card (api/og).
+// Building blocks shared by the site card (opengraph-image.tsx) and the result card (result-card.tsx).
 // Satori only lays out flexbox: every element with more than one child sets display: flex.
 
-export const OG_SIZE = { width: 1200, height: 630 } as const;
 const BAND_HEIGHT = 104;
 const RECEIPT_WIDTH = 372;
 

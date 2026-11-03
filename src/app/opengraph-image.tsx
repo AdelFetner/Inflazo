@@ -1,7 +1,8 @@
 import { ImageResponse } from 'next/og';
 import { SITE_NAME, SITE_TAGLINE } from '@/lib/site';
-import { OgFrame, OG_SIZE, Receipt } from './_og/parts';
-import { OG_COLORS, OG_DISPLAY_FONT, OG_FONTS } from './fonts/og';
+import { OG_FONTS } from './_og/fonts';
+import { OgFrame, Receipt } from './_og/parts';
+import { OG_COLORS, OG_DISPLAY_FONT, OG_SIZE } from './_og/theme';
 
 export const size = OG_SIZE;
 export const contentType = 'image/png';

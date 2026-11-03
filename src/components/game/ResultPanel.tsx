@@ -1,9 +1,10 @@
 'use client';
 
 import { useRef, type Ref } from 'react';
+import { formatPuzzleDay } from '@/lib/game/calendar';
 import { formatYoy } from '@/lib/game/format';
 import { formatPeriod, shiftPeriod } from '@/lib/game/period';
-import { gridScore, joinShareMessage, ogImagePath, ROUND_COUNT, shareMessage, verdict } from '@/lib/game/share';
+import { gridScore, joinShareMessage, ROUND_COUNT, shareMessage, verdict } from '@/lib/game/share';
 import type { Puzzle } from '@/lib/game/types';
 import { Countdown } from './Countdown';
 import { ShareActions } from './ShareActions';
@@ -63,7 +64,12 @@ export function ResultPanel({ puzzle, grid, spare, siteUrl, streak, onCountdownE
         <div className="mt-4">
           <ShareActions
             message={message}
-            imagePath={ogImagePath(puzzle.number, grid)}
+            card={{
+              number: puzzle.number,
+              grid,
+              day: formatPuzzleDay(puzzle.date),
+              prices: `${formatPeriod(shiftPeriod(puzzle.period, -12))} → ${formatPeriod(puzzle.period)}`,
+            }}
             imageName={`inflazo-${puzzle.number}.png`}
             onCopyFailed={() => selectText(preRef.current)}
           />

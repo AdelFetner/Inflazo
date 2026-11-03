@@ -6,6 +6,8 @@ Juego diario al estilo Wordle con los precios promedio del INDEC. Cada día hay 
 
 El nombre y la bajada viven en `src/lib/site.ts` (`SITE_NAME`, `SITE_TAGLINE`).
 
+La tarjeta de resultado (1200×630) es un solo componente, `src/app/_og/result-card.tsx`, dibujado con Satori en dos lugares: en el servidor por `/api/og`, para los previews de links (los bots de WhatsApp, X y LinkedIn no ejecutan JavaScript), y en el navegador para "Descargar imagen" y "Imagen" (`src/app/_og/render-in-browser.tsx`), así que esos botones no le piden nada al servidor salvo las fuentes de `public/fonts/`. `satori` está fijado en la misma versión que trae Next (`next/dist/compiled/@vercel/og`) para que las dos imágenes salgan iguales: si se actualiza Next, revisar que coincidan.
+
 ## Fuente de datos
 
 - API del INDEC: `https://api.indec.gob.ar/v1/ipc_nacional`
