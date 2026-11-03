@@ -45,7 +45,11 @@ export async function GET(request: Request) {
       ...OG_SIZE,
       fonts: OG_FONTS,
       // A valid (n, g) always renders the same image, so browsers and the CDN may keep it forever.
-      headers: { 'cache-control': 'public, max-age=31536000, s-maxage=31536000, immutable' },
+      // s-maxage alone never reached Vercel's CDN (every request was a MISS); its own header is honoured.
+      headers: {
+        'cache-control': 'public, max-age=31536000, s-maxage=31536000, immutable',
+        'vercel-cdn-cache-control': 'max-age=31536000',
+      },
     },
   );
 }
