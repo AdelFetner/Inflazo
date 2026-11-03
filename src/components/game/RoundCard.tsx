@@ -51,26 +51,29 @@ export function RoundCard({ side, item, fromLabel, revealed, correct, chosen, on
         <span className={`mt-1.5 block text-[15px] ${muted}`}> por {unit}</span>
       </span>
 
-      {revealed ? (
-        <span className="rise block w-full">
-          {verdict && <span className="mb-1 block text-[15px] font-semibold"> {verdict}</span>}
-          <AnimatedPercent
-            value={item.yoy}
-            className="condensed figures block text-[56px] leading-[0.9] font-bold tracking-[-0.03em] sm:text-[80px]"
-          />
-          <span className={`figures mt-3 block text-[15px] ${muted}`}>
-            {' '}
-            {formatPrice(item.from)} → {formatPrice(item.to)}
+      {/* Same slot height before and after the reveal, so nothing below the cards moves. */}
+      <span className="flex min-h-[116px] w-full flex-col justify-end sm:min-h-[140px]">
+        {revealed ? (
+          <span className="rise block w-full">
+            <span className="mb-1 block text-[15px] font-semibold"> {verdict ?? '\u00a0'}</span>
+            <AnimatedPercent
+              value={item.yoy}
+              className="condensed figures block text-[56px] leading-[0.9] font-bold tracking-[-0.03em] sm:text-[80px]"
+            />
+            <span className={`figures mt-3 block text-[15px] ${muted}`}>
+              {' '}
+              {formatPrice(item.from)} → {formatPrice(item.to)}
+            </span>
           </span>
-        </span>
-      ) : (
-        <span className="block">
-          <span className="block text-[15px] text-ink-2"> Precio en {fromLabel}</span>
-          <span className="condensed figures mt-1 block text-[40px] leading-[0.95] font-bold tracking-[-0.02em] sm:text-[52px]">
-            {formatPrice(item.from)}
+        ) : (
+          <span className="block">
+            <span className="block text-[15px] text-ink-2"> Precio en {fromLabel}</span>
+            <span className="condensed figures mt-1 block text-[40px] leading-[0.95] font-bold tracking-[-0.02em] sm:text-[52px]">
+              {formatPrice(item.from)}
+            </span>
           </span>
-        </span>
-      )}
+        )}
+      </span>
     </button>
   );
 }

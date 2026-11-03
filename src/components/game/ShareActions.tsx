@@ -21,7 +21,7 @@ export function ShareActions({ message, imagePath, imageName, onCopyFailed }: Sh
   const text = joinShareMessage(message);
   const [copied, setCopied] = useState(false);
   const [moreOpen, setMoreOpen] = useState(false);
-  // Only set where the browser can share files (most phones, desktop Chrome/Edge/Safari).
+  // Phones get the OS share sheet with the PNG; desktops (and phones that cannot share files) download it.
   const [imageFile, setImageFile] = useState<File | null>(null);
   const moreId = useId();
 
@@ -31,10 +31,10 @@ export function ShareActions({ message, imagePath, imageName, onCopyFailed }: Sh
     return () => window.clearTimeout(id);
   }, [copied]);
 
-  // Prefetch the PNG so the click can call navigator.share() straight away: Safari drops the
+  // Prefetch the PNG on phones so the click can call navigator.share() straight away: Safari drops the
   // user activation if the share waits on a network request first.
   useEffect(() => {
-    if (typeof navigator.canShare !== 'function') return;
+    if (typeof navigator.canShare !== 'function' || !window.matchMedia('(pointer: coarse)').matches) return;
     const probe = new File([new Blob()], imageName, { type: 'image/png' });
     if (!navigator.canShare({ files: [probe] })) return;
     const controller = new AbortController();
@@ -42,7 +42,7 @@ export function ShareActions({ message, imagePath, imageName, onCopyFailed }: Sh
       .then((response) => (response.ok ? response.blob() : Promise.reject(new Error(String(response.status)))))
       .then((blob) => setImageFile(new File([blob], imageName, { type: 'image/png' })))
       .catch(() => {
-        // No image button; text sharing still works.
+        // Stays a download link.
       });
     return () => controller.abort();
   }, [imagePath, imageName]);
@@ -71,9 +71,14 @@ export function ShareActions({ message, imagePath, imageName, onCopyFailed }: Sh
   async function shareImage() {
     if (!imageFile) return;
     try {
-      await navigator.share({ files: [imageFile], text });
+      // Image only: apps such as Instagram Stories drop out of the share sheet when text comes along.
+      await navigator.share({ files: [imageFile] });
     } catch (error) {
-      if (!(error instanceof DOMException && error.name === 'AbortError')) window.open(imagePath, '_blank', 'noopener');
+      if (error instanceof DOMException && error.name === 'AbortError') return;
+      const link = document.createElement('a');
+      link.href = imagePath;
+      link.download = imageName;
+      link.click();
     }
   }
 
@@ -117,13 +122,17 @@ export function ShareActions({ message, imagePath, imageName, onCopyFailed }: Sh
               Copiar
             </button>
           </li>
-          {imageFile && (
-            <li>
+          <li>
+            {imageFile ? (
               <button type="button" onClick={shareImage} aria-label="Compartir imagen" className={chip}>
                 Imagen
               </button>
-            </li>
-          )}
+            ) : (
+              <a href={imagePath} download={imageName} className={chip}>
+                Descargar imagen
+              </a>
+            )}
+          </li>
           <li>
             <button
               type="button"

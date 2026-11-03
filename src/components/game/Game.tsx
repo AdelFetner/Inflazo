@@ -199,16 +199,19 @@ export function Game({ puzzle, spare, siteUrl }: GameProps) {
                 Ronda {roundIndex + 1} de {ROUND_COUNT}
               </p>
             </div>
-            {revealing && (
-              <button
-                ref={advanceRef}
-                type="button"
-                onClick={advance}
-                className="rise h-14 w-full bg-ink px-10 text-[17px] font-semibold text-paper transition-[background-color,transform] duration-150 hover:bg-accent active:scale-[0.98] sm:w-auto"
-              >
-                {advanceLabel}
-              </button>
-            )}
+            {/* Always laid out, hidden until the reveal, so the row never changes height. */}
+            <button
+              ref={advanceRef}
+              type="button"
+              onClick={advance}
+              disabled={!revealing}
+              aria-hidden={!revealing}
+              className={`h-14 w-full bg-ink px-10 text-[17px] font-semibold text-paper transition-[background-color,transform] duration-150 hover:bg-accent active:scale-[0.98] sm:w-auto ${
+                revealing ? 'rise' : 'invisible'
+              }`}
+            >
+              {advanceLabel}
+            </button>
           </div>
         </section>
       )}
