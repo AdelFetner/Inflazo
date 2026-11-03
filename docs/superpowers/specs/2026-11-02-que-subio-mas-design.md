@@ -74,10 +74,10 @@ Juego web diario, estilo Wordle, basado en precios oficiales del INDEC. Cada dí
 
 - Next.js (App Router, TypeScript, Tailwind). Páginas estáticas; los JSON se importan en build.
 - `/` — puzzle del día:
-  - Header: título, número de puzzle, botón de reglas y de estadísticas.
-  - Ronda: dos tarjetas con nombre del producto y unidad ("Cebolla · por kg"), pregunta "¿Cuál aumentó más en los últimos 12 meses?" (meses mostrados: "sep 2025 → sep 2026").
+  - Header: nombre, "Desafío #n del 3 de noviembre", botón de reglas y de estadísticas.
+  - Ronda: la pregunta "¿Cuál aumentó más entre sep 2025 y sep 2026?" y dos tarjetas como cartel de góndola: producto, unidad y el precio de hace un año (no revela la respuesta). Abajo, el progreso (cuadrados) con "Ronda n de 5" y el botón para avanzar.
   - Al elegir: revela en ambas tarjetas precio anterior → actual y la variación % con contador animado; marca acierto/error; botón "Siguiente".
-  - Final: puntaje N/5, grilla, botón Compartir (Web Share API en mobile; fallback copiar al portapapeles), botones por red (WhatsApp, X, LinkedIn, Copiar, Compartir imagen cuando el navegador comparte archivos; "Más": Telegram, Bluesky, Threads, Facebook, Reddit), cuenta regresiva al próximo puzzle, fuente "Datos: INDEC, precios promedio GBA". Endpoints y motivos: `docs/research/2026-11-02-share-ux.md`.
+  - Final: puntaje N/5, veredicto, el texto del mensaje, botón Compartir (Web Share API en mobile; fallback copiar al portapapeles), links de texto por red (WhatsApp, X, LinkedIn, Copiar, Imagen cuando el navegador comparte archivos; "Más": Telegram, Bluesky, Threads, Facebook, Reddit), cuenta regresiva al próximo desafío y, al costado, el ticket del súper con lo que más subió en cada ronda y si el jugador acertó. Endpoints y motivos: `docs/research/2026-11-02-share-ux.md`.
 - Estado local (`localStorage`): progreso del día (se puede recargar y retomar), historial por número de puzzle, racha actual, mejor racha, distribución de puntajes 0–5. Sin backend ni cuentas.
 - Texto compartido (la línea de racha aparece solo con racha ≥ 2; el desafío depende del puntaje: 5 → "¿Me igualás?", 3–4 → "¿Me ganás?", 0–2 → "¿Vos lo hacés mejor?"):
 
@@ -92,7 +92,7 @@ Juego web diario, estilo Wordle, basado en precios oficiales del INDEC. Cada dí
 
   En X el link va dentro del texto (si va en `url`, X lo pega a la última línea). En LinkedIn se agrega al final `#INDEC #Inflación #Economía #Precios`.
 
-- `/r/[number]/[grid]` — página de resultado compartido, adonde llega quien toca el link: puntaje, grilla, el desafío, cómo se juega en tres líneas y el CTA "Aceptá el desafío". Metadata OG/Twitter: título "Saqué 4/5 en Inflazo #42", descripción con desafío + pitch, imagen `/api/og?n=42&g=11011`. `grid` es una cadena de 5 dígitos 0/1; valores inválidos ⇒ 404.
+- `/r/[number]/[grid]` — página de resultado compartido, adonde llega quien toca el link: título "Te desafiaron a ver qué subió más", "Sacó 4 de 5 en el desafío del 3 de noviembre. ¿Me ganás?", cómo se juega en tres líneas, el CTA "Aceptá el desafío" y el ticket sin nombres de productos (el visitante va a jugar el mismo desafío). Metadata OG/Twitter: título "Saqué 4/5 en Inflazo #42", descripción con desafío + pitch, imagen `/api/og?n=42&g=11011`. `grid` es una cadena de 5 dígitos 0/1; valores inválidos ⇒ 404.
 - `/api/og` — `ImageResponse` 1200×630 con forma de ticket de súper: puntaje, veredicto, qué es el juego, una línea por ronda con ✓/✗, período de precios y una franja con el desafío y el dominio. El llamado a la acción queda a la derecha porque X tapa la esquina inferior izquierda con el dominio. Parámetros inválidos ⇒ 400.
 - URL base desde `NEXT_PUBLIC_SITE_URL`.
 - Mobile-first; contraste AA; operable con teclado; respeta `prefers-reduced-motion` (sin contador animado).

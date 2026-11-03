@@ -6,10 +6,10 @@ import type { Puzzle } from '../src/lib/game/types';
 const BASE_URL = 'http://localhost:3100';
 const wrongOn = 2; // answer round 3 wrong → grid 11011
 
-/** The puzzle the page actually renders (header "#n · …"), so a run crossing midnight stays consistent. */
+/** The puzzle the page actually renders (header "Desafío #n del …"), so a run crossing midnight stays consistent. */
 async function renderedPuzzle(page: Page): Promise<Puzzle> {
-  const header = await page.getByText(/^#\d+ · Precios promedio en GBA/).textContent();
-  const number = Number(header?.match(/^#(\d+)/)?.[1]);
+  const header = await page.getByText(/^Desafío #\d+ del /).textContent();
+  const number = Number(header?.match(/^Desafío #(\d+)/)?.[1]);
   const puzzle = (puzzles as Puzzle[]).find((p) => p.number === number);
   if (!puzzle) throw new Error(`Rendered puzzle #${number} not found in data/puzzles.json`);
   return puzzle;

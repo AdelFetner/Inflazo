@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState, type ReactNode } from 'react';
 import { useRouter } from 'next/navigation';
-import { argentinaDate, puzzleNumberForDate } from '@/lib/game/calendar';
+import { argentinaDate, formatPuzzleDay, puzzleNumberForDate } from '@/lib/game/calendar';
 import { formatPeriod, shiftPeriod } from '@/lib/game/period';
 import { answersFor, recordAnswer } from '@/lib/game/session';
 import { gridFromAnswers, ROUND_COUNT } from '@/lib/game/share';
@@ -95,6 +95,7 @@ export function Game({ puzzle, spare, siteUrl }: GameProps) {
   const header = (
     <Header
       number={puzzle.number}
+      date={puzzle.date}
       statsDisabled={!state}
       onRules={() => rulesRef.current?.showModal()}
       onStats={openStats}
@@ -102,7 +103,7 @@ export function Game({ puzzle, spare, siteUrl }: GameProps) {
   );
   const banner = spare && (
     <p className="mt-6 bg-ink px-4 py-3 text-[15px] leading-snug text-paper">
-      Puzzle de repuesto: todavía no hay un puzzle nuevo para hoy.
+      Desafío de repuesto: todavía no hay uno nuevo para hoy.
     </p>
   );
 
@@ -155,25 +156,9 @@ export function Game({ puzzle, spare, siteUrl }: GameProps) {
         />
       ) : (
         <section aria-labelledby="question" className="mt-8 sm:mt-12">
-          <div className="flex items-center justify-between gap-4">
-            <p className="text-[17px] font-semibold">
-              Ronda {roundIndex + 1} de {ROUND_COUNT}
-            </p>
-            <ol className="flex gap-1.5" aria-hidden="true">
-              {Array.from({ length: ROUND_COUNT }, (_, i) => (
-                <li
-                  key={i}
-                  className={`size-4 transition-colors duration-300 ${
-                    marks[i] === '1' ? 'bg-up' : marks[i] === '0' ? 'bg-down' : i === roundIndex ? 'bg-ink' : 'bg-paper-3'
-                  }`}
-                />
-              ))}
-            </ol>
-          </div>
-
           <h2
             id="question"
-            className="condensed mt-3 max-w-[22ch] text-[34px] leading-[0.98] font-bold tracking-[-0.025em] text-balance sm:max-w-none sm:text-[56px]"
+            className="condensed max-w-[22ch] text-[34px] leading-[0.98] font-bold tracking-[-0.025em] text-balance sm:max-w-none sm:text-[56px] lg:text-[76px]"
           >
             ¿Cuál aumentó más entre {formatPeriod(shiftPeriod(puzzle.period, -12))} y {formatPeriod(puzzle.period)}?
           </h2>
@@ -185,6 +170,7 @@ export function Game({ puzzle, spare, siteUrl }: GameProps) {
                 ref={side === 'a' ? optionRef : undefined}
                 side={side}
                 item={round[side]}
+                fromLabel={formatPeriod(shiftPeriod(puzzle.period, -12))}
                 revealed={revealing}
                 correct={round.answer === side}
                 chosen={chosen}
@@ -197,8 +183,23 @@ export function Game({ puzzle, spare, siteUrl }: GameProps) {
             {revealing ? (chosen === round.answer ? 'Correcto.' : 'Incorrecto.') : ''}
           </p>
 
-          {revealing && (
-            <div className="mt-6 flex justify-end sm:mt-8">
+          <div className="mt-6 flex min-h-14 flex-wrap items-center justify-between gap-x-6 gap-y-4 sm:mt-8">
+            <div className="flex items-center gap-3">
+              <ol className="flex gap-1.5" aria-hidden="true">
+                {Array.from({ length: ROUND_COUNT }, (_, i) => (
+                  <li
+                    key={i}
+                    className={`size-4 transition-colors duration-300 ${
+                      marks[i] === '1' ? 'bg-up' : marks[i] === '0' ? 'bg-down' : i === roundIndex ? 'bg-ink' : 'bg-paper-3'
+                    }`}
+                  />
+                ))}
+              </ol>
+              <p className="text-[17px] font-semibold">
+                Ronda {roundIndex + 1} de {ROUND_COUNT}
+              </p>
+            </div>
+            {revealing && (
               <button
                 ref={advanceRef}
                 type="button"
@@ -207,8 +208,8 @@ export function Game({ puzzle, spare, siteUrl }: GameProps) {
               >
                 {advanceLabel}
               </button>
-            </div>
-          )}
+            )}
+          </div>
         </section>
       )}
 
@@ -224,12 +225,14 @@ function Frame({ children }: { children: ReactNode }) {
 
 interface HeaderProps {
   number: number;
+  /** Puzzle day, `YYYY-MM-DD`. */
+  date: string;
   statsDisabled: boolean;
   onRules: () => void;
   onStats: () => void;
 }
 
-function Header({ number, statsDisabled, onRules, onStats }: HeaderProps) {
+function Header({ number, date, statsDisabled, onRules, onStats }: HeaderProps) {
   const iconButton =
     'grid size-11 place-items-center text-ink transition-colors hover:bg-paper-2 active:bg-paper-3 disabled:opacity-40';
   return (
@@ -239,7 +242,9 @@ function Header({ number, statsDisabled, onRules, onStats }: HeaderProps) {
           {SITE_NAME}
           <span className="sr-only">: ¿qué subió más?</span>
         </h1>
-        <p className="figures mt-2 text-[14px] text-ink-2 sm:text-[15px]">#{number} · Precios promedio en GBA · INDEC</p>
+        <p className="figures mt-2 text-[14px] text-ink-2 sm:text-[15px]">
+          Desafío #{number} del {formatPuzzleDay(date)}
+        </p>
       </div>
       <div className="-mr-2 flex gap-1">
         <button type="button" aria-label="Reglas" onClick={onRules} className={iconButton}>

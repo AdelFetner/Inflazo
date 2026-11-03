@@ -3,12 +3,9 @@ import { connection } from 'next/server';
 import { OgFrame, OG_SIZE, Receipt, type Mark } from '@/app/_og/parts';
 import { OG_COLORS, OG_DISPLAY_FONT, OG_FONTS } from '@/app/fonts/og';
 import { getPuzzle, getTodayNumber } from '@/lib/data/puzzles';
-import { dateForPuzzleNumber } from '@/lib/game/calendar';
+import { dateForPuzzleNumber, formatPuzzleDay } from '@/lib/game/calendar';
 import { formatPeriod, shiftPeriod } from '@/lib/game/period';
 import { ROUND_COUNT, challenge, gridScore, parseResultParams, verdictLine } from '@/lib/game/share';
-
-// Puzzle dates are calendar days stored as UTC midnight, so format them in UTC.
-const dayFormatter = new Intl.DateTimeFormat('es-AR', { day: 'numeric', month: 'long', timeZone: 'UTC' });
 
 export async function GET(request: Request) {
   // Request-time: today's number changes daily, so the upper bound must be read per request.
@@ -20,7 +17,7 @@ export async function GET(request: Request) {
   }
 
   const score = gridScore(params.grid);
-  const day = dayFormatter.format(new Date(`${dateForPuzzleNumber(params.number)}T00:00:00Z`));
+  const day = formatPuzzleDay(dateForPuzzleNumber(params.number));
   const marks = [...params.grid].map((cell): Mark => (cell === '1' ? 'hit' : 'miss'));
   const puzzle = getPuzzle(params.number);
   const prices = puzzle ? `${formatPeriod(shiftPeriod(puzzle.period, -12))} → ${formatPeriod(puzzle.period)}` : 'último año';

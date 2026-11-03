@@ -35,7 +35,7 @@ interface CountdownProps {
   onEnd: () => void;
 }
 
-/** `Próximo puzzle en HH:MM:SS`; calls `onEnd` once and shows a loading line after the day is over. */
+/** `Próximo desafío en HH:MM:SS`; calls `onEnd` once and shows a loading line after the day is over. */
 export function Countdown({ day, onEnd }: CountdownProps) {
   const seconds = useSyncExternalStore(subscribe, nowSeconds, serverSnapshot);
   const today = seconds === null ? null : argentinaDate(new Date(seconds * 1000));
@@ -52,11 +52,11 @@ export function Countdown({ day, onEnd }: CountdownProps) {
   }, [today, day, onEnd]);
 
   if (day !== null && today !== null && today > day) {
-    return <span role="status">Cargando el puzzle de hoy…</span>;
+    return <span role="status">Cargando el desafío de hoy…</span>;
   }
   return (
     <>
-      Próximo puzzle en{' '}
+      Próximo desafío en{' '}
       <time className="condensed figures text-[24px] font-bold">
         {seconds === null ? '--:--:--' : formatRemaining(msUntilNextPuzzle(new Date(seconds * 1000)))}
       </time>

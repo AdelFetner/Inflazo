@@ -4,6 +4,8 @@
   --color-paper: #f2f1ec;
   --color-paper-2: #e4e2da;
   --color-paper-3: #d6d3c8;
+  /* Thermal-paper white for the ticket, a touch warmer than white against the paper ground. */
+  --color-receipt: #fffdf6;
   --color-ink: #141413;
   --color-ink-2: #55534c;
   --color-accent: #1648c8;

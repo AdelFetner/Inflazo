@@ -134,7 +134,7 @@ function MarkBox({ mark }: { mark: Mark }) {
 /** A supermarket receipt: one line per round, the total at the bottom. Spoiler-free: no products. */
 export function Receipt({ title, subtitle, marks, total }: { title: string; subtitle: string; marks: Mark[]; total: string }) {
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', filter: 'drop-shadow(0 14px 22px rgba(20,20,19,0.22))' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', filter: 'drop-shadow(0 14px 22px rgba(20,20,19,0.22))' /* taste-skill-ignore: the ticket lies on the page as paper */ }}>
       <div
         style={{
           width: RECEIPT_WIDTH,

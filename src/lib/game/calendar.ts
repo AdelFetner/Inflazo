@@ -31,6 +31,14 @@ export function dateForPuzzleNumber(n: number): string {
   return new Date(isoDateToUtcMs(EPOCH_DATE) + (n - 1) * DAY_MS).toISOString().slice(0, 10);
 }
 
+// Puzzle dates are calendar days stored as UTC midnight, so they are formatted in UTC.
+const dayFormatter = new Intl.DateTimeFormat('es-AR', { day: 'numeric', month: 'long', timeZone: 'UTC' });
+
+/** `2026-11-03` → `3 de noviembre`. */
+export function formatPuzzleDay(isoDate: string): string {
+  return dayFormatter.format(isoDateToUtcMs(isoDate));
+}
+
 export function msUntilNextPuzzle(now: Date): number {
   const nextMidnightUtcMs = isoDateToUtcMs(argentinaDate(now)) + DAY_MS - ARGENTINA_UTC_OFFSET_MS;
   return nextMidnightUtcMs - now.getTime();

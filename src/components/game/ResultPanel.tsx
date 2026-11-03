@@ -1,10 +1,13 @@
 'use client';
 
 import { useRef, type Ref } from 'react';
-import { gridScore, gridToEmoji, joinShareMessage, ogImagePath, ROUND_COUNT, shareMessage, verdict } from '@/lib/game/share';
+import { formatYoy } from '@/lib/game/format';
+import { formatPeriod, shiftPeriod } from '@/lib/game/period';
+import { gridScore, joinShareMessage, ogImagePath, ROUND_COUNT, shareMessage, verdict } from '@/lib/game/share';
 import type { Puzzle } from '@/lib/game/types';
 import { Countdown } from './Countdown';
 import { ShareActions } from './ShareActions';
+import { Ticket } from './Ticket';
 
 interface ResultPanelProps {
   puzzle: Puzzle;
@@ -30,51 +33,57 @@ export function ResultPanel({ puzzle, grid, spare, siteUrl, streak, onCountdownE
   const message = shareMessage(puzzle.number, grid, siteUrl, streak);
   const score = gridScore(grid);
   const preRef = useRef<HTMLPreElement>(null);
+  // The player has finished, so the ticket may name what rose more in each round.
+  const lines = puzzle.rounds.map((round, i) => {
+    const winner = round[round.answer];
+    return { label: winner.name, amount: formatYoy(winner.yoy), hit: grid[i] === '1' };
+  });
 
   return (
-    <section aria-labelledby="result-heading" className="rise mt-8 sm:mt-12">
-      <h2 id="result-heading" ref={headingRef} tabIndex={-1} className="text-[17px] font-semibold focus:outline-none">
-        Tu resultado de hoy
-      </h2>
+    <section aria-labelledby="result-heading" className="rise mt-8 grid gap-10 sm:mt-12 lg:grid-cols-[1fr_minmax(0,400px)] lg:gap-14">
+      <div>
+        <h2 id="result-heading" ref={headingRef} tabIndex={-1} className="text-[17px] font-semibold focus:outline-none">
+          Tu resultado de hoy
+        </h2>
+        <p
+          data-testid="final-score"
+          className="condensed figures mt-2 text-[140px] leading-[0.82] font-bold tracking-[-0.04em] sm:text-[200px]"
+        >
+          {score}/{ROUND_COUNT}
+        </p>
+        <p className="mt-5 text-[19px] leading-snug text-balance sm:text-[22px]">{verdict(score)}</p>
 
-      <div className="mt-2 grid gap-8 sm:grid-cols-[1.1fr_1fr] sm:gap-12">
-        <div>
-          <p
-            data-testid="final-score"
-            className="condensed figures text-[140px] leading-[0.82] font-bold tracking-[-0.04em] sm:text-[220px]"
-          >
-            {score}/{ROUND_COUNT}
-          </p>
-          <p className="mt-5 text-[19px] leading-snug text-balance sm:text-[22px]">{verdict(score)}</p>
-          <p className="mt-6 text-[28px] leading-none tracking-[0.08em]" aria-label={`${score} de ${ROUND_COUNT} correctas`}>
-            {gridToEmoji(grid)}
-          </p>
-        </div>
-
-        <div className="flex flex-col gap-4">
-          <pre
-            ref={preRef}
-            data-testid="share-text"
-            className="bg-paper-2 p-4 font-sans text-[15px] leading-relaxed wrap-break-word whitespace-pre-wrap select-all"
-          >
-            {joinShareMessage(message)}
-          </pre>
+        <pre
+          ref={preRef}
+          data-testid="share-text"
+          className="mt-8 bg-paper-2 p-4 font-sans text-[15px] leading-relaxed wrap-break-word whitespace-pre-wrap select-all"
+        >
+          {joinShareMessage(message)}
+        </pre>
+        <div className="mt-4">
           <ShareActions
             message={message}
             imagePath={ogImagePath(puzzle.number, grid)}
             imageName={`inflazo-${puzzle.number}.png`}
             onCopyFailed={() => selectText(preRef.current)}
           />
-
-          <div className="mt-4 bg-ink p-5 text-paper">
-            <p className="text-[15px]">
-              <Countdown day={spare ? null : puzzle.date} onEnd={onCountdownEnd} />
-            </p>
-          </div>
         </div>
+
+        <p className="mt-8 text-[17px]">
+          <Countdown day={spare ? null : puzzle.date} onEnd={onCountdownEnd} />
+        </p>
       </div>
 
-      <p className="mt-10 text-[14px] text-ink-2">Fuente: INDEC, API ipc_nacional (precios promedio GBA).</p>
+      <Ticket
+        className="w-full lg:mt-8 lg:rotate-[1.5deg]"
+        title={`Ticket #${puzzle.number}`}
+        subtitle={`Lo que más subió, ${formatPeriod(shiftPeriod(puzzle.period, -12))} a ${formatPeriod(puzzle.period)}`}
+        lines={lines}
+        total={`${score}/${ROUND_COUNT}`}
+      />
+      <p className="text-[14px] text-ink-2 lg:col-span-2">
+        Precios promedio del Gran Buenos Aires, publicados por el INDEC.
+      </p>
     </section>
   );
 }

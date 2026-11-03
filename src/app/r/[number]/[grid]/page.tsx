@@ -2,9 +2,11 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { connection } from 'next/server';
-import { getTodayNumber } from '@/lib/data/puzzles';
-import { ROUND_COUNT, SHARE_PITCH_PLAIN, challenge, gridScore, gridToEmoji, ogImagePath, parseResultParams } from '@/lib/game/share';
+import { getPuzzle, getTodayNumber } from '@/lib/data/puzzles';
+import { dateForPuzzleNumber, formatPuzzleDay } from '@/lib/game/calendar';
+import { ROUND_COUNT, SHARE_PITCH_PLAIN, challenge, gridScore, ogImagePath, parseResultParams } from '@/lib/game/share';
 import { getSiteUrl, SITE_NAME } from '@/lib/site';
+import { Ticket } from '@/components/game/Ticket';
 
 /**
  * Request-time page: validity depends on today's puzzle number, so it is resolved per request
@@ -50,42 +52,53 @@ export default async function SharedResult({ params }: PageProps<'/r/[number]/[g
   const result = await resolve(params);
   if (!result) notFound();
   const score = gridScore(result.grid);
+  const day = formatPuzzleDay(getPuzzle(result.number)?.date ?? dateForPuzzleNumber(result.number));
+  // Spoiler-free: the visitor is about to play the same puzzle, so no product names.
+  const lines = [...result.grid].map((cell, i) => ({ label: `Ronda ${i + 1}`, hit: cell === '1' }));
 
   return (
-    <main className="mx-auto w-full max-w-3xl flex-1 px-5 py-10 sm:px-8 sm:py-16">
-      <p className="text-[15px] font-semibold tracking-[0.08em] text-ink-2 uppercase">Te desafiaron</p>
-      <h1 className="condensed mt-2 text-[44px] leading-none font-bold tracking-[-0.02em] sm:text-[64px]">
-        {SITE_NAME} <span className="figures">#{result.number}</span>
-      </h1>
-
-      <p className="condensed figures rise mt-8 text-[140px] leading-[0.82] font-bold tracking-[-0.04em] sm:text-[220px]">
-        {score}/{ROUND_COUNT}
-      </p>
-      <p className="mt-6 text-[28px] leading-none tracking-[0.08em]" aria-label={`${score} de ${ROUND_COUNT} correctas`}>
-        {gridToEmoji(result.grid)}
-      </p>
-      <p className="condensed mt-8 text-[36px] leading-tight font-bold sm:text-[44px]">{challenge(score)}</p>
-
-      <ol className="mt-6 grid gap-3 text-[17px] leading-snug sm:text-[19px]">
-        <li>
-          <span className="font-semibold">Dos productos del súper.</span> Elegí cuál aumentó más en el último año.
-        </li>
-        <li>
-          <span className="font-semibold">Cinco rondas,</span> cada una más difícil. Un puzzle nuevo por día.
-        </li>
-        <li>
-          <span className="font-semibold">Precios oficiales del INDEC</span> (promedios del Gran Buenos Aires).
-        </li>
-      </ol>
-
-      <Link
-        href="/"
-        className="mt-10 inline-flex h-14 items-center justify-center bg-ink px-8 text-[17px] font-semibold text-paper transition-[background-color,transform] duration-150 hover:bg-accent active:scale-[0.98]"
-      >
-        Aceptá el desafío
+    <main className="mx-auto w-full max-w-[1040px] flex-1 px-5 pt-5 pb-16 sm:px-10 sm:pt-8">
+      <Link href="/" className="condensed text-[30px] leading-none font-extrabold tracking-[-0.02em] sm:text-[40px]">
+        {SITE_NAME}
       </Link>
 
-      <p className="mt-10 text-[14px] text-ink-2">Fuente: INDEC, API ipc_nacional (precios promedio GBA).</p>
+      <div className="mt-10 grid gap-12 sm:mt-14 lg:grid-cols-[1fr_minmax(0,380px)] lg:gap-14">
+        <div>
+          <h1 className="condensed max-w-[14ch] text-[44px] leading-[0.95] font-bold tracking-[-0.025em] text-balance sm:text-[64px]">
+            Te desafiaron a ver qué subió más
+          </h1>
+          <p className="mt-6 max-w-[34ch] text-[19px] leading-snug sm:text-[22px]">
+            Sacó {score} de {ROUND_COUNT} en el desafío del {day}. {challenge(score)}
+          </p>
+
+          <ul className="mt-8 grid gap-3 text-[17px] leading-snug sm:text-[19px]">
+            <li>
+              <span className="font-semibold">Dos productos del súper.</span> Elegí cuál aumentó más en el último año.
+            </li>
+            <li>
+              <span className="font-semibold">Cinco rondas,</span> cada una más difícil. Un desafío nuevo por día.
+            </li>
+            <li>
+              <span className="font-semibold">Precios oficiales del INDEC,</span> promedios del Gran Buenos Aires.
+            </li>
+          </ul>
+
+          <Link
+            href="/"
+            className="mt-10 inline-flex h-14 items-center justify-center bg-ink px-8 text-[17px] font-semibold text-paper transition-[background-color,transform] duration-150 hover:bg-accent active:scale-[0.98]"
+          >
+            Aceptá el desafío
+          </Link>
+        </div>
+
+        <Ticket
+          className="rise w-full lg:rotate-[1.5deg]"
+          title={`Ticket #${result.number}`}
+          subtitle={`Desafío del ${day}`}
+          lines={lines}
+          total={`${score}/${ROUND_COUNT}`}
+        />
+      </div>
     </main>
   );
 }

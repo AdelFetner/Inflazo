@@ -18,7 +18,7 @@ export function Dialog({ title, children, ref }: DialogProps) {
       onClick={(event) => {
         if (event.target === event.currentTarget) event.currentTarget.close();
       }}
-      className="m-auto w-[min(100vw-2rem,30rem)] bg-paper p-0 text-ink shadow-[0_24px_64px_rgb(0_0_0/0.25)] open:rise"
+      className="m-auto w-[min(100vw-2rem,30rem)] bg-paper p-0 text-ink shadow-[0_24px_64px_rgb(0_0_0/0.25)] open:rise" // taste-skill-ignore: a modal floats over the page
     >
       <div className="p-6 sm:p-8">
         <div className="flex items-start justify-between gap-4">

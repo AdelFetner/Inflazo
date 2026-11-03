@@ -8,6 +8,8 @@ import { AnimatedPercent } from './AnimatedPercent';
 interface RoundCardProps {
   side: Answer;
   item: RoundItem;
+  /** Month of the earlier price, e.g. `sep 2025`. */
+  fromLabel: string;
   revealed: boolean;
   /** This option is the right answer. */
   correct: boolean;
@@ -17,7 +19,7 @@ interface RoundCardProps {
   ref?: Ref<HTMLButtonElement>;
 }
 
-export function RoundCard({ side, item, revealed, correct, chosen, onChoose, ref }: RoundCardProps) {
+export function RoundCard({ side, item, fromLabel, revealed, correct, chosen, onChoose, ref }: RoundCardProps) {
   const result = !revealed ? undefined : correct ? 'correct' : chosen === side ? 'wrong' : undefined;
   const tone =
     result === 'correct'
@@ -28,7 +30,9 @@ export function RoundCard({ side, item, revealed, correct, chosen, onChoose, ref
           ? 'bg-paper-2 text-ink'
           : 'bg-paper-2 text-ink hover:bg-paper-3 active:scale-[0.985]';
   const muted = result ? 'text-white' : 'text-ink-2';
-  const verdict = result === 'correct' ? (chosen === side ? 'Subió más · tu elección' : 'Subió más') : result === 'wrong' ? 'Tu elección' : null;
+  const verdict = result === 'correct' ? (chosen === side ? 'Subió más. Acertaste.' : 'Subió más') : result === 'wrong' ? 'Tu elección' : null;
+  // Units come as INDEC labels ("kg", "Litro", "Env. 4 u"); read them mid-sentence.
+  const unit = item.unit.charAt(0).toLowerCase() + item.unit.slice(1);
 
   return (
     <button
@@ -44,7 +48,7 @@ export function RoundCard({ side, item, revealed, correct, chosen, onChoose, ref
         <span className="block text-[22px] leading-[1.1] font-semibold tracking-[-0.01em] text-balance sm:text-[28px]">
           {item.name}
         </span>
-        <span className={`mt-1.5 block text-[15px] ${muted}`}> por {item.unit}</span>
+        <span className={`mt-1.5 block text-[15px] ${muted}`}> por {unit}</span>
       </span>
 
       {revealed ? (
@@ -60,8 +64,11 @@ export function RoundCard({ side, item, revealed, correct, chosen, onChoose, ref
           </span>
         </span>
       ) : (
-        <span className="text-[15px] font-semibold text-ink-2 transition-colors group-hover:text-ink" aria-hidden="true">
-          Elegir
+        <span className="block">
+          <span className="block text-[15px] text-ink-2"> Precio en {fromLabel}</span>
+          <span className="condensed figures mt-1 block text-[40px] leading-[0.95] font-bold tracking-[-0.02em] sm:text-[52px]">
+            {formatPrice(item.from)}
+          </span>
         </span>
       )}
     </button>

@@ -22,7 +22,7 @@ export default function NotFound() {
         No encontramos esa página
       </h1>
       <p className="mt-5 max-w-xl text-[19px] leading-snug">
-        El link puede estar mal copiado o ser de un puzzle que todavía no salió.
+        El link puede estar mal copiado o ser de un desafío que todavía no salió.
       </p>
       <Link
         href="/"

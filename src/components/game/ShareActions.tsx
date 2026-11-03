@@ -13,8 +13,9 @@ interface ShareActionsProps {
   onCopyFailed: () => void;
 }
 
+// Plain underlined text: the black Compartir button is the one primary action.
 const chip =
-  'inline-flex h-11 items-center px-4 border border-ink/25 text-[15px] font-semibold transition-colors duration-150 hover:bg-paper-2 active:bg-paper-3';
+  'inline-flex h-11 items-center text-[16px] font-semibold underline decoration-ink/30 decoration-2 underline-offset-[6px] transition-colors duration-150 hover:decoration-ink';
 
 export function ShareActions({ message, imagePath, imageName, onCopyFailed }: ShareActionsProps) {
   const text = joinShareMessage(message);
@@ -106,10 +107,10 @@ export function ShareActions({ message, imagePath, imageName, onCopyFailed }: Sh
       </div>
 
       <div>
-        <p id={`${moreId}-label`} className="text-[14px] text-ink-2">
-          O compartí en
+        <p id={`${moreId}-label`} className="text-[15px] text-ink-2">
+          O mandalo por
         </p>
-        <ul aria-labelledby={`${moreId}-label`} className="mt-2 flex flex-wrap gap-2">
+        <ul aria-labelledby={`${moreId}-label`} className="flex flex-wrap gap-x-6">
           {PRIMARY_NETWORKS.map(networkLink)}
           <li>
             <button type="button" onClick={copy} className={chip}>
@@ -118,8 +119,8 @@ export function ShareActions({ message, imagePath, imageName, onCopyFailed }: Sh
           </li>
           {imageFile && (
             <li>
-              <button type="button" onClick={shareImage} className={chip}>
-                Compartir imagen
+              <button type="button" onClick={shareImage} aria-label="Compartir imagen" className={chip}>
+                Imagen
               </button>
             </li>
           )}
@@ -135,7 +136,7 @@ export function ShareActions({ message, imagePath, imageName, onCopyFailed }: Sh
             </button>
           </li>
         </ul>
-        <ul id={moreId} hidden={!moreOpen} aria-label="Más redes" className="mt-2 flex flex-wrap gap-2">
+        <ul id={moreId} hidden={!moreOpen} aria-label="Más redes" className="flex flex-wrap gap-x-6">
           {MORE_NETWORKS.map(networkLink)}
         </ul>
       </div>
