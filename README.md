@@ -75,3 +75,11 @@ Para recrearlo:
 4. Crear un Deploy Hook: *Project → Settings → Git → Deploy Hooks*, con branch `main`. Copiar la URL y guardarla en GitHub como el secret `VERCEL_DEPLOY_HOOK_URL`.
 
 ¿Por qué el Deploy Hook? Vercel puede no desplegar los commits hechos por `github-actions[bot]` (por ejemplo en el plan Hobby con repo privado), así que los datos nuevos no llegarían al sitio. El workflow llama al hook solo cuando pushea un commit de datos, y eso dispara el deploy de `main`.
+
+## Analítica
+
+`src/app/layout.tsx` carga Vercel Web Analytics (`@vercel/analytics`) y Speed Insights (`@vercel/speed-insights`). Ambos hay que activarlos una vez en el dashboard del proyecto (en `inflazo` ya están activos). No usan cookies ni guardan datos personales.
+
+- **Dónde mirar:** Vercel → proyecto `inflazo` → *Analytics*. Rutas: `/` es el juego y `/r/[code]` son las visitas que llegan desde un link compartido (todas las visitas a resultados se agrupan en esa ruta, sin el código). Cada visita cuenta como 1 evento.
+- **Límites del plan Hobby:** 50.000 eventos por mes en Web Analytics (al pasarse hay 3 días de gracia y después se pausa la captura hasta el próximo ciclo) y ventana de reporte de 1 mes. Speed Insights tiene 10.000 eventos en 30 días y se pausa 14 días si se pasa. No hay eventos custom (`track()`), así que no se puede medir cuántos terminan una partida ni cuántos tocan cada botón de compartir; eso requiere Pro.
+- **Por API:** `GET https://api.vercel.com/v1/query/web-analytics/visits/aggregate` con `projectId`, `teamId`, `since`, `until` (obligatorio) y `by=route|referrerHostname|country|deviceType|day`.
