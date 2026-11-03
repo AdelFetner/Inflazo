@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from 'next';
 import { Archivo } from 'next/font/google';
-import { getSiteUrl, SITE_NAME, SITE_TAGLINE } from '@/lib/site';
+import { getSiteUrl, SITE_NAME } from '@/lib/site';
 import './globals.css';
 
 const archivo = Archivo({
@@ -11,7 +11,7 @@ const archivo = Archivo({
 
 export const metadata: Metadata = {
   metadataBase: new URL(getSiteUrl()),
-  title: `${SITE_NAME} — ${SITE_TAGLINE}`,
+  title: `${SITE_NAME} | ¿Qué subió más en el súper?`,
   description: 'Cada día, 5 rondas: adiviná qué producto del súper aumentó más en el último año. Datos oficiales del INDEC.',
   applicationName: SITE_NAME,
   openGraph: { siteName: SITE_NAME, locale: 'es_AR', type: 'website' },

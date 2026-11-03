@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { SITE_NAME } from '@/lib/site';
 
 export const metadata: Metadata = {
-  title: `Página no encontrada — ${SITE_NAME}`,
+  title: `Página no encontrada | ${SITE_NAME}`,
 };
 
 export default function NotFound() {

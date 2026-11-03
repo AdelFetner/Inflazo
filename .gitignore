@@ -45,3 +45,6 @@ next-env.d.ts
 
 # agent workspace
 .superpowers/
+
+# design review workspace
+.taste-skill/
