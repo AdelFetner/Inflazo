@@ -6118,5 +6118,107 @@
         "answer": "b"
       }
     ]
+  },
+  {
+    "number": 61,
+    "date": "2027-01-02",
+    "period": "202609",
+    "rounds": [
+      {
+        "a": {
+          "code": "02.1.2.1.01",
+          "name": "Vino común",
+          "unit": "Litro",
+          "from": 2215.06,
+          "to": 2312.09,
+          "yoy": 4.4
+        },
+        "b": {
+          "code": "01.1.5.1.02",
+          "name": "Aceite de girasol",
+          "unit": "Bot. 1,5 litros",
+          "from": 4696.85,
+          "to": 6981.99,
+          "yoy": 48.7
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "12.1.3.2.08",
+          "name": "Desodorante",
+          "unit": "150 cc",
+          "from": 3414.64,
+          "to": 4550.81,
+          "yoy": 33.3
+        },
+        "b": {
+          "code": "01.1.6.1.11",
+          "name": "Manzana deliciosa",
+          "unit": "kg",
+          "from": 2602.07,
+          "to": 4064.45,
+          "yoy": 56.2
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.2.1.18",
+          "name": "Paleta",
+          "unit": "kg",
+          "from": 11643.72,
+          "to": 17278.8,
+          "yoy": 48.4
+        },
+        "b": {
+          "code": "01.1.1.1.05",
+          "name": "Pan francés",
+          "unit": "kg",
+          "from": 3833.99,
+          "to": 4958.05,
+          "yoy": 29.3
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.4.2.06",
+          "name": "Queso pategrás",
+          "unit": "kg",
+          "from": 22084.06,
+          "to": 28456.33,
+          "yoy": 28.9
+        },
+        "b": {
+          "code": "01.1.7.1.17",
+          "name": "Lechuga",
+          "unit": "kg",
+          "from": 2940.98,
+          "to": 3634.2,
+          "yoy": 23.6
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.2.5.04",
+          "name": "Salchicha tipo viena",
+          "unit": "Env. 6 u",
+          "from": 2129.6,
+          "to": 2902.42,
+          "yoy": 36.3
+        },
+        "b": {
+          "code": "01.1.8.1.01",
+          "name": "Azúcar",
+          "unit": "kg",
+          "from": 1150.96,
+          "to": 1597.51,
+          "yoy": 38.8
+        },
+        "answer": "b"
+      }
+    ]
   }
 ]
