@@ -1,23 +1,22 @@
 import { NextResponse, type NextRequest } from 'next/server';
 import { getTodayNumber } from '@/lib/data/puzzles';
-import { parseResultParams } from '@/lib/game/share';
+import { decodeResult } from '@/lib/game/result-code';
 
 /**
- * /r/{n}/{grid} is partially prerendered under Cache Components: its static shell starts streaming
+ * /r/{code} is partially prerendered under Cache Components: its static shell starts streaming
  * with 200 before the page can call notFound(). Invalid share links are rejected here, before
  * rendering, so they get a real HTTP 404 (the page keeps its own notFound() for client navigations).
+ * Anything that is not exactly one segment (including the old /r/{n}/{grid} links) is a 404 too.
  */
 export function proxy(request: NextRequest) {
   const segments = request.nextUrl.pathname.split('/').filter(Boolean);
-  if (segments.length !== 3) return NextResponse.next();
-  let number: string;
-  let grid: string;
+  let code: string | null = null;
   try {
-    [number, grid] = segments.slice(1).map(decodeURIComponent);
+    if (segments.length === 2) code = decodeURIComponent(segments[1]);
   } catch {
-    return NextResponse.next();
+    // Malformed percent-encoding: not a code.
   }
-  if (parseResultParams(number, grid, getTodayNumber())) return NextResponse.next();
+  if (code !== null && decodeResult(code, getTodayNumber())) return NextResponse.next();
   return NextResponse.rewrite(new URL('/_not-found', request.url), { status: 404 });
 }
 

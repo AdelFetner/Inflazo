@@ -16,6 +16,7 @@ interface ShareActionsProps {
 
 interface CardImage {
   file: File;
+  blob: Blob;
   url: string;
   /** Phones that can share files get the OS share sheet; everyone else downloads. */
   shareable: boolean;
@@ -27,7 +28,7 @@ const chip =
 
 export function ShareActions({ message, card, imageName, onCopyFailed }: ShareActionsProps) {
   const text = joinShareMessage(message);
-  const [copied, setCopied] = useState(false);
+  const [copied, setCopied] = useState<'text' | 'image' | null>(null);
   const [moreOpen, setMoreOpen] = useState(false);
   const [image, setImage] = useState<CardImage | null>(null);
   const moreId = useId();
@@ -35,7 +36,7 @@ export function ShareActions({ message, card, imageName, onCopyFailed }: ShareAc
 
   useEffect(() => {
     if (!copied) return;
-    const id = window.setTimeout(() => setCopied(false), 2000);
+    const id = window.setTimeout(() => setCopied(null), 2000);
     return () => window.clearTimeout(id);
   }, [copied]);
 
@@ -55,7 +56,7 @@ export function ShareActions({ message, card, imageName, onCopyFailed }: ShareAc
           window.matchMedia('(pointer: coarse)').matches &&
           typeof navigator.canShare === 'function' &&
           navigator.canShare({ files: [file] });
-        setImage({ file, url, shareable });
+        setImage({ file, blob, url, shareable });
       })
       .catch((error: unknown) => {
         // No image link; text sharing still works.
@@ -70,9 +71,19 @@ export function ShareActions({ message, card, imageName, onCopyFailed }: ShareAc
   async function copy() {
     try {
       await navigator.clipboard.writeText(text);
-      setCopied(true);
+      setCopied('text');
     } catch {
       onCopyFailed();
+    }
+  }
+
+  // For pasting into a chat or a post composer: no network accepts an image through a share link.
+  async function copyImage(current: CardImage) {
+    try {
+      await navigator.clipboard.write([new ClipboardItem({ 'image/png': current.blob })]);
+      setCopied('image');
+    } catch (error) {
+      console.error('Could not copy the result image', error);
     }
   }
 
@@ -125,8 +136,8 @@ export function ShareActions({ message, card, imageName, onCopyFailed }: ShareAc
         >
           Compartir
         </button>
-        <p role="status" className="w-24 text-[15px] font-semibold text-up">
-          {copied ? '¡Copiado!' : ''}
+        <p role="status" className="w-36 text-[15px] font-semibold text-up">
+          {copied === 'text' ? '¡Copiado!' : copied === 'image' ? '¡Imagen copiada!' : ''}
         </p>
       </div>
 
@@ -138,9 +149,16 @@ export function ShareActions({ message, card, imageName, onCopyFailed }: ShareAc
           {PRIMARY_NETWORKS.map(networkLink)}
           <li>
             <button type="button" onClick={copy} className={chip}>
-              Copiar
+              Copiar texto
             </button>
           </li>
+          {image && typeof ClipboardItem !== 'undefined' && !image.shareable && (
+            <li>
+              <button type="button" onClick={() => copyImage(image)} className={chip}>
+                Copiar imagen
+              </button>
+            </li>
+          )}
           {image && (
             <li>
               {image.shareable ? (

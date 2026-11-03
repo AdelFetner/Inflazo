@@ -6,14 +6,14 @@ import { OG_SIZE } from '@/app/_og/theme';
 import { getPuzzle, getTodayNumber } from '@/lib/data/puzzles';
 import { dateForPuzzleNumber, formatPuzzleDay } from '@/lib/game/calendar';
 import { formatPeriod, shiftPeriod } from '@/lib/game/period';
-import { parseResultParams } from '@/lib/game/share';
+import { decodeResult } from '@/lib/game/result-code';
 
 /** Link-preview image for /r pages. Crawlers can't run script, so this one is drawn on the server. */
 export async function GET(request: Request) {
   // Request-time: today's number changes daily, so the upper bound must be read per request.
   await connection();
   const { searchParams } = new URL(request.url);
-  const params = parseResultParams(searchParams.get('n') ?? '', searchParams.get('g') ?? '', getTodayNumber());
+  const params = decodeResult(searchParams.get('c') ?? '', getTodayNumber());
   if (!params) {
     return new Response('Parámetros inválidos', { status: 400, headers: { 'content-type': 'text/plain; charset=utf-8' } });
   }

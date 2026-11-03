@@ -4,7 +4,8 @@ import { notFound } from 'next/navigation';
 import { connection } from 'next/server';
 import { getPuzzle, getTodayNumber } from '@/lib/data/puzzles';
 import { dateForPuzzleNumber, formatPuzzleDay } from '@/lib/game/calendar';
-import { ROUND_COUNT, SHARE_PITCH_PLAIN, challenge, gridScore, ogImagePath, parseResultParams } from '@/lib/game/share';
+import { decodeResult } from '@/lib/game/result-code';
+import { ROUND_COUNT, SHARE_PITCH_PLAIN, challenge, gridScore, ogImagePath, resultPath } from '@/lib/game/share';
 import { getSiteUrl, SITE_NAME } from '@/lib/site';
 import { Ticket } from '@/components/game/Ticket';
 
@@ -17,20 +18,20 @@ import { Ticket } from '@/components/game/Ticket';
  */
 export const instant = false;
 
-async function resolve(params: PageProps<'/r/[number]/[grid]'>['params']) {
-  const { number, grid } = await params;
+async function resolve(params: PageProps<'/r/[code]'>['params']) {
+  const { code } = await params;
   await connection();
-  return parseResultParams(number, grid, getTodayNumber());
+  return decodeResult(code, getTodayNumber());
 }
 
-export async function generateMetadata({ params }: PageProps<'/r/[number]/[grid]'>): Promise<Metadata> {
+export async function generateMetadata({ params }: PageProps<'/r/[code]'>): Promise<Metadata> {
   const result = await resolve(params);
   if (!result) return {};
   const score = gridScore(result.grid);
   // Link previews (WhatsApp, Telegram, LinkedIn, Facebook) show title + description under the image.
   const title = `Saqué ${score}/${ROUND_COUNT} en ${SITE_NAME} #${result.number}`;
   const description = `${challenge(score)} ${SHARE_PITCH_PLAIN}`;
-  const url = `${getSiteUrl()}/r/${result.number}/${result.grid}`;
+  const url = `${getSiteUrl()}${resultPath(result.number, result.grid)}`;
   const image = `${getSiteUrl()}${ogImagePath(result.number, result.grid)}`;
   return {
     title,
@@ -48,7 +49,7 @@ export async function generateMetadata({ params }: PageProps<'/r/[number]/[grid]
   };
 }
 
-export default async function SharedResult({ params }: PageProps<'/r/[number]/[grid]'>) {
+export default async function SharedResult({ params }: PageProps<'/r/[code]'>) {
   const result = await resolve(params);
   if (!result) notFound();
   const score = gridScore(result.grid);

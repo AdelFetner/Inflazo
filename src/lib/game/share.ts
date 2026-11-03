@@ -1,9 +1,9 @@
 import { SITE_NAME } from '../site';
+import { encodeResult } from './result-code';
 import type { Answer, Round } from './types';
 
 export const ROUND_COUNT = 5;
 const GRID_PATTERN = /^[01]{5}$/;
-const NUMBER_PATTERN = /^[1-9]\d*$/;
 
 export function isValidGrid(grid: string): boolean {
   return GRID_PATTERN.test(grid);
@@ -22,11 +22,11 @@ export function gridFromAnswers(rounds: Round[], answers: Answer[]): string {
 }
 
 export function resultPath(number: number, grid: string): string {
-  return `/r/${number}/${grid}`;
+  return `/r/${encodeResult(number, grid)}`;
 }
 
 export function ogImagePath(number: number, grid: string): string {
-  return `/api/og?n=${number}&g=${grid}`;
+  return `/api/og?c=${encodeResult(number, grid)}`;
 }
 
 /** Share message split in two: Telegram, Facebook and Reddit take the link as a separate field. */
@@ -88,14 +88,4 @@ export function joinShareMessage({ text, url }: ShareMessage): string {
 
 export function shareText(number: number, grid: string, siteUrl: string, streak = 0): string {
   return joinShareMessage(shareMessage(number, grid, siteUrl, streak));
-}
-
-export function parseResultParams(
-  numberParam: string,
-  gridParam: string,
-  maxNumber: number,
-): { number: number; grid: string } | null {
-  if (!NUMBER_PATTERN.test(numberParam) || !isValidGrid(gridParam)) return null;
-  const number = Number(numberParam);
-  return number <= maxNumber ? { number, grid: gridParam } : null;
 }

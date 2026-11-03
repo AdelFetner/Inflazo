@@ -1,5 +1,6 @@
 import { expect, test, type Page } from '@playwright/test';
 import puzzles from '../data/puzzles.json';
+import { encodeResult } from '../src/lib/game/result-code';
 import { shareText } from '../src/lib/game/share';
 import type { Puzzle } from '../src/lib/game/types';
 
@@ -52,16 +53,21 @@ test('resumes at the next unanswered round after reload', async ({ page }) => {
 });
 
 test('shared result page advertises the OG image', async ({ request }) => {
-  const html = await (await request.get('/r/1/11011')).text();
-  expect(html).toMatch(/<meta property="og:image" content="[^"]*\/api\/og\?n=1&amp;g=11011"/);
-  const image = await request.get('/api/og?n=1&g=11011');
+  const code = encodeResult(1, '11011');
+  const html = await (await request.get(`/r/${code}`)).text();
+  expect(html).toMatch(new RegExp(`<meta property="og:image" content="[^"]*/api/og\\?c=${code}"`));
+  expect(html).toContain('Te desafiaron a ver qué subió más');
+  const image = await request.get(`/api/og?c=${code}`);
   expect(image.status()).toBe(200);
   expect(image.headers()['content-type']).toBe('image/png');
 });
 
-test('rejects hand-edited share links', async ({ request }) => {
-  for (const path of ['/r/0/11111', '/r/042/11111', '/r/abc/11111', '/r/1/2', '/r/99999/11111']) {
+test('rejects hand-edited, old-style and future share links', async ({ request }) => {
+  const future = encodeResult(99999, '11111');
+  for (const path of ['/r/abc', '/r/ABCDEF', '/r/1/11011', '/r/0/11111', '/r/abcdefg', `/r/${future}`]) {
     expect((await request.get(path)).status(), path).toBe(404);
   }
-  expect((await request.get('/api/og?n=1&g=22222')).status()).toBe(400);
+  for (const query of ['c=zzz', 'n=1&g=11011', `c=${future}`, '']) {
+    expect((await request.get(`/api/og?${query}`)).status(), query).toBe(400);
+  }
 });

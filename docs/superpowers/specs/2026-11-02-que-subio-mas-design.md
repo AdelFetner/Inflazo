@@ -87,12 +87,13 @@ Juego web diario, estilo Wordle, basado en precios oficiales del INDEC. Cada dí
   🔥 Racha: 7
 
   ¿Me ganás? Adiviná qué aumentó más en el súper, con precios del INDEC 👇
-  https://<sitio>/r/42/11011
+  https://<sitio>/r/qt0bjg
   ```
 
   En X el link va dentro del texto (si va en `url`, X lo pega a la última línea). En LinkedIn se agrega al final `#INDEC #Inflación #Economía #Precios`.
 
-- `/r/[number]/[grid]` — página de resultado compartido, adonde llega quien toca el link: título "Te desafiaron a ver qué subió más", "Sacó 4 de 5 en el desafío del 3 de noviembre. ¿Me ganás?", cómo se juega en tres líneas, el CTA "Aceptá el desafío" y el ticket sin nombres de productos (el visitante va a jugar el mismo desafío). Metadata OG/Twitter: título "Saqué 4/5 en Inflazo #42", descripción con desafío + pitch, imagen `/api/og?n=42&g=11011`. `grid` es una cadena de 5 dígitos 0/1; valores inválidos ⇒ 404.
+- `/r/[code]` — página de resultado compartido, adonde llega quien toca el link: título "Te desafiaron a ver qué subió más", "Sacó 4 de 5 en el desafío del 3 de noviembre. ¿Me ganás?", cómo se juega en tres líneas, el CTA "Aceptá el desafío" y el ticket sin nombres de productos (el visitante va a jugar el mismo desafío). Metadata OG/Twitter: título "Saqué 4/5 en Inflazo #42", descripción con desafío + pitch, imagen `/api/og?c=<código>`. `code` son 6 caracteres opacos (ver abajo); cualquier otra cosa, o un desafío futuro, ⇒ 404.
+- **Código de resultado** (`src/lib/game/result-code.ts`): el link lleva el número de desafío y los aciertos de cada ronda, pero como 6 caracteres sin pistas (`/r/qt0bjg`) y no como `/r/1/00011`. Es una codificación y no un hash: la página tiene que poder leer el resultado, y un día solo tiene 32 resultados posibles, así que no hay nada secreto. Aporta que no se lee de un vistazo y que un link editado a mano casi nunca decodifica (5 bits de control). Un hash de verdad no sirve acá porque no se puede revertir; la alternativa sería guardar los resultados en una base, que el proyecto evita. Los links viejos `/r/<n>/<grilla>` dan 404: no llegaron a circular.
 - `/api/og` — `ImageResponse` 1200×630 con forma de ticket de súper: puntaje, veredicto, qué es el juego, una línea por ronda con ✓/✗, período de precios y una franja con el desafío y el dominio. El llamado a la acción queda a la derecha porque X tapa la esquina inferior izquierda con el dominio. Parámetros inválidos ⇒ 400.
 - URL base desde `NEXT_PUBLIC_SITE_URL`.
 - Mobile-first; contraste AA; operable con teclado; respeta `prefers-reduced-motion` (sin contador animado).
@@ -106,7 +107,7 @@ Juego web diario, estilo Wordle, basado en precios oficiales del INDEC. Cada dí
 ## Tests
 
 - Unitarios (Vitest): normalizador de ingesta contra fixture de respuesta real de la API (incluye fila con `///`); cálculo de yoy; generador (determinismo, sin productos repetidos en un puzzle, sin pares repetidos en el mismo período, bandas de dificultad, diferencia ≥ 1 pp, congelamiento de puzzles pasados); cálculo de número de puzzle en zona horaria AR alrededor de medianoche; codificación de grilla/texto compartido; actualización de rachas.
-- Smoke E2E (Playwright): jugar las 5 rondas del día, ver pantalla final, texto de compartir correcto, recargar y ver el estado persistido; `/r/1/11011` responde con meta `og:image`; `/api/og?n=1&g=11011` devuelve `image/png`.
+- Smoke E2E (Playwright): jugar las 5 rondas del día, ver pantalla final, texto de compartir correcto, recargar y ver el estado persistido; `/r/<código>` responde con meta `og:image`; `/api/og?c=<código>` devuelve `image/png`; links viejos, editados a mano o de días futuros dan 404 (y 400 en `/api/og`).
 
 ## Fuera de alcance
 

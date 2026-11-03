@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
-import { gridFromAnswers, gridToEmoji, isValidGrid, ogImagePath, parseResultParams, shareMessage, shareText } from './share';
+import { decodeResult } from './result-code';
+import { gridFromAnswers, gridToEmoji, isValidGrid, ogImagePath, shareMessage, shareText } from './share';
 import type { Round } from './types';
 
 const item = (code: string) => ({ code, name: code, unit: 'kg', from: 1, to: 2, yoy: 100 });
@@ -7,9 +8,15 @@ const round = (answer: 'a' | 'b'): Round => ({ a: item('A'), b: item('B'), answe
 
 describe('share text', () => {
   it('matches the exact share format: result, blank line, challenge + pitch, link', () => {
-    expect(shareText(42, '11011', 'https://inflazo.adelfetner.com')).toBe(
-      'Inflazo #42 · 4/5\n🟩🟩🟥🟩🟩\n\n¿Me ganás? Adiviná qué aumentó más en el súper, con precios del INDEC 👇\nhttps://inflazo.adelfetner.com/r/42/11011',
-    );
+    const lines = shareText(42, '11011', 'https://inflazo.adelfetner.com').split('\n');
+    expect(lines.slice(0, 5)).toEqual([
+      'Inflazo #42 · 4/5',
+      '🟩🟩🟥🟩🟩',
+      '',
+      '¿Me ganás? Adiviná qué aumentó más en el súper, con precios del INDEC 👇',
+      expect.stringMatching(/^https:\/\/inflazo\.adelfetner\.com\/r\/[0-9a-z]{6}$/),
+    ]);
+    expect(lines).toHaveLength(5);
   });
 
   it('picks the challenge by score', () => {
@@ -19,7 +26,7 @@ describe('share text', () => {
   });
 
   it('does not double the slash when the site URL ends with one', () => {
-    expect(shareText(1, '00000', 'https://x.ar/').endsWith('https://x.ar/r/1/00000')).toBe(true);
+    expect(shareText(1, '00000', 'https://x.ar/')).toMatch(/\nhttps:\/\/x\.ar\/r\/[0-9a-z]{6}$/);
   });
 
   it('renders emoji per round', () => {
@@ -27,21 +34,30 @@ describe('share text', () => {
   });
 
   it('adds the streak line from two days in a row', () => {
-    expect(shareText(42, '11011', 'https://inflazo.adelfetner.com', 7)).toBe(
-      'Inflazo #42 · 4/5\n🟩🟩🟥🟩🟩\n🔥 Racha: 7\n\n¿Me ganás? Adiviná qué aumentó más en el súper, con precios del INDEC 👇\nhttps://inflazo.adelfetner.com/r/42/11011',
-    );
+    const withStreak = shareText(42, '11011', 'https://inflazo.adelfetner.com', 7);
+    expect(withStreak).toContain('🟩🟩🟥🟩🟩\n🔥 Racha: 7\n\n¿Me ganás?');
     expect(shareText(42, '11011', 'https://inflazo.adelfetner.com', 1)).not.toContain('Racha');
   });
 
   it('splits the message into text and link for networks that take the link apart', () => {
-    expect(shareMessage(42, '11011', 'https://inflazo.adelfetner.com/', 3)).toEqual({
-      text: 'Inflazo #42 · 4/5\n🟩🟩🟥🟩🟩\n🔥 Racha: 3\n\n¿Me ganás? Adiviná qué aumentó más en el súper, con precios del INDEC 👇',
-      url: 'https://inflazo.adelfetner.com/r/42/11011',
-    });
+    const { text, url } = shareMessage(42, '11011', 'https://inflazo.adelfetner.com/', 3);
+    expect(text).toBe('Inflazo #42 · 4/5\n🟩🟩🟥🟩🟩\n🔥 Racha: 3\n\n¿Me ganás? Adiviná qué aumentó más en el súper, con precios del INDEC 👇');
+    expect(url).toMatch(/^https:\/\/inflazo\.adelfetner\.com\/r\/[0-9a-z]{6}$/);
   });
 
-  it('points at the result image', () => {
-    expect(ogImagePath(42, '11011')).toBe('/api/og?n=42&g=11011');
+  it('links to a result page whose code reads back as the shared result', () => {
+    const { url } = shareMessage(42, '11011', 'https://inflazo.adelfetner.com', 3);
+    expect(url).toMatch(/^https:\/\/inflazo\.adelfetner\.com\/r\/[0-9a-z]{6}$/);
+    expect(decodeResult(url.split('/r/')[1], 100)).toEqual({ number: 42, grid: '11011' });
+  });
+
+  it('shows no raw results in the link', () => {
+    expect(shareMessage(42, '11011', 'https://x.ar').url).not.toContain('11011');
+  });
+
+  it('points the preview image at the same code', () => {
+    const code = shareMessage(42, '11011', 'https://x.ar').url.split('/r/')[1];
+    expect(ogImagePath(42, '11011')).toBe(`/api/og?c=${code}`);
   });
 });
 
@@ -59,15 +75,3 @@ describe('isValidGrid', () => {
   });
 });
 
-describe('parseResultParams', () => {
-  it('accepts valid links up to the max number', () => {
-    expect(parseResultParams('42', '11011', 100)).toEqual({ number: 42, grid: '11011' });
-    expect(parseResultParams('100', '00000', 100)).toEqual({ number: 100, grid: '00000' });
-  });
-
-  it('rejects malformed or out-of-range links', () => {
-    for (const [n, g] of [['0', '11011'], ['042', '11011'], ['4.2', '11011'], ['abc', '11011'], ['101', '11011'], ['42', '1101'], ['42', '22222']]) {
-      expect(parseResultParams(n, g, 100)).toBeNull();
-    }
-  });
-});
