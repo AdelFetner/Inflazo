@@ -6322,5 +6322,107 @@
         "answer": "a"
       }
     ]
+  },
+  {
+    "number": 63,
+    "date": "2027-01-04",
+    "period": "202609",
+    "rounds": [
+      {
+        "a": {
+          "code": "01.1.2.1.12",
+          "name": "Hamburguesas congeladas",
+          "unit": "Env. 4 u",
+          "from": 5441.87,
+          "to": 8388.83,
+          "yoy": 54.2
+        },
+        "b": {
+          "code": "01.1.6.1.09",
+          "name": "Limón",
+          "unit": "kg",
+          "from": 1477.72,
+          "to": 1501.99,
+          "yoy": 1.6
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.2.1.02",
+          "name": "Asado",
+          "unit": "kg",
+          "from": 11190.54,
+          "to": 16836.34,
+          "yoy": 50.5
+        },
+        "b": {
+          "code": "06.1.2.1.02",
+          "name": "Algodón",
+          "unit": "100 g",
+          "from": 1635.68,
+          "to": 1815.63,
+          "yoy": 11
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.4.3.02",
+          "name": "Yogur firme",
+          "unit": "195 cc",
+          "from": 2225.25,
+          "to": 2598.41,
+          "yoy": 16.8
+        },
+        "b": {
+          "code": "01.1.2.5.04",
+          "name": "Salchicha tipo viena",
+          "unit": "Env. 6 u",
+          "from": 2129.6,
+          "to": 2902.42,
+          "yoy": 36.3
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.2.1.17",
+          "name": "Nalga",
+          "unit": "kg",
+          "from": 14598.47,
+          "to": 21914.04,
+          "yoy": 50.1
+        },
+        "b": {
+          "code": "01.1.6.1.11",
+          "name": "Manzana deliciosa",
+          "unit": "kg",
+          "from": 2602.07,
+          "to": 4064.45,
+          "yoy": 56.2
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.4.2.06",
+          "name": "Queso pategrás",
+          "unit": "kg",
+          "from": 22084.06,
+          "to": 28456.33,
+          "yoy": 28.9
+        },
+        "b": {
+          "code": "01.1.4.3.05",
+          "name": "Dulce de leche",
+          "unit": "400 g",
+          "from": 3163.75,
+          "to": 3953.16,
+          "yoy": 25
+        },
+        "answer": "a"
+      }
+    ]
   }
 ]
