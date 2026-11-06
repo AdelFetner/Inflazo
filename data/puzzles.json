@@ -6424,5 +6424,107 @@
         "answer": "a"
       }
     ]
+  },
+  {
+    "number": 64,
+    "date": "2027-01-05",
+    "period": "202609",
+    "rounds": [
+      {
+        "a": {
+          "code": "01.1.7.1.19",
+          "name": "Papa",
+          "unit": "kg",
+          "from": 823,
+          "to": 2201.11,
+          "yoy": 167.4
+        },
+        "b": {
+          "code": "01.2.1.1.12",
+          "name": "Yerba mate",
+          "unit": "500 g",
+          "from": 2353.86,
+          "to": 2652.39,
+          "yoy": 12.7
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.4.1.01",
+          "name": "Leche fresca entera sachet",
+          "unit": "Litro",
+          "from": 1580.18,
+          "to": 2071.04,
+          "yoy": 31.1
+        },
+        "b": {
+          "code": "01.1.4.4.01",
+          "name": "Huevos de gallina",
+          "unit": "Docena",
+          "from": 3987.33,
+          "to": 3940.5,
+          "yoy": -1.2
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "02.1.2.1.01",
+          "name": "Vino común",
+          "unit": "Litro",
+          "from": 2215.06,
+          "to": 2312.09,
+          "yoy": 4.4
+        },
+        "b": {
+          "code": "01.1.9.1.01",
+          "name": "Sal fina",
+          "unit": "500 g",
+          "from": 1342.31,
+          "to": 1540.25,
+          "yoy": 14.7
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "12.1.3.1.04",
+          "name": "Pañales descartables",
+          "unit": "10 u",
+          "from": 4223.13,
+          "to": 4709.66,
+          "yoy": 11.5
+        },
+        "b": {
+          "code": "01.1.6.1.09",
+          "name": "Limón",
+          "unit": "kg",
+          "from": 1477.72,
+          "to": 1501.99,
+          "yoy": 1.6
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.7.1.26",
+          "name": "Tomate redondo",
+          "unit": "kg",
+          "from": 3310.32,
+          "to": 4038.58,
+          "yoy": 22
+        },
+        "b": {
+          "code": "01.1.7.2.08",
+          "name": "Tomate entero en conserva",
+          "unit": "Lata 230 g",
+          "from": 1212.13,
+          "to": 1512.8,
+          "yoy": 24.8
+        },
+        "answer": "b"
+      }
+    ]
   }
 ]
