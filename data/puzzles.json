@@ -6526,5 +6526,107 @@
         "answer": "b"
       }
     ]
+  },
+  {
+    "number": 65,
+    "date": "2027-01-06",
+    "period": "202609",
+    "rounds": [
+      {
+        "a": {
+          "code": "01.1.6.1.11",
+          "name": "Manzana deliciosa",
+          "unit": "kg",
+          "from": 2602.07,
+          "to": 4064.45,
+          "yoy": 56.2
+        },
+        "b": {
+          "code": "01.1.1.3.01",
+          "name": "Arroz blanco simple",
+          "unit": "kg",
+          "from": 1745.29,
+          "to": 1905.45,
+          "yoy": 9.2
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.2.6.09",
+          "name": "Salame",
+          "unit": "kg",
+          "from": 20258.1,
+          "to": 26910.3,
+          "yoy": 32.8
+        },
+        "b": {
+          "code": "01.1.7.1.08",
+          "name": "Batata",
+          "unit": "kg",
+          "from": 1476.54,
+          "to": 2527.1,
+          "yoy": 71.2
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.2.1.18",
+          "name": "Paleta",
+          "unit": "kg",
+          "from": 11643.72,
+          "to": 17278.8,
+          "yoy": 48.4
+        },
+        "b": {
+          "code": "12.1.3.2.08",
+          "name": "Desodorante",
+          "unit": "150 cc",
+          "from": 3414.64,
+          "to": 4550.81,
+          "yoy": 33.3
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "05.6.1.1.08",
+          "name": "Detergente líquido",
+          "unit": "750 cc",
+          "from": 1702.99,
+          "to": 2150.14,
+          "yoy": 26.3
+        },
+        "b": {
+          "code": "12.1.3.2.05",
+          "name": "Champú",
+          "unit": "400 cc",
+          "from": 5779.51,
+          "to": 7599.69,
+          "yoy": 31.5
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.4.1.01",
+          "name": "Leche fresca entera sachet",
+          "unit": "Litro",
+          "from": 1580.18,
+          "to": 2071.04,
+          "yoy": 31.1
+        },
+        "b": {
+          "code": "02.1.3.1.01",
+          "name": "Cerveza en botella",
+          "unit": "Litro",
+          "from": 3432.12,
+          "to": 4394.49,
+          "yoy": 28
+        },
+        "answer": "a"
+      }
+    ]
   }
 ]
