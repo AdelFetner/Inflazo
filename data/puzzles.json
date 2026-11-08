@@ -6628,5 +6628,107 @@
         "answer": "a"
       }
     ]
+  },
+  {
+    "number": 66,
+    "date": "2027-01-07",
+    "period": "202609",
+    "rounds": [
+      {
+        "a": {
+          "code": "01.1.7.1.31",
+          "name": "Zapallo anco",
+          "unit": "kg",
+          "from": 922.05,
+          "to": 2816.26,
+          "yoy": 205.4
+        },
+        "b": {
+          "code": "01.1.1.3.11",
+          "name": "Harina de trigo común",
+          "unit": "kg",
+          "from": 914.65,
+          "to": 1097.92,
+          "yoy": 20
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.7.1.26",
+          "name": "Tomate redondo",
+          "unit": "kg",
+          "from": 3310.32,
+          "to": 4038.58,
+          "yoy": 22
+        },
+        "b": {
+          "code": "01.1.2.1.02",
+          "name": "Asado",
+          "unit": "kg",
+          "from": 11190.54,
+          "to": 16836.34,
+          "yoy": 50.5
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.2.2.1.01",
+          "name": "Agua sin gas",
+          "unit": "1,5 litros",
+          "from": 1465.62,
+          "to": 1731.27,
+          "yoy": 18.1
+        },
+        "b": {
+          "code": "01.1.4.2.06",
+          "name": "Queso pategrás",
+          "unit": "kg",
+          "from": 22084.06,
+          "to": 28456.33,
+          "yoy": 28.9
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.1.1.05",
+          "name": "Pan francés",
+          "unit": "kg",
+          "from": 3833.99,
+          "to": 4958.05,
+          "yoy": 29.3
+        },
+        "b": {
+          "code": "01.1.7.1.17",
+          "name": "Lechuga",
+          "unit": "kg",
+          "from": 2940.98,
+          "to": 3634.2,
+          "yoy": 23.6
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.4.1.01",
+          "name": "Leche fresca entera sachet",
+          "unit": "Litro",
+          "from": 1580.18,
+          "to": 2071.04,
+          "yoy": 31.1
+        },
+        "b": {
+          "code": "05.6.1.1.10",
+          "name": "Jabón en pan",
+          "unit": "200 g",
+          "from": 1225.84,
+          "to": 1563.64,
+          "yoy": 27.6
+        },
+        "answer": "a"
+      }
+    ]
   }
 ]
