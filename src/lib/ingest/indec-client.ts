@@ -4,6 +4,9 @@ export const INDEC_BASE_URL = 'https://api.indec.gob.ar/v1/';
 export const IPC_PRIMARY_KEY =
   'clasificador,nivel,codigo,descripcion,periodo,anio,mes,indicador,tipo_de_indicador,tipo_de_indicador_descripcion,region,unidad_de_medida';
 export const PAGE_SIZE = 1000;
+export const MAX_ATTEMPTS = 4;
+export const RETRY_BASE_DELAY_MS = 5000;
+const RETRYABLE_STATUSES: Record<number, true> = { 429: true, 502: true, 503: true, 504: true };
 
 export class IngestError extends Error {
   override name = 'IngestError';
@@ -29,7 +32,38 @@ export function parseTotal(header: string | null): number {
   return Number(match[1]);
 }
 
-export async function fetchPrecioPromedioRows(token: string, fetchImpl: typeof fetch = fetch): Promise<IndecRow[]> {
+const defaultSleep = (ms: number) => new Promise<void>((resolve) => setTimeout(resolve, ms));
+
+export type FetchOptions = { sleep?: (ms: number) => Promise<void> };
+
+// Retries network errors and transient gateway statuses (the INDEC API intermittently returns 504).
+async function fetchWithRetry(
+  url: URL,
+  init: RequestInit,
+  fetchImpl: typeof fetch,
+  sleep: (ms: number) => Promise<void>,
+): Promise<Response> {
+  for (let attempt = 1; ; attempt++) {
+    let failure: string;
+    try {
+      const response = await fetchImpl(url, init);
+      if (!(response.status in RETRYABLE_STATUSES)) return response;
+      failure = `INDEC API responded ${response.status}: ${(await response.text()).slice(0, 200)}`;
+    } catch (error) {
+      failure = `INDEC API request failed: ${error instanceof Error ? error.message : String(error)}`;
+    }
+    if (attempt >= MAX_ATTEMPTS) throw new IngestError(`${failure} (after ${attempt} attempts)`);
+    const delay = RETRY_BASE_DELAY_MS * 3 ** (attempt - 1);
+    console.warn(`${failure} — retrying in ${delay / 1000}s (attempt ${attempt}/${MAX_ATTEMPTS})`);
+    await sleep(delay);
+  }
+}
+
+export async function fetchPrecioPromedioRows(
+  token: string,
+  fetchImpl: typeof fetch = fetch,
+  { sleep = defaultSleep }: FetchOptions = {},
+): Promise<IndecRow[]> {
   const rows: IndecRow[] = [];
   for (let offset = 0; ; offset += PAGE_SIZE) {
     const url = new URL('ipc_nacional', INDEC_BASE_URL);
@@ -41,9 +75,12 @@ export async function fetchPrecioPromedioRows(token: string, fetchImpl: typeof f
       offset: String(offset),
     }).toString();
 
-    const response = await fetchImpl(url, {
-      headers: { Authorization: `Bearer ${token}`, Prefer: 'count=exact', Accept: 'application/json' },
-    });
+    const response = await fetchWithRetry(
+      url,
+      { headers: { Authorization: `Bearer ${token}`, Prefer: 'count=exact', Accept: 'application/json' } },
+      fetchImpl,
+      sleep,
+    );
     if (response.status !== 200 && response.status !== 206) {
       const body = (await response.text()).slice(0, 200);
       throw new IngestError(`INDEC API responded ${response.status}: ${body}`);

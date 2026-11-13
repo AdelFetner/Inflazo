@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import rows from '../../../tests/fixtures/indec-precio-promedio-rows.json';
-import { IngestError, PAGE_SIZE, fetchPrecioPromedioRows, parseTotal } from './indec-client';
+import { IngestError, MAX_ATTEMPTS, PAGE_SIZE, fetchPrecioPromedioRows, parseTotal } from './indec-client';
 
 type Call = { url: URL; headers: Headers };
 
@@ -51,6 +51,52 @@ describe('fetchPrecioPromedioRows', () => {
 
   it('fails when the row count does not match the reported total', async () => {
     await expect(fetchPrecioPromedioRows('tok', fakeApi(10, { contentRange: '0-9/2000' }).fetchImpl)).rejects.toThrow(/expected 2000/);
+  });
+
+  describe('transient failures', () => {
+    const noSleep = async () => {};
+
+    function flaky(failures: Response[] | Error[]) {
+      const api = fakeApi(10);
+      const queue = [...failures];
+      const fetchImpl = (async (input: string | URL | Request, init?: RequestInit) => {
+        const next = queue.shift();
+        if (next instanceof Error) throw next;
+        if (next) return next;
+        return api.fetchImpl(input, init);
+      }) as typeof fetch;
+      return fetchImpl;
+    }
+
+    it('recovers after 504s', async () => {
+      const fetchImpl = flaky([new Response('<html>504</html>', { status: 504 }), new Response('', { status: 502 })]);
+      expect(await fetchPrecioPromedioRows('tok', fetchImpl, { sleep: noSleep })).toHaveLength(10);
+    });
+
+    it('recovers after a network error', async () => {
+      const fetchImpl = flaky([new TypeError('fetch failed')]);
+      expect(await fetchPrecioPromedioRows('tok', fetchImpl, { sleep: noSleep })).toHaveLength(10);
+    });
+
+    it('gives up after MAX_ATTEMPTS', async () => {
+      let calls = 0;
+      const fetchImpl = (async () => {
+        calls++;
+        return new Response('<html>504</html>', { status: 504 });
+      }) as typeof fetch;
+      await expect(fetchPrecioPromedioRows('tok', fetchImpl, { sleep: noSleep })).rejects.toThrow(/504[\s\S]*after 4 attempts/);
+      expect(calls).toBe(MAX_ATTEMPTS);
+    });
+
+    it('does not retry auth errors', async () => {
+      let calls = 0;
+      const fetchImpl = (async () => {
+        calls++;
+        return new Response('{"message":"JWT expired"}', { status: 401 });
+      }) as typeof fetch;
+      await expect(fetchPrecioPromedioRows('tok', fetchImpl, { sleep: noSleep })).rejects.toThrow(/401/);
+      expect(calls).toBe(1);
+    });
   });
 });
 
