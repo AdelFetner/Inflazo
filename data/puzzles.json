@@ -7240,5 +7240,107 @@
         "answer": "a"
       }
     ]
+  },
+  {
+    "number": 72,
+    "date": "2027-01-13",
+    "period": "202610",
+    "rounds": [
+      {
+        "a": {
+          "code": "01.1.2.1.12",
+          "name": "Hamburguesas congeladas",
+          "unit": "Env. 4 u",
+          "from": 5596.56,
+          "to": 8524.07,
+          "yoy": 52.3
+        },
+        "b": {
+          "code": "01.1.4.4.01",
+          "name": "Huevos de gallina",
+          "unit": "Docena",
+          "from": 4050.41,
+          "to": 4121.92,
+          "yoy": 1.8
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.2.1.02",
+          "name": "Asado",
+          "unit": "kg",
+          "from": 11775.55,
+          "to": 16957.55,
+          "yoy": 44
+        },
+        "b": {
+          "code": "01.2.1.1.02",
+          "name": "Café molido",
+          "unit": "500 g",
+          "from": 12120.17,
+          "to": 14713.72,
+          "yoy": 21.4
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.1.2.04",
+          "name": "Galletitas de agua envasadas",
+          "unit": "250 g",
+          "from": 1232.79,
+          "to": 1692.59,
+          "yoy": 37.3
+        },
+        "b": {
+          "code": "01.1.2.6.11",
+          "name": "Salchichón",
+          "unit": "kg",
+          "from": 9322.2,
+          "to": 11711.81,
+          "yoy": 25.6
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.7.2.04",
+          "name": "Arvejas secas remojadas",
+          "unit": "Lata 220 g",
+          "from": 862.78,
+          "to": 999.02,
+          "yoy": 15.8
+        },
+        "b": {
+          "code": "01.1.7.2.08",
+          "name": "Tomate entero en conserva",
+          "unit": "Lata 230 g",
+          "from": 1240.43,
+          "to": 1541.48,
+          "yoy": 24.3
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.6.1.11",
+          "name": "Manzana deliciosa",
+          "unit": "kg",
+          "from": 2890.3,
+          "to": 4129.11,
+          "yoy": 42.9
+        },
+        "b": {
+          "code": "01.1.5.1.02",
+          "name": "Aceite de girasol",
+          "unit": "1,5 litros",
+          "from": 5012.41,
+          "to": 7093.33,
+          "yoy": 41.5
+        },
+        "answer": "a"
+      }
+    ]
   }
 ]
