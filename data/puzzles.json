@@ -7444,5 +7444,107 @@
         "answer": "a"
       }
     ]
+  },
+  {
+    "number": 74,
+    "date": "2027-01-15",
+    "period": "202610",
+    "rounds": [
+      {
+        "a": {
+          "code": "01.1.6.1.09",
+          "name": "Limón",
+          "unit": "kg",
+          "from": 2376.62,
+          "to": 1826.57,
+          "yoy": -23.1
+        },
+        "b": {
+          "code": "01.1.2.1.02",
+          "name": "Asado",
+          "unit": "kg",
+          "from": 11775.55,
+          "to": 16957.55,
+          "yoy": 44
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "12.1.3.1.04",
+          "name": "Pañales descartables",
+          "unit": "10 u",
+          "from": 4389.07,
+          "to": 4935.07,
+          "yoy": 12.4
+        },
+        "b": {
+          "code": "12.1.3.2.05",
+          "name": "Champú",
+          "unit": "400 cc",
+          "from": 5870.7,
+          "to": 7813.16,
+          "yoy": 33.1
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.4.2.03",
+          "name": "Queso cremoso",
+          "unit": "kg",
+          "from": 11363.22,
+          "to": 14612.29,
+          "yoy": 28.6
+        },
+        "b": {
+          "code": "01.2.1.1.12",
+          "name": "Yerba mate",
+          "unit": "500 g",
+          "from": 2420.79,
+          "to": 2719.88,
+          "yoy": 12.4
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.8.1.01",
+          "name": "Azúcar",
+          "unit": "kg",
+          "from": 1163.29,
+          "to": 1608.23,
+          "yoy": 38.2
+        },
+        "b": {
+          "code": "12.1.3.2.08",
+          "name": "Desodorante",
+          "unit": "150 cc",
+          "from": 3534.84,
+          "to": 4660.84,
+          "yoy": 31.9
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.2.1.1.02",
+          "name": "Café molido",
+          "unit": "500 g",
+          "from": 12120.17,
+          "to": 14713.72,
+          "yoy": 21.4
+        },
+        "b": {
+          "code": "01.1.4.3.05",
+          "name": "Dulce de leche",
+          "unit": "400 g",
+          "from": 3202.71,
+          "to": 3966.76,
+          "yoy": 23.9
+        },
+        "answer": "b"
+      }
+    ]
   }
 ]
