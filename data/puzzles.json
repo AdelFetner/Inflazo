@@ -7648,5 +7648,107 @@
         "answer": "a"
       }
     ]
+  },
+  {
+    "number": 76,
+    "date": "2027-01-17",
+    "period": "202610",
+    "rounds": [
+      {
+        "a": {
+          "code": "01.1.4.2.06",
+          "name": "Queso pategrás",
+          "unit": "kg",
+          "from": 22226.88,
+          "to": 29367.34,
+          "yoy": 32.1
+        },
+        "b": {
+          "code": "01.1.7.1.19",
+          "name": "Papa",
+          "unit": "kg",
+          "from": 829.02,
+          "to": 2737.14,
+          "yoy": 230.2
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "05.6.1.1.08",
+          "name": "Detergente líquido",
+          "unit": "750 cc",
+          "from": 1744.73,
+          "to": 2211.54,
+          "yoy": 26.8
+        },
+        "b": {
+          "code": "01.1.6.1.02",
+          "name": "Banana",
+          "unit": "kg",
+          "from": 2977.35,
+          "to": 2966.61,
+          "yoy": -0.4
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "02.1.2.1.01",
+          "name": "Vino común",
+          "unit": "Litro",
+          "from": 2197.14,
+          "to": 2361.62,
+          "yoy": 7.5
+        },
+        "b": {
+          "code": "02.1.3.1.01",
+          "name": "Cerveza en botella",
+          "unit": "Litro",
+          "from": 3543.29,
+          "to": 4455.68,
+          "yoy": 25.7
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "12.1.3.2.11",
+          "name": "Jabón de tocador",
+          "unit": "125 g",
+          "from": 1151.6,
+          "to": 1553.53,
+          "yoy": 34.9
+        },
+        "b": {
+          "code": "01.1.3.1.03",
+          "name": "Filet de merluza fresco",
+          "unit": "kg",
+          "from": 10496.67,
+          "to": 14838.06,
+          "yoy": 41.4
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.2.1.02",
+          "name": "Asado",
+          "unit": "kg",
+          "from": 11775.55,
+          "to": 16957.55,
+          "yoy": 44
+        },
+        "b": {
+          "code": "01.1.6.1.11",
+          "name": "Manzana deliciosa",
+          "unit": "kg",
+          "from": 2890.3,
+          "to": 4129.11,
+          "yoy": 42.9
+        },
+        "answer": "a"
+      }
+    ]
   }
 ]
