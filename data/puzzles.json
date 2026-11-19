@@ -7750,5 +7750,107 @@
         "answer": "a"
       }
     ]
+  },
+  {
+    "number": 77,
+    "date": "2027-01-18",
+    "period": "202610",
+    "rounds": [
+      {
+        "a": {
+          "code": "01.1.7.1.08",
+          "name": "Batata",
+          "unit": "kg",
+          "from": 1498.72,
+          "to": 3072.6,
+          "yoy": 105
+        },
+        "b": {
+          "code": "01.1.4.2.03",
+          "name": "Queso cremoso",
+          "unit": "kg",
+          "from": 11363.22,
+          "to": 14612.29,
+          "yoy": 28.6
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.4.3.02",
+          "name": "Yogur firme",
+          "unit": "195 cc",
+          "from": 2314.42,
+          "to": 2621.92,
+          "yoy": 13.3
+        },
+        "b": {
+          "code": "01.1.6.1.09",
+          "name": "Limón",
+          "unit": "kg",
+          "from": 2376.62,
+          "to": 1826.57,
+          "yoy": -23.1
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.6.1.13",
+          "name": "Naranja",
+          "unit": "kg",
+          "from": 1071.1,
+          "to": 1164.05,
+          "yoy": 8.7
+        },
+        "b": {
+          "code": "01.1.1.2.05",
+          "name": "Galletitas dulces envasadas sin relleno",
+          "unit": "150 g",
+          "from": 1286.74,
+          "to": 1601.04,
+          "yoy": 24.4
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.9.3.06",
+          "name": "Polvo para flan",
+          "unit": "8 porciones",
+          "from": 1118.54,
+          "to": 1365.03,
+          "yoy": 22
+        },
+        "b": {
+          "code": "05.6.1.1.08",
+          "name": "Detergente líquido",
+          "unit": "750 cc",
+          "from": 1744.73,
+          "to": 2211.54,
+          "yoy": 26.8
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.4.2.08",
+          "name": "Queso sardo",
+          "unit": "kg",
+          "from": 21594.91,
+          "to": 28654.38,
+          "yoy": 32.7
+        },
+        "b": {
+          "code": "01.1.1.1.05",
+          "name": "Pan francés",
+          "unit": "kg",
+          "from": 3908.68,
+          "to": 5057.65,
+          "yoy": 29.4
+        },
+        "answer": "a"
+      }
+    ]
   }
 ]
