@@ -7852,5 +7852,107 @@
         "answer": "a"
       }
     ]
+  },
+  {
+    "number": 78,
+    "date": "2027-01-19",
+    "period": "202610",
+    "rounds": [
+      {
+        "a": {
+          "code": "01.1.7.1.31",
+          "name": "Zapallo anco",
+          "unit": "kg",
+          "from": 991.28,
+          "to": 4454.89,
+          "yoy": 349.4
+        },
+        "b": {
+          "code": "01.1.5.1.02",
+          "name": "Aceite de girasol",
+          "unit": "1,5 litros",
+          "from": 5012.41,
+          "to": 7093.33,
+          "yoy": 41.5
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.4.1.01",
+          "name": "Leche fresca entera sachet",
+          "unit": "Litro",
+          "from": 1591.71,
+          "to": 2078.53,
+          "yoy": 30.6
+        },
+        "b": {
+          "code": "01.1.2.1.12",
+          "name": "Hamburguesas congeladas",
+          "unit": "Env. 4 u",
+          "from": 5596.56,
+          "to": 8524.07,
+          "yoy": 52.3
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "12.1.3.1.04",
+          "name": "Pañales descartables",
+          "unit": "10 u",
+          "from": 4389.07,
+          "to": 4935.07,
+          "yoy": 12.4
+        },
+        "b": {
+          "code": "05.6.1.1.08",
+          "name": "Detergente líquido",
+          "unit": "750 cc",
+          "from": 1744.73,
+          "to": 2211.54,
+          "yoy": 26.8
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "02.1.3.1.01",
+          "name": "Cerveza en botella",
+          "unit": "Litro",
+          "from": 3543.29,
+          "to": 4455.68,
+          "yoy": 25.7
+        },
+        "b": {
+          "code": "01.1.1.4.04",
+          "name": "Fideos secos tipo guisero",
+          "unit": "500 g",
+          "from": 1516.22,
+          "to": 1791.8,
+          "yoy": 18.2
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "12.1.3.2.08",
+          "name": "Desodorante",
+          "unit": "150 cc",
+          "from": 3534.84,
+          "to": 4660.84,
+          "yoy": 31.9
+        },
+        "b": {
+          "code": "01.1.2.5.04",
+          "name": "Salchicha tipo viena",
+          "unit": "Env. 6 u",
+          "from": 2181.99,
+          "to": 2963.7,
+          "yoy": 35.8
+        },
+        "answer": "b"
+      }
+    ]
   }
 ]
