@@ -7954,5 +7954,107 @@
         "answer": "b"
       }
     ]
+  },
+  {
+    "number": 79,
+    "date": "2027-01-20",
+    "period": "202610",
+    "rounds": [
+      {
+        "a": {
+          "code": "01.1.1.1.03",
+          "name": "Pan de mesa",
+          "unit": "390 g",
+          "from": 3345.06,
+          "to": 3444.82,
+          "yoy": 3
+        },
+        "b": {
+          "code": "01.1.7.1.31",
+          "name": "Zapallo anco",
+          "unit": "kg",
+          "from": 991.28,
+          "to": 4454.89,
+          "yoy": 349.4
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.5.1.02",
+          "name": "Aceite de girasol",
+          "unit": "1,5 litros",
+          "from": 5012.41,
+          "to": 7093.33,
+          "yoy": 41.5
+        },
+        "b": {
+          "code": "01.2.1.1.12",
+          "name": "Yerba mate",
+          "unit": "500 g",
+          "from": 2420.79,
+          "to": 2719.88,
+          "yoy": 12.4
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "12.1.3.2.05",
+          "name": "Champú",
+          "unit": "400 cc",
+          "from": 5870.7,
+          "to": 7813.16,
+          "yoy": 33.1
+        },
+        "b": {
+          "code": "01.1.9.3.06",
+          "name": "Polvo para flan",
+          "unit": "8 porciones",
+          "from": 1118.54,
+          "to": 1365.03,
+          "yoy": 22
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.2.1.08",
+          "name": "Carne picada común",
+          "unit": "kg",
+          "from": 7320.71,
+          "to": 10778.88,
+          "yoy": 47.2
+        },
+        "b": {
+          "code": "01.1.1.2.04",
+          "name": "Galletitas de agua envasadas",
+          "unit": "250 g",
+          "from": 1232.79,
+          "to": 1692.59,
+          "yoy": 37.3
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.2.1.1.02",
+          "name": "Café molido",
+          "unit": "500 g",
+          "from": 12120.17,
+          "to": 14713.72,
+          "yoy": 21.4
+        },
+        "b": {
+          "code": "01.1.1.4.04",
+          "name": "Fideos secos tipo guisero",
+          "unit": "500 g",
+          "from": 1516.22,
+          "to": 1791.8,
+          "yoy": 18.2
+        },
+        "answer": "a"
+      }
+    ]
   }
 ]
