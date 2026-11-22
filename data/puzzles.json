@@ -8056,5 +8056,107 @@
         "answer": "a"
       }
     ]
+  },
+  {
+    "number": 80,
+    "date": "2027-01-21",
+    "period": "202610",
+    "rounds": [
+      {
+        "a": {
+          "code": "01.2.2.1.04",
+          "name": "Gaseosa base cola",
+          "unit": "1,5 litros",
+          "from": 2973.12,
+          "to": 3841.05,
+          "yoy": 29.2
+        },
+        "b": {
+          "code": "01.1.7.1.10",
+          "name": "Cebolla",
+          "unit": "kg",
+          "from": 922.48,
+          "to": 3375.94,
+          "yoy": 266
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.7.2.08",
+          "name": "Tomate entero en conserva",
+          "unit": "Lata 230 g",
+          "from": 1240.43,
+          "to": 1541.48,
+          "yoy": 24.3
+        },
+        "b": {
+          "code": "01.1.4.4.01",
+          "name": "Huevos de gallina",
+          "unit": "Docena",
+          "from": 4050.41,
+          "to": 4121.92,
+          "yoy": 1.8
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.9.3.06",
+          "name": "Polvo para flan",
+          "unit": "8 porciones",
+          "from": 1118.54,
+          "to": 1365.03,
+          "yoy": 22
+        },
+        "b": {
+          "code": "01.1.5.1.02",
+          "name": "Aceite de girasol",
+          "unit": "1,5 litros",
+          "from": 5012.41,
+          "to": 7093.33,
+          "yoy": 41.5
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.2.1.1.02",
+          "name": "Café molido",
+          "unit": "500 g",
+          "from": 12120.17,
+          "to": 14713.72,
+          "yoy": 21.4
+        },
+        "b": {
+          "code": "01.1.4.2.03",
+          "name": "Queso cremoso",
+          "unit": "kg",
+          "from": 11363.22,
+          "to": 14612.29,
+          "yoy": 28.6
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.1.1.05",
+          "name": "Pan francés",
+          "unit": "kg",
+          "from": 3908.68,
+          "to": 5057.65,
+          "yoy": 29.4
+        },
+        "b": {
+          "code": "01.1.2.6.02",
+          "name": "Jamón cocido",
+          "unit": "kg",
+          "from": 16982.62,
+          "to": 21699.32,
+          "yoy": 27.8
+        },
+        "answer": "a"
+      }
+    ]
   }
 ]
