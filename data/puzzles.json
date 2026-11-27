@@ -8566,5 +8566,107 @@
         "answer": "a"
       }
     ]
+  },
+  {
+    "number": 85,
+    "date": "2027-01-26",
+    "period": "202610",
+    "rounds": [
+      {
+        "a": {
+          "code": "01.1.7.1.31",
+          "name": "Zapallo anco",
+          "unit": "kg",
+          "from": 991.28,
+          "to": 4454.89,
+          "yoy": 349.4
+        },
+        "b": {
+          "code": "01.1.4.2.03",
+          "name": "Queso cremoso",
+          "unit": "kg",
+          "from": 11363.22,
+          "to": 14612.29,
+          "yoy": 28.6
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.4.3.05",
+          "name": "Dulce de leche",
+          "unit": "400 g",
+          "from": 3202.71,
+          "to": 3966.76,
+          "yoy": 23.9
+        },
+        "b": {
+          "code": "01.1.4.4.01",
+          "name": "Huevos de gallina",
+          "unit": "Docena",
+          "from": 4050.41,
+          "to": 4121.92,
+          "yoy": 1.8
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.4.2.06",
+          "name": "Queso pategrás",
+          "unit": "kg",
+          "from": 22226.88,
+          "to": 29367.34,
+          "yoy": 32.1
+        },
+        "b": {
+          "code": "01.1.7.1.17",
+          "name": "Lechuga",
+          "unit": "kg",
+          "from": 2958.24,
+          "to": 3499.96,
+          "yoy": 18.3
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.2.1.18",
+          "name": "Paleta",
+          "unit": "kg",
+          "from": 12018.19,
+          "to": 17156.95,
+          "yoy": 42.8
+        },
+        "b": {
+          "code": "01.1.8.1.01",
+          "name": "Azúcar",
+          "unit": "kg",
+          "from": 1163.29,
+          "to": 1608.23,
+          "yoy": 38.2
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.2.6.11",
+          "name": "Salchichón",
+          "unit": "kg",
+          "from": 9322.2,
+          "to": 11711.81,
+          "yoy": 25.6
+        },
+        "b": {
+          "code": "05.6.1.1.08",
+          "name": "Detergente líquido",
+          "unit": "750 cc",
+          "from": 1744.73,
+          "to": 2211.54,
+          "yoy": 26.8
+        },
+        "answer": "b"
+      }
+    ]
   }
 ]
