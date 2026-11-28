@@ -8668,5 +8668,107 @@
         "answer": "b"
       }
     ]
+  },
+  {
+    "number": 86,
+    "date": "2027-01-27",
+    "period": "202610",
+    "rounds": [
+      {
+        "a": {
+          "code": "01.1.6.1.09",
+          "name": "Limón",
+          "unit": "kg",
+          "from": 2376.62,
+          "to": 1826.57,
+          "yoy": -23.1
+        },
+        "b": {
+          "code": "01.1.1.1.05",
+          "name": "Pan francés",
+          "unit": "kg",
+          "from": 3908.68,
+          "to": 5057.65,
+          "yoy": 29.4
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.7.1.17",
+          "name": "Lechuga",
+          "unit": "kg",
+          "from": 2958.24,
+          "to": 3499.96,
+          "yoy": 18.3
+        },
+        "b": {
+          "code": "01.1.5.1.02",
+          "name": "Aceite de girasol",
+          "unit": "1,5 litros",
+          "from": 5012.41,
+          "to": 7093.33,
+          "yoy": 41.5
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.1.2.5.04",
+          "name": "Salchicha tipo viena",
+          "unit": "Env. 6 u",
+          "from": 2181.99,
+          "to": 2963.7,
+          "yoy": 35.8
+        },
+        "b": {
+          "code": "01.1.9.1.01",
+          "name": "Sal fina",
+          "unit": "500 g",
+          "from": 1333.65,
+          "to": 1585.62,
+          "yoy": 18.9
+        },
+        "answer": "a"
+      },
+      {
+        "a": {
+          "code": "01.1.7.1.26",
+          "name": "Tomate redondo",
+          "unit": "kg",
+          "from": 2998.37,
+          "to": 3594.7,
+          "yoy": 19.9
+        },
+        "b": {
+          "code": "01.1.2.6.02",
+          "name": "Jamón cocido",
+          "unit": "kg",
+          "from": 16982.62,
+          "to": 21699.32,
+          "yoy": 27.8
+        },
+        "answer": "b"
+      },
+      {
+        "a": {
+          "code": "01.2.2.1.04",
+          "name": "Gaseosa base cola",
+          "unit": "1,5 litros",
+          "from": 2973.12,
+          "to": 3841.05,
+          "yoy": 29.2
+        },
+        "b": {
+          "code": "01.1.4.2.08",
+          "name": "Queso sardo",
+          "unit": "kg",
+          "from": 21594.91,
+          "to": 28654.38,
+          "yoy": 32.7
+        },
+        "answer": "b"
+      }
+    ]
   }
 ]
